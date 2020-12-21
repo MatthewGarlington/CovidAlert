@@ -3,16 +3,67 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B06A663258EB464009E07FA /* OverDoseDeathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B06A662258EB464009E07FA /* OverDoseDeathViewModel.swift */; };
+		6B06A667258EB480009E07FA /* OverDose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B06A666258EB480009E07FA /* OverDose.swift */; };
+		6B0ADB8F25852330007BD794 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADB8E25852330007BD794 /* GraphView.swift */; };
+		6B0ADBA825852350007BD794 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADBA725852350007BD794 /* LineChartView.swift */; };
+		6B0ADBBD25852361007BD794 /* CoronaTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADBBB25852361007BD794 /* CoronaTracker.xcdatamodeld */; };
+		6B0ADBC72585236A007BD794 /* CoronaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADBC62585236A007BD794 /* CoronaClient.swift */; };
+		6B0ADBD62585239A007BD794 /* Covid.graphql.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0ADBD52585239A007BD794 /* Covid.graphql.json */; };
+		6B0ADBDC258523F7007BD794 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBDB258523F7007BD794 /* ApolloSQLite */; };
+		6B0ADBDE258523F7007BD794 /* ApolloCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBDD258523F7007BD794 /* ApolloCore */; };
+		6B0ADBE0258523F7007BD794 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBDF258523F7007BD794 /* ApolloWebSocket */; };
+		6B0ADBE2258523F7007BD794 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBE1258523F7007BD794 /* Apollo */; };
+		6B0ADBE7258523F7007BD794 /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBE6258523F7007BD794 /* ApolloCodegenLib */; };
+		6B0ADBED2585242F007BD794 /* FancyScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBEC2585242F007BD794 /* FancyScrollView */; };
+		6B0ADBF22585246A007BD794 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBF12585246A007BD794 /* SwiftUICharts */; };
+		6B0ADBF7258524BA007BD794 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBF6258524BA007BD794 /* Neumorphic */; };
+		6B0ADBFC258524EF007BD794 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0ADBFB258524EF007BD794 /* URLImage */; };
+		6B0ADC0425853A0A007BD794 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC0325853A0A007BD794 /* Helpers.swift */; };
+		6B0ADC0A25853A2A007BD794 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC0925853A2A007BD794 /* Summary.swift */; };
+		6B0ADC0E25853A2D007BD794 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC0D25853A2D007BD794 /* Country.swift */; };
+		6B0ADC1625853A4A007BD794 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC1525853A4A007BD794 /* DataController.swift */; };
+		6B0ADC1C25853A61007BD794 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC1B25853A61007BD794 /* CountryData.swift */; };
+		6B0ADC2225853A74007BD794 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC2125853A74007BD794 /* Line.swift */; };
+		6B0ADC2625853A7D007BD794 /* MagnifierRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC2525853A7D007BD794 /* MagnifierRect.swift */; };
+		6B0ADC2A25853A82007BD794 /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC2925853A82007BD794 /* Path+QuadCurve.swift */; };
+		6B0ADC2E25853A8E007BD794 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC2D25853A8E007BD794 /* Legend.swift */; };
+		6B0ADC3A25853AA7007BD794 /* IndicatorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ADC3925853AA7007BD794 /* IndicatorPoint.swift */; };
+		6B0BB4F62583251C00122B32 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0BB4F52583251C00122B32 /* KingfisherSwiftUI */; };
+		6B1026B2258E39CF00C0334F /* TwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1026B1258E39CF00C0334F /* TwitterCardView.swift */; };
+		6B1801E225868BCD00EF39DA /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1801E125868BCD00EF39DA /* NewsDetailView.swift */; };
+		6B3D7A5D2581C49F00B10B63 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D7A5C2581C49F00B10B63 /* NumberFormatter.swift */; };
+		6B3D7A622581C79D00B10B63 /* NavigationLazyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D7A612581C79D00B10B63 /* NavigationLazyStack.swift */; };
+		6B8C3EB92586D4E200D141D0 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C3EB82586D4E200D141D0 /* TwitterViewController.swift */; };
+		6B8C3EBD2586D74D00D141D0 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C3EBC2586D74D00D141D0 /* Twitter.swift */; };
+		6B9C5C4D2588552500E60A83 /* StateNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C5C4C2588552500E60A83 /* StateNewsViewModel.swift */; };
 		6BA0A681258124F900CD03A5 /* CovidAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A680258124F900CD03A5 /* CovidAlertApp.swift */; };
-		6BA0A683258124F900CD03A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A682258124F900CD03A5 /* ContentView.swift */; };
+		6BA0A683258124F900CD03A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A682258124F900CD03A5 /* HomeView.swift */; };
 		6BA0A685258124FA00CD03A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA0A684258124FA00CD03A5 /* Assets.xcassets */; };
 		6BA0A688258124FA00CD03A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA0A687258124FA00CD03A5 /* Preview Assets.xcassets */; };
 		6BA0A693258124FA00CD03A5 /* CovidAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A692258124FA00CD03A5 /* CovidAlertTests.swift */; };
 		6BA0A69E258124FA00CD03A5 /* CovidAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A69D258124FA00CD03A5 /* CovidAlertUITests.swift */; };
+		6BA0A6B825813D5900CD03A5 /* StateDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A6B725813D5900CD03A5 /* StateDataView.swift */; };
+		6BA0A6C4258143DE00CD03A5 /* NewsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A6C3258143DE00CD03A5 /* NewsDataView.swift */; };
+		6BA0A6C92581447B00CD03A5 /* AllUSDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A6C82581447B00CD03A5 /* AllUSDataView.swift */; };
+		6BA0A6E92581541500CD03A5 /* TileModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0A6E82581541500CD03A5 /* TileModifer.swift */; };
+		6BA5018925829DFB00F5FDB5 /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5018825829DFB00F5FDB5 /* StateDetailView.swift */; };
+		6BA501912582ADE400F5FDB5 /* StateDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA501902582ADE400F5FDB5 /* StateDetailViewModel.swift */; };
+		6BA501962582AE1E00F5FDB5 /* AllStateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA501952582AE1E00F5FDB5 /* AllStateDetails.swift */; };
+		6BA5019B2582B76D00F5FDB5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5019A2582B76D00F5FDB5 /* State.swift */; };
+		6BA501A32583146300F5FDB5 /* NewsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA501A22583146300F5FDB5 /* NewsDataViewModel.swift */; };
+		6BA501A82583148100F5FDB5 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA501A72583148100F5FDB5 /* News.swift */; };
+		6BAE9C342584243600CA9E16 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAE9C332584243600CA9E16 /* Alamofire */; };
+		6BAE9C3A2584246B00CA9E16 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAE9C392584246B00CA9E16 /* SwiftyJSON */; };
+		6BAE9C4F2584509400CA9E16 /* UsTotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE9C4E2584509400CA9E16 /* UsTotalViewModel.swift */; };
+		6BAE9C54258451B200CA9E16 /* TotalUS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE9C53258451B200CA9E16 /* TotalUS.swift */; };
+		6BB03E452586BC5E00C66C85 /* StateNewsView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB03E442586BC5E00C66C85 /* StateNewsView1.swift */; };
+		6BF0F60425815E8700CC427D /* StateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0F60325815E8700CC427D /* StateDetails.swift */; };
+		6BF0F609258160BF00CC427D /* StateDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0F608258160BF00CC427D /* StateDataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +83,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6B0ADBE8258523F7007BD794 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6B06A662258EB464009E07FA /* OverDoseDeathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverDoseDeathViewModel.swift; sourceTree = "<group>"; };
+		6B06A666258EB480009E07FA /* OverDose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverDose.swift; sourceTree = "<group>"; };
+		6B0ADB8E25852330007BD794 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = "../../../../../Downloads/CoronaTracker-master/Project/CoronaTracker/Controller/GraphView.swift"; sourceTree = "<group>"; };
+		6B0ADBA725852350007BD794 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChartView.swift; path = "../../../../../Downloads/CoronaTracker-master/Project/CoronaTracker/Controller/LineChart/LineChartView.swift"; sourceTree = "<group>"; };
+		6B0ADBBC25852361007BD794 /* CoronaTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoronaTracker.xcdatamodel; sourceTree = "<group>"; };
+		6B0ADBC62585236A007BD794 /* CoronaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoronaClient.swift; path = "../../../../../Downloads/CoronaTracker-master/Project/CoronaTracker/Model/Networking/CoronaClient.swift"; sourceTree = "<group>"; };
+		6B0ADBD52585239A007BD794 /* Covid.graphql.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Covid.graphql.json; path = ../../../../../Documents/Covid19Final/CovidCount/Helpers/Covid.graphql.json; sourceTree = "<group>"; };
+		6B0ADC0325853A0A007BD794 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		6B0ADC0925853A2A007BD794 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		6B0ADC0D25853A2D007BD794 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		6B0ADC1525853A4A007BD794 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		6B0ADC1B25853A61007BD794 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		6B0ADC2125853A74007BD794 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		6B0ADC2525853A7D007BD794 /* MagnifierRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifierRect.swift; sourceTree = "<group>"; };
+		6B0ADC2925853A82007BD794 /* Path+QuadCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Path+QuadCurve.swift"; sourceTree = "<group>"; };
+		6B0ADC2D25853A8E007BD794 /* Legend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
+		6B0ADC3925853AA7007BD794 /* IndicatorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorPoint.swift; sourceTree = "<group>"; };
+		6B1026B1258E39CF00C0334F /* TwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCardView.swift; sourceTree = "<group>"; };
+		6B1801E125868BCD00EF39DA /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		6B3D7A5C2581C49F00B10B63 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		6B3D7A612581C79D00B10B63 /* NavigationLazyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyStack.swift; sourceTree = "<group>"; };
+		6B8C3EB82586D4E200D141D0 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		6B8C3EBC2586D74D00D141D0 /* Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
+		6B9C5C4C2588552500E60A83 /* StateNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateNewsViewModel.swift; sourceTree = "<group>"; };
 		6BA0A67D258124F900CD03A5 /* CovidAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA0A680258124F900CD03A5 /* CovidAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAlertApp.swift; sourceTree = "<group>"; };
-		6BA0A682258124F900CD03A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6BA0A682258124F900CD03A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6BA0A684258124FA00CD03A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BA0A687258124FA00CD03A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BA0A689258124FA00CD03A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +133,21 @@
 		6BA0A699258124FA00CD03A5 /* CovidAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA0A69D258124FA00CD03A5 /* CovidAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAlertUITests.swift; sourceTree = "<group>"; };
 		6BA0A69F258124FA00CD03A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BA0A6B725813D5900CD03A5 /* StateDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataView.swift; sourceTree = "<group>"; };
+		6BA0A6C3258143DE00CD03A5 /* NewsDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataView.swift; sourceTree = "<group>"; };
+		6BA0A6C82581447B00CD03A5 /* AllUSDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUSDataView.swift; sourceTree = "<group>"; };
+		6BA0A6E82581541500CD03A5 /* TileModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifer.swift; sourceTree = "<group>"; };
+		6BA5018825829DFB00F5FDB5 /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
+		6BA501902582ADE400F5FDB5 /* StateDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailViewModel.swift; sourceTree = "<group>"; };
+		6BA501952582AE1E00F5FDB5 /* AllStateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStateDetails.swift; sourceTree = "<group>"; };
+		6BA5019A2582B76D00F5FDB5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		6BA501A22583146300F5FDB5 /* NewsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataViewModel.swift; sourceTree = "<group>"; };
+		6BA501A72583148100F5FDB5 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		6BAE9C4E2584509400CA9E16 /* UsTotalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsTotalViewModel.swift; sourceTree = "<group>"; };
+		6BAE9C53258451B200CA9E16 /* TotalUS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUS.swift; sourceTree = "<group>"; };
+		6BB03E442586BC5E00C66C85 /* StateNewsView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateNewsView1.swift; sourceTree = "<group>"; };
+		6BF0F60325815E8700CC427D /* StateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetails.swift; sourceTree = "<group>"; };
+		6BF0F608258160BF00CC427D /* StateDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +155,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0ADBED2585242F007BD794 /* FancyScrollView in Frameworks */,
+				6BAE9C3A2584246B00CA9E16 /* SwiftyJSON in Frameworks */,
+				6B0ADBE0258523F7007BD794 /* ApolloWebSocket in Frameworks */,
+				6B0ADBDC258523F7007BD794 /* ApolloSQLite in Frameworks */,
+				6B0ADBDE258523F7007BD794 /* ApolloCore in Frameworks */,
+				6B0ADBE7258523F7007BD794 /* ApolloCodegenLib in Frameworks */,
+				6B0BB4F62583251C00122B32 /* KingfisherSwiftUI in Frameworks */,
+				6B0ADBFC258524EF007BD794 /* URLImage in Frameworks */,
+				6B0ADBF22585246A007BD794 /* SwiftUICharts in Frameworks */,
+				6B0ADBF7258524BA007BD794 /* Neumorphic in Frameworks */,
+				6B0ADBE2258523F7007BD794 /* Apollo in Frameworks */,
+				6BAE9C342584243600CA9E16 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +210,11 @@
 		6BA0A67F258124F900CD03A5 /* CovidAlert */ = {
 			isa = PBXGroup;
 			children = (
+				6BA0A6BF25813D9D00CD03A5 /* View */,
+				6BA0A6BE25813D8800CD03A5 /* Controllers */,
+				6BA0A6BD25813D8200CD03A5 /* Model */,
+				6BA0A6BC25813D7300CD03A5 /* Helpers */,
 				6BA0A680258124F900CD03A5 /* CovidAlertApp.swift */,
-				6BA0A682258124F900CD03A5 /* ContentView.swift */,
 				6BA0A684258124FA00CD03A5 /* Assets.xcassets */,
 				6BA0A689258124FA00CD03A5 /* Info.plist */,
 				6BA0A686258124FA00CD03A5 /* Preview Content */,
@@ -130,6 +248,114 @@
 			path = CovidAlertUITests;
 			sourceTree = "<group>";
 		};
+		6BA0A6BC25813D7300CD03A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6BA0A6E82581541500CD03A5 /* TileModifer.swift */,
+				6B0ADC0325853A0A007BD794 /* Helpers.swift */,
+				6B3D7A5C2581C49F00B10B63 /* NumberFormatter.swift */,
+				6B3D7A612581C79D00B10B63 /* NavigationLazyStack.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6BA0A6BD25813D8200CD03A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BF0F60325815E8700CC427D /* StateDetails.swift */,
+				6BA501952582AE1E00F5FDB5 /* AllStateDetails.swift */,
+				6BA5019A2582B76D00F5FDB5 /* State.swift */,
+				6B0ADC2925853A82007BD794 /* Path+QuadCurve.swift */,
+				6BA501A72583148100F5FDB5 /* News.swift */,
+				6BAE9C53258451B200CA9E16 /* TotalUS.swift */,
+				6B0ADC2D25853A8E007BD794 /* Legend.swift */,
+				6B0ADC0925853A2A007BD794 /* Summary.swift */,
+				6B0ADC2525853A7D007BD794 /* MagnifierRect.swift */,
+				6B0ADC1B25853A61007BD794 /* CountryData.swift */,
+				6B0ADC3925853AA7007BD794 /* IndicatorPoint.swift */,
+				6B0ADC2125853A74007BD794 /* Line.swift */,
+				6B0ADC0D25853A2D007BD794 /* Country.swift */,
+				6B8C3EBC2586D74D00D141D0 /* Twitter.swift */,
+				6B06A666258EB480009E07FA /* OverDose.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BA0A6BE25813D8800CD03A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6BF0F608258160BF00CC427D /* StateDataViewModel.swift */,
+				6BA501902582ADE400F5FDB5 /* StateDetailViewModel.swift */,
+				6BA501A22583146300F5FDB5 /* NewsDataViewModel.swift */,
+				6B0ADC1525853A4A007BD794 /* DataController.swift */,
+				6BAE9C4E2584509400CA9E16 /* UsTotalViewModel.swift */,
+				6B8C3EB82586D4E200D141D0 /* TwitterViewController.swift */,
+				6B9C5C4C2588552500E60A83 /* StateNewsViewModel.swift */,
+				6B06A662258EB464009E07FA /* OverDoseDeathViewModel.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6BA0A6BF25813D9D00CD03A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BC789FD25851BFA008396F4 /* AllUS */,
+				6BF0F6102581706100CC427D /* News */,
+				6BF0F60F2581705500CC427D /* Graph */,
+				6BF0F60E2581704800CC427D /* State */,
+				6BF0F60D2581702900CC427D /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BC789FD25851BFA008396F4 /* AllUS */ = {
+			isa = PBXGroup;
+			children = (
+				6BA0A6C82581447B00CD03A5 /* AllUSDataView.swift */,
+			);
+			path = AllUS;
+			sourceTree = "<group>";
+		};
+		6BF0F60D2581702900CC427D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6BA0A682258124F900CD03A5 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6BF0F60E2581704800CC427D /* State */ = {
+			isa = PBXGroup;
+			children = (
+				6BA0A6B725813D5900CD03A5 /* StateDataView.swift */,
+				6BA5018825829DFB00F5FDB5 /* StateDetailView.swift */,
+				6BB03E442586BC5E00C66C85 /* StateNewsView1.swift */,
+				6B1026B1258E39CF00C0334F /* TwitterCardView.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		6BF0F60F2581705500CC427D /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				6B0ADB8E25852330007BD794 /* GraphView.swift */,
+				6B0ADBA725852350007BD794 /* LineChartView.swift */,
+				6B0ADBBB25852361007BD794 /* CoronaTracker.xcdatamodeld */,
+				6B0ADBC62585236A007BD794 /* CoronaClient.swift */,
+				6B0ADBD52585239A007BD794 /* Covid.graphql.json */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		6BF0F6102581706100CC427D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				6BA0A6C3258143DE00CD03A5 /* NewsDataView.swift */,
+				6B1801E125868BCD00EF39DA /* NewsDetailView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,12 +366,27 @@
 				6BA0A679258124F900CD03A5 /* Sources */,
 				6BA0A67A258124F900CD03A5 /* Frameworks */,
 				6BA0A67B258124F900CD03A5 /* Resources */,
+				6B0ADBE8258523F7007BD794 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CovidAlert;
+			packageProductDependencies = (
+				6B0BB4F52583251C00122B32 /* KingfisherSwiftUI */,
+				6BAE9C332584243600CA9E16 /* Alamofire */,
+				6BAE9C392584246B00CA9E16 /* SwiftyJSON */,
+				6B0ADBDB258523F7007BD794 /* ApolloSQLite */,
+				6B0ADBDD258523F7007BD794 /* ApolloCore */,
+				6B0ADBDF258523F7007BD794 /* ApolloWebSocket */,
+				6B0ADBE1258523F7007BD794 /* Apollo */,
+				6B0ADBE6258523F7007BD794 /* ApolloCodegenLib */,
+				6B0ADBEC2585242F007BD794 /* FancyScrollView */,
+				6B0ADBF12585246A007BD794 /* SwiftUICharts */,
+				6B0ADBF6258524BA007BD794 /* Neumorphic */,
+				6B0ADBFB258524EF007BD794 /* URLImage */,
+			);
 			productName = CovidAlert;
 			productReference = 6BA0A67D258124F900CD03A5 /* CovidAlert.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +458,16 @@
 				Base,
 			);
 			mainGroup = 6BA0A674258124F900CD03A5;
+			packageReferences = (
+				6B0BB4F42583251C00122B32 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6BAE9C322584243600CA9E16 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6BAE9C382584246B00CA9E16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				6B0ADBEB2585242F007BD794 /* XCRemoteSwiftPackageReference "FancyScrollView" */,
+				6B0ADBF02585246A007BD794 /* XCRemoteSwiftPackageReference "ChartView" */,
+				6B0ADBF5258524BA007BD794 /* XCRemoteSwiftPackageReference "neumorphic" */,
+				6B0ADBFA258524EF007BD794 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 6BA0A67E258124F900CD03A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0ADBD62585239A007BD794 /* Covid.graphql.json in Resources */,
 				6BA0A688258124FA00CD03A5 /* Preview Assets.xcassets in Resources */,
 				6BA0A685258124FA00CD03A5 /* Assets.xcassets in Resources */,
 			);
@@ -259,7 +511,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BA0A683258124F900CD03A5 /* ContentView.swift in Sources */,
+				6BA501962582AE1E00F5FDB5 /* AllStateDetails.swift in Sources */,
+				6BA0A6E92581541500CD03A5 /* TileModifer.swift in Sources */,
+				6BA501A82583148100F5FDB5 /* News.swift in Sources */,
+				6B0ADC1C25853A61007BD794 /* CountryData.swift in Sources */,
+				6B0ADC0425853A0A007BD794 /* Helpers.swift in Sources */,
+				6B0ADC2625853A7D007BD794 /* MagnifierRect.swift in Sources */,
+				6B0ADBBD25852361007BD794 /* CoronaTracker.xcdatamodeld in Sources */,
+				6BA501912582ADE400F5FDB5 /* StateDetailViewModel.swift in Sources */,
+				6B06A667258EB480009E07FA /* OverDose.swift in Sources */,
+				6BA5018925829DFB00F5FDB5 /* StateDetailView.swift in Sources */,
+				6B9C5C4D2588552500E60A83 /* StateNewsViewModel.swift in Sources */,
+				6B06A663258EB464009E07FA /* OverDoseDeathViewModel.swift in Sources */,
+				6BB03E452586BC5E00C66C85 /* StateNewsView1.swift in Sources */,
+				6B0ADC2E25853A8E007BD794 /* Legend.swift in Sources */,
+				6B0ADC2225853A74007BD794 /* Line.swift in Sources */,
+				6BAE9C4F2584509400CA9E16 /* UsTotalViewModel.swift in Sources */,
+				6BA0A683258124F900CD03A5 /* HomeView.swift in Sources */,
+				6BA5019B2582B76D00F5FDB5 /* State.swift in Sources */,
+				6B0ADC3A25853AA7007BD794 /* IndicatorPoint.swift in Sources */,
+				6B3D7A622581C79D00B10B63 /* NavigationLazyStack.swift in Sources */,
+				6B0ADBA825852350007BD794 /* LineChartView.swift in Sources */,
+				6BF0F609258160BF00CC427D /* StateDataViewModel.swift in Sources */,
+				6B0ADC1625853A4A007BD794 /* DataController.swift in Sources */,
+				6B1801E225868BCD00EF39DA /* NewsDetailView.swift in Sources */,
+				6BAE9C54258451B200CA9E16 /* TotalUS.swift in Sources */,
+				6B0ADBC72585236A007BD794 /* CoronaClient.swift in Sources */,
+				6BF0F60425815E8700CC427D /* StateDetails.swift in Sources */,
+				6BA0A6C4258143DE00CD03A5 /* NewsDataView.swift in Sources */,
+				6BA0A6C92581447B00CD03A5 /* AllUSDataView.swift in Sources */,
+				6B0ADC2A25853A82007BD794 /* Path+QuadCurve.swift in Sources */,
+				6B8C3EB92586D4E200D141D0 /* TwitterViewController.swift in Sources */,
+				6BA0A6B825813D5900CD03A5 /* StateDataView.swift in Sources */,
+				6B0ADC0A25853A2A007BD794 /* Summary.swift in Sources */,
+				6B0ADC0E25853A2D007BD794 /* Country.swift in Sources */,
+				6B8C3EBD2586D74D00D141D0 /* Twitter.swift in Sources */,
+				6BA501A32583146300F5FDB5 /* NewsDataViewModel.swift in Sources */,
+				6B0ADB8F25852330007BD794 /* GraphView.swift in Sources */,
+				6B3D7A5D2581C49F00B10B63 /* NumberFormatter.swift in Sources */,
+				6B1026B2258E39CF00C0334F /* TwitterCardView.swift in Sources */,
 				6BA0A681258124F900CD03A5 /* CovidAlertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +870,150 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.38.3;
+			};
+		};
+		6B0ADBEB2585242F007BD794 /* XCRemoteSwiftPackageReference "FancyScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nerdsupremacist/FancyScrollView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+		6B0ADBF02585246A007BD794 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+		6B0ADBF5258524BA007BD794 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
+		6B0ADBFA258524EF007BD794 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.12;
+			};
+		};
+		6B0BB4F42583251C00122B32 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
+		6BAE9C322584243600CA9E16 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		6BAE9C382584246B00CA9E16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B0ADBDB258523F7007BD794 /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+		6B0ADBDD258523F7007BD794 /* ApolloCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCore;
+		};
+		6B0ADBDF258523F7007BD794 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		6B0ADBE1258523F7007BD794 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		6B0ADBE6258523F7007BD794 /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBDA258523F7007BD794 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+		6B0ADBEC2585242F007BD794 /* FancyScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBEB2585242F007BD794 /* XCRemoteSwiftPackageReference "FancyScrollView" */;
+			productName = FancyScrollView;
+		};
+		6B0ADBF12585246A007BD794 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBF02585246A007BD794 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		6B0ADBF6258524BA007BD794 /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBF5258524BA007BD794 /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+		6B0ADBFB258524EF007BD794 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0ADBFA258524EF007BD794 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		6B0BB4F52583251C00122B32 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B0BB4F42583251C00122B32 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		6BAE9C332584243600CA9E16 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BAE9C322584243600CA9E16 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6BAE9C392584246B00CA9E16 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BAE9C382584246B00CA9E16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6B0ADBBB25852361007BD794 /* CoronaTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B0ADBBC25852361007BD794 /* CoronaTracker.xcdatamodel */,
+			);
+			currentVersion = 6B0ADBBC25852361007BD794 /* CoronaTracker.xcdatamodel */;
+			name = CoronaTracker.xcdatamodeld;
+			path = "../../../../../Downloads/CoronaTracker-master/Project/CoronaTracker/Model/Core Data/CoronaTracker.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6BA0A675258124F900CD03A5 /* Project object */;
 }

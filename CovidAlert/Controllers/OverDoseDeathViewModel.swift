@@ -31,7 +31,7 @@ class OverDoseDeathViewModel: ObservableObject {
             do {
                 
                 self.overDosed = try JSONDecoder().decode(OverDose.self, from: data)
-           //    print(self.overDosed!)
+               print(self.overDosed!)
         } catch let jsonError {
             print("Decoding failed for OverDose", jsonError)
         }

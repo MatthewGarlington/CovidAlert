@@ -166,7 +166,7 @@ struct AllUSDataView: View {
                         .cornerRadius(30)
                         .shadow(radius: 10)
                         VStack(spacing: 20) {
-                   Text("Overdose Increase")
+                   Text("Overdose Deaths")
                     .font(.system(size: 30, weight: .semibold))
                     .padding(.horizontal)
                 

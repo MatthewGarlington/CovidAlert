@@ -62,6 +62,17 @@ struct StateDataView: View {
                         
                             
                     }.padding(.horizontal)
+                HStack(alignment: .lastTextBaseline) {
+                    Spacer()
+                NavigationLink(
+                    destination: StateDataViewII(),
+                    label: {
+                        Text("See All States")
+                            .foregroundColor(.black)
+                            .padding(.horizontal)
+                    })
+          
+                }
                     }
         
         }

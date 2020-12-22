@@ -47,12 +47,13 @@ struct NewsDataView: View {
                                 ZStack{
                                     
                                     KFImage(URL(string: samplePhoto))
-                                        .frame(width: 385, height: 250)
+                                        .frame(width: 300, height: 250)
                                         .cornerRadius(30)
                                         .shadow(radius: 4)
                                         .blur(radius: 5)
                                     LinearGradient(gradient: Gradient(colors: [Color.clear, Color.black]), startPoint: .leading, endPoint: .trailing)
                                         .cornerRadius(30)
+                                        .frame(width: 300, height: 300)
                                     
                                     
                                     

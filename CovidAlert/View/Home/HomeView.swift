@@ -80,16 +80,21 @@ struct HomeView: View {
                         AllUSDataView()
                    
                    
-                        VStack {
+                        VStack(spacing: 40) {
                         
+                       
+                            
                        
                     
                         NewsDataView()
                     
-                //        GraphView(data: [])
+                        SymptomCheckView()
+                            
+                        
+                    
             
                     
-                    }
+                        }.padding()
                         
                        
                     }.background(Color.discoverBackground)

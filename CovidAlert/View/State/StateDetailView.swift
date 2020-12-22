@@ -168,13 +168,14 @@ struct StateDetailView: View {
              
                     
                     
-                }   .background(Color.gray)
-                .cornerRadius(7)
+                }
                 
                 
         
-            }
+            }  .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .bottom, endPoint: .top))
+            .cornerRadius(7)
         }.navigationBarTitle("Maryland", displayMode: .inline)
+      
     }
 }
 

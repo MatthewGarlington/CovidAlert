@@ -48,14 +48,14 @@ struct HomeView: View {
       
 
             NavigationView {
-                
+            
                 ZStack{
                     
-                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue]), startPoint: .top, endPoint: .center)
+                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.black]), startPoint: .top, endPoint: .center)
                         .ignoresSafeArea()
                     
                         Color.discoverBackground
-                        .offset(y:400)
+                        .offset(y:300)
                 
                 ScrollView {
                   
@@ -78,17 +78,17 @@ struct HomeView: View {
                         
                     
                         AllUSDataView()
-                   
+                            .padding(.bottom, 50)
                    
                         VStack(spacing: 40) {
                         
                        
                             
                        
+//                        SymptomCheckView()
+//                        NewsDataView()
                     
-                        NewsDataView()
-                    
-                        SymptomCheckView()
+                      
                             
                         
                     
@@ -106,10 +106,11 @@ struct HomeView: View {
                     
                 } .navigationTitle("Coronavirus US")
                 
+                  
                
-          
-
             }
+
+            
         }
     }
 

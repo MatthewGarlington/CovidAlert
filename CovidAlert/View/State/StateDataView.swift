@@ -68,7 +68,9 @@ struct StateDataView: View {
                     destination: StateDataViewII(),
                     label: {
                         Text("See All States")
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
+                            .font(.subheadline)
+                            .bold()
                             .padding(.horizontal)
                     })
           

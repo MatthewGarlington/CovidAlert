@@ -23,86 +23,68 @@ struct NewsDataView: View {
     
     let samplePhoto = "https://static01.nyt.com/images/2020/11/24/nyregion/24nytoday-photo/24nytoday-photo-facebookJumbo.jpg"
   
+ 
+    
+   
+
     
     var body: some View {
         
+
         
-        
-        VStack {
-            Text("Covid News")
-                .padding(.horizontal)
-                .font(.system(size: 30, weight: .bold))
+        ScrollView {
             
+             
             
-            ScrollView(.horizontal, showsIndicators: false) {
+            VStack {
                 
-                HStack(spacing: 40) {
-                    ForEach(0..<10, id: \.self) { new in
-                        NavigationLink(
-                            destination: NewsDetailView(),
-                            label: {
-                                
-                                
-                                //         vm.news?.articles ?? []
-                                ZStack{
-                                    
-                                    KFImage(URL(string: samplePhoto))
-                                        .frame(width: 300, height: 250)
-                                        .cornerRadius(30)
-                                        .shadow(radius: 4)
-                                        .blur(radius: 5)
-                                    LinearGradient(gradient: Gradient(colors: [Color.clear, Color.black]), startPoint: .leading, endPoint: .trailing)
-                                        .cornerRadius(30)
-                                        .frame(width: 300, height: 300)
-                                    
-                                    
-                                    
-                                    
-                                    VStack {
-                                        HStack(alignment: .firstTextBaseline) {
-                                            Text(title)
-                                                .frame(width: 300, height: 50, alignment: .topLeading)
-                                                .font(.system(size: 20, weight: .bold))
-                                                .foregroundColor(.white)
-                                                .padding(.horizontal)
-                                            
-                                            
-                                        }.padding(.horizontal)
-                                        .padding(.top)
-                                        Text(description)
-                                            .frame(width: 300, height: 150, alignment: .center)
-                                            .font(.system(size: 18, weight: .semibold))
-                                            .foregroundColor(.white)
-                                            .padding()
-                                        
-                                    }
-                                    
-                                }
-                                
-                            })
+                StatNewsLargeCard()
+                
+                
+                HStack {
+                    ForEach(0..<2, id: \.self) { item in
+                        StateNewsCard()
                     }
-                    
                 }
-                
-                
-            }.padding(.horizontal)
-            //                GraphView(data: [])
-        }
-        
-        .padding(.top)
+                HStack {
+                    ForEach(0..<2, id: \.self) { item in
+                        StateNewsCard()
+                    }
+                }
+                HStack {
+                    ForEach(0..<2, id: \.self) { item in
+                        StateNewsCard()
+                    }
+                }
+                HStack {
+                    ForEach(0..<2, id: \.self) { item in
+                        StateNewsCard()
+                    }
+                }
+                VStack {
+                    ForEach(0..<2, id: \.self) { item in
+                        StatenewsHorizontalViewCard()
+                    }
+                }
+            }
+        }.navigationTitle("Covid News")
+        .padding(.horizontal)
+  
         
     }
     
-    
-    
 }
-        
+
+
     
 
 
 struct NewsDataView_Previews: PreviewProvider {
     static var previews: some View {
+    
+        NavigationView {
         NewsDataView()
-        HomeView()
+        }
+   
     }
 }

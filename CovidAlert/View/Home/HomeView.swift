@@ -47,7 +47,7 @@ struct HomeView: View {
     var body: some View {
       
 
-            NavigationView {
+          
             
                 ZStack{
                     
@@ -111,7 +111,7 @@ struct HomeView: View {
             }
 
             
-        }
+        
     }
 
 
@@ -126,6 +126,8 @@ struct HomeView: View {
 
 struct Homeview_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView {
         HomeView()
+        }
     }
 }

@@ -40,32 +40,11 @@ struct NewsDataView: View {
                 
                 StatNewsLargeCard()
                 
+                StateNewsCard()
+               
+                StatenewsHorizontalViewCard()
+                    
                 
-                HStack {
-                    ForEach(0..<2, id: \.self) { item in
-                        StateNewsCard()
-                    }
-                }
-                HStack {
-                    ForEach(0..<2, id: \.self) { item in
-                        StateNewsCard()
-                    }
-                }
-                HStack {
-                    ForEach(0..<2, id: \.self) { item in
-                        StateNewsCard()
-                    }
-                }
-                HStack {
-                    ForEach(0..<2, id: \.self) { item in
-                        StateNewsCard()
-                    }
-                }
-                VStack {
-                    ForEach(0..<2, id: \.self) { item in
-                        StatenewsHorizontalViewCard()
-                    }
-                }
             }
         }.navigationTitle("Covid News")
         .padding(.horizontal)

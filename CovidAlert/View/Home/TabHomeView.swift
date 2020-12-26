@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TabHomeView: View {
+    
+  
+    
     @State private var selectedTab = 0
     
     let minDragTranslationForSwipe: CGFloat = 50
@@ -24,31 +27,36 @@ struct TabHomeView: View {
     }
     
     var body: some View {
-        TabView(selection: $selectedTab) {
+        NavigationView {
+        TabView {
             HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
-                }.tag(0)
-                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+                }
+//                .tag(0)
+//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
             GraphView(data: [])
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                     Text("Graph")
-                }.tag(1)
-                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
-            SymptomCheckDetailView()
+                }
+//                .tag(1)
+//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+            CDCHomeView()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Screener")
-                }.tag(2)
-                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+                }
+//                .tag(2)
+//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
             NewsDataView()
                 .tabItem {
                     Image(systemName: "newspaper.fill")
                     Text("News")
-                }.tag(3)
-                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+                }
+//                .tag(3)
+//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
             
         }
         .accentColor(.red)
@@ -58,9 +66,12 @@ struct TabHomeView: View {
         }
     }
 }
+}
 
 struct TabHomeView_Previews: PreviewProvider {
     static var previews: some View {
+
         TabHomeView()
+        
     }
 }

@@ -27,6 +27,10 @@ struct CovidTestingView: View {
         
        
     @State var showingDetail = false
+    @State var showingGetTestedDetail = false
+    @State var showingTestResultsDetail = false
+    @State var showingResultsTimingDetail = false
+    @State var showingWaitingOnResultsDetail = false
     
     var body: some View {
         ScrollView {
@@ -70,11 +74,11 @@ struct CovidTestingView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingGetTestedDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingGetTestedDetail) {
+                            ShouldYouGetTestedSheetView()
                         }
                          
                             .padding()
@@ -116,11 +120,11 @@ struct CovidTestingView: View {
                         Text(cell.body)
                        
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingTestResultsDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingTestResultsDetail) {
+                            TestResultsSheetsView()
                         }
                             .padding()
                        
@@ -160,11 +164,11 @@ struct CovidTestingView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingResultsTimingDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingResultsTimingDetail) {
+                            WhenResultsSheetView()
                         }
                             .padding()
                        
@@ -204,18 +208,18 @@ struct CovidTestingView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingWaitingOnResultsDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingWaitingOnResultsDetail) {
+                            WaitingOnTestResultsSheetView()
                         }
                             
                             .padding()
                        
                         }
-                    }.frame(width: 300, height: 250)
-                    .padding()
+                    }.frame(width: 300)
+                    .padding(.top)
                 }
             }
             

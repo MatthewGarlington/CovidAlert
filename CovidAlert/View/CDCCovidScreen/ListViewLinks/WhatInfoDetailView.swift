@@ -37,6 +37,13 @@ struct WhatInfoDetailView: View {
     ]
     
     @State var showingDetail = false
+    @State var showingWashingDetail = false
+    @State var showingPhysicalDistancingDetail = false
+    @State var showingQuarantiningDetail = false
+    @State var showingIsolateDetail = false
+    @State var showingSymptomDetail = false
+    @State var showingCleaningDetail = false
+    @State var showingFaceMaskDetail = false
    
     var body: some View {
         
@@ -79,11 +86,11 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingWashingDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingWashingDetail) {
+                            WashingHandsInfoSheets()
                         }
                             .padding()
                        
@@ -124,11 +131,11 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                        
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingPhysicalDistancingDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingPhysicalDistancingDetail) {
+                            PhysicalDistancingSheetView()
                         }
                             .padding()
                        
@@ -168,11 +175,11 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingQuarantiningDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingQuarantiningDetail) {
+                            QuarantiningSheetView()
                         }
                             .padding()
                        
@@ -212,17 +219,17 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingIsolateDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingIsolateDetail) {
+                            IsolatingSheetView()
                         }
                             .padding()
                        
                         }
                     }.frame(width: 300, height: 250)
-                    .padding()
+                    .padding(.top)
                 }
             }
             
@@ -256,17 +263,17 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingSymptomDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingSymptomDetail) {
+                            SymptomMonitoringSheetView()
                         }
                             .padding()
                        
                         }
                     }.frame(width: 300)
-                    .padding()
+                    .padding(.top)
                 }
             }
             
@@ -300,17 +307,17 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingCleaningDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingCleaningDetail) {
+                            CleaningInfoSheetView()
                         }
                             .padding()
                        
                         }
                     }.frame(width: 300)
-                    .padding()
+                    .padding(.top)
                 }
             }
             
@@ -345,17 +352,17 @@ struct WhatInfoDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingFaceMaskDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingFaceMaskDetail) {
+                            FaceMaskSheetView()
                         }
                             .padding()
                        
                         }
                     }.frame(width: 300)
-                    .padding()
+                    .padding(.top)
                 }
             }
             

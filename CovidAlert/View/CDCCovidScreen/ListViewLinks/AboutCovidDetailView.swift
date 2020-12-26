@@ -29,6 +29,10 @@ struct AboutCovidDetailView: View {
     ]
     
     @State var showingDetail = false
+    @State var showingSymptomDetail = false
+    @State var showingRiskDetail = false
+    @State var showingPregnancyDetail = false
+    @State var showingDoctorDetail = false
     
     
     var body: some View {
@@ -76,7 +80,7 @@ struct AboutCovidDetailView: View {
                             Text("Learn More")
                                 .fontWeight(.semibold)
                         }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                            WhatIsCovid19DetailView()
                         }
                             .padding()
                        
@@ -117,11 +121,11 @@ struct AboutCovidDetailView: View {
                         Text(cell.body)
                        
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingSymptomDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingSymptomDetail) {
+                            WhatAreCovidSymptomDetailView()
                         }
                             .padding()
                        
@@ -161,11 +165,11 @@ struct AboutCovidDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingRiskDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingRiskDetail) {
+                            CovidRiskSheetView()
                         }
                             .padding()
                        
@@ -205,17 +209,17 @@ struct AboutCovidDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingPregnancyDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingPregnancyDetail) {
+                            PregnancyAndCovidSheetView()
                         }
                             .padding()
                        
                         }
                     }.frame(width: 300, height: 250)
-                    .padding()
+                    .padding(.top)
                 }
             }
             
@@ -249,17 +253,17 @@ struct AboutCovidDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingDoctorDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingDoctorDetail) {
+                            ShouldYouSeeADoctorSheetView()
                         }
                             .padding()
                        
                         }
                     }.frame(width: 300)
-                    .padding()
+                    .padding(.top)
                 }
             }
             

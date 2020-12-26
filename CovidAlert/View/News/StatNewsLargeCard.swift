@@ -9,7 +9,7 @@ import SwiftUI
 import KingfisherSwiftUI
 
 struct StatNewsLargeCard: View {
-    @ObservedObject var vm = NewsDataViewModel()
+   // @ObservedObject var vm = NewsDataViewModel()
  
     
 

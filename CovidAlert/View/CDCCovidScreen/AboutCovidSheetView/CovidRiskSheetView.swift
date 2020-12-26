@@ -41,7 +41,7 @@ struct CovidRiskSheetView: View {
                 .font(.system(size: 20))
                 
                 NavigationLink(
-                    destination: Text("Destination"),
+                    destination: CDCScreenerTool(),
                     label: {
                         ZStack{
                      

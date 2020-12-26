@@ -92,17 +92,18 @@ struct TextAndImageInfoView: View {
 //Mark: - New .swift file.
 struct VButtons: View {
     
-    let buttonLabels = ["Start Screening", "View Previous Results"]
+
     
     var body: some View {
         VStack {
-            ForEach(buttonLabels, id: \.self)  { label in
+           
             Button(action: {
             // do stuff
-            
-            
+    
+//            CDCScreenerTool()
+                
             }) {
-                Text(label)
+                Text("Start Screening")
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 50, alignment: .center)
@@ -114,7 +115,7 @@ struct VButtons: View {
         }
     }
 }
-}
+
 
 //Mark: - New .swift file.
 struct CDCHomeView_Previews: PreviewProvider {

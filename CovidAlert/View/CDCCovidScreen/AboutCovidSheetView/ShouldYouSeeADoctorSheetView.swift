@@ -11,10 +11,10 @@ struct ShouldYouSeeADoctorSheetView: View {
     var body: some View {
         NavigationView {
         ScrollView {
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 20) {
 
-                Image(systemName: "person.2.fill")
-                    .foregroundColor(.purple)
+                Image(systemName: "staroflife.fill")
+                    .foregroundColor(.red)
                     .font(.system(size: 35))
                    
         
@@ -40,14 +40,14 @@ struct ShouldYouSeeADoctorSheetView: View {
                 .frame(height: 100)
                 .font(.system(size: 20))
             Text("Testing is limited-availability across the country and is currently being prioritized for healthcare workers, emergency medical service providers, police, and other essential workers, so please consult your doctor for availability in your local area.")
-                    .frame(height: 100)
+                    .frame(height: 150)
                     .font(.system(size: 20))
             Text("If you develop emergency warning signs, call emergency services. Emergency warning signs include: severe, constant chect pain or pressure; extreme difficulty breathing; severe, constant lightheadedness; serious disorientation or unresponsiveness; or blue-tinted face or lips.")
-                        .frame(height: 100)
+                        .frame(height: 200)
                         .font(.system(size: 20))
                 
                 NavigationLink(
-                    destination: Text("Screener Tool"),
+                    destination: CDCScreenerTool(),
                     label: {
                         ZStack{
                      

@@ -34,6 +34,13 @@ struct SelfCareDetailView: View {
     
   
     @State var showingDetail = false
+    @State var showingBodyCareDetail = false
+    @State var showingMentalHealthDetail = false
+    @State var showingShopWiseDetail = false
+    @State var showingWorkStrategiesDetail = false
+    @State var showingHomePlanDetail = false
+    @State var showingCovidContractionsDetail = false
+    
     
     var body: some View {
         ScrollView {
@@ -76,11 +83,11 @@ struct SelfCareDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingBodyCareDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingBodyCareDetail) {
+                            CareForBodySheetView()
                         }
                          
                             .padding()
@@ -122,11 +129,11 @@ struct SelfCareDetailView: View {
                         Text(cell.body)
                        
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingMentalHealthDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingMentalHealthDetail) {
+                            MentalHealthSheetView()
                         }
                          
                             .padding()
@@ -167,11 +174,11 @@ struct SelfCareDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingShopWiseDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingShopWiseDetail) {
+                            ShopWisleySheetView()
                         }
                          
                             .padding()
@@ -212,11 +219,11 @@ struct SelfCareDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingWorkStrategiesDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingWorkStrategiesDetail) {
+                            WorkStrategiesSheetView()
                         }
                          
                             .padding()
@@ -257,11 +264,11 @@ struct SelfCareDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingHomePlanDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingHomePlanDetail) {
+                            HouseHoldEmergencyPlanSheetView()
                         }
                          
                             .padding()
@@ -302,11 +309,11 @@ struct SelfCareDetailView: View {
                         Text(cell.body)
                 
                         VStack(alignment: .leading) {
-                            Button(action: {self.showingDetail.toggle()}, label: {
+                            Button(action: {self.showingCovidContractionsDetail.toggle()}, label: {
                             Text("Learn More")
                                 .fontWeight(.semibold)
-                        }).sheet(isPresented: $showingDetail) {
-                            WhatIsCovidDetailView()
+                        }).sheet(isPresented: $showingCovidContractionsDetail) {
+                            CovidContractionSheetView()
                         }
                          
                             .padding()

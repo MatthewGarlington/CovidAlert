@@ -10,7 +10,7 @@ import KingfisherSwiftUI
 
 struct StatenewsHorizontalViewCard: View {
     
-    @ObservedObject var vm = NewsDataViewModel()
+  //  @ObservedObject var vm = NewsDataViewModel()
  
     
 
@@ -23,7 +23,48 @@ struct StatenewsHorizontalViewCard: View {
     
     var body: some View {
         HStack(spacing: 40) {
-           
+         
+            VStack {
+                NavigationLink(
+                    destination: NewsDetailView(),
+                    label: {
+                        
+                        
+                        //         vm.news?.articles ?? []
+                        ZStack{
+                            
+                            Spacer()
+                                .frame(width: 450, height: 150)
+                                .background(Color.black)
+                                .cornerRadius(30)
+                                .shadow(radius: 4)
+             
+                      
+                    
+                            
+                            HStack {
+                               
+                                KFImage(URL(string: samplePhoto ))
+                                    .resizable()
+                                    .frame(width: 175 , height: 130 )
+                                    .cornerRadius(12)
+                                    .padding(.top)
+                            
+                                
+                                Text(description)
+                                    .frame(width: 150, height: 125, alignment: .center)
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundColor(.white)
+                                    .padding()
+                                
+                            }
+                        
+                        
+                            
+                        }
+                        
+                    })
+                
                 NavigationLink(
                     destination: NewsDetailView(),
                     label: {
@@ -64,6 +105,7 @@ struct StatenewsHorizontalViewCard: View {
                         
                     })
             }
+        }
             
         
         

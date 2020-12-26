@@ -36,10 +36,10 @@ class NewsDataViewModel: ObservableObject {
               
                 do {
                     
-                    self.news = try JSONDecoder().decode(News.self, from: data)
-      //              print(self.news)
+                    self.news = try JSONDecoder().decode(News?.self, from: data)
+                //   print(self.news)
             } catch let jsonError {
-               // print("Decoding failed for UserDetails", jsonError)
+              //  print("Decoding failed for NewsDetails", jsonError)
             }
            
                 }

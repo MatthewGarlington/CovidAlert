@@ -15,7 +15,7 @@ struct StateDataView: View {
    
     
  
-        let state: StateUS
+  //      let state: StateUS
     
 //    let stateDetailArray: [StateDetails] = [.init(state: "MD", positive: 200, inIcuCurrently: 200, death: 200, positiveIncrease: 13, deathIncrease: 25)]
 //    let state : State
@@ -29,9 +29,9 @@ struct StateDataView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
             
                     HStack {
-                        ForEach(0..<50, id: \.self) { statein in
+                        ForEach(vm.stateDetails, id: \.state) { statein in
                             NavigationLink(
-                                destination: StateDetailView(state: state),
+                                destination: StateDetailView(),
                                 label: {
                                
                              
@@ -48,7 +48,7 @@ struct StateDataView: View {
                                
                                    
                                     HStack(alignment: .bottom) {
-                                        Text("MD")
+                                        Text(statein.state)
                                         .font(.system(size: 16, weight: .semibold))
                                         .padding(.horizontal)
                                        
@@ -92,7 +92,7 @@ struct StateDataView_Previews: PreviewProvider {
     
     static var previews: some View {
         NavigationView {
-            StateDataView(state: .init(state: "MD"))
+            StateDataView()
     }
         HomeView()
     }

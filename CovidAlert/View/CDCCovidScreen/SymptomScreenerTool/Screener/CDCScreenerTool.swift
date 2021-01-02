@@ -27,12 +27,16 @@ struct CDCScreenerTool: View {
     }
 }
 
+
    
 struct ScreenerToolBody: View {
+    
+    
+    @State private var showNextPage: Bool = false
         var body: some View {
          
      
-           
+   
             VStack(alignment: .leading, spacing: 5) {
       
                 VStack(alignment: .leading, spacing: 2) {
@@ -57,8 +61,19 @@ struct ScreenerToolBody: View {
                     Text("By using this tool, you agree to its terms and that the company will not be liable for any harm relating to using it")
                         .frame(height: 100)
                 }
+                    
+                    
                 VStack {
-                    Button(action: {}, label: {
+                    
+                    NavigationLink(
+                        destination: EmergencyScrenerView(), isActive: $showNextPage,
+                        
+                        label: { Text("") }
+                        
+                    )
+                    Button(action: {
+                        self.showNextPage.toggle()
+                    }, label: {
                         ZStack {
                         Spacer()
                             .frame(width: 375, height: 50, alignment: .center)
@@ -79,6 +94,7 @@ struct ScreenerToolBody: View {
             }.padding()
         
         }
+        
 }
     
             
@@ -101,6 +117,8 @@ struct ScreenerHeaderView: View {
         
     }
 }
+
+
 
 struct CDCScreenerTool_Previews: PreviewProvider {
     static var previews: some View {

@@ -8,20 +8,20 @@
 import Foundation
 
 
-class StateDetailViewModel: ObservableObject {
+class MDDetailViewModel: ObservableObject {
    
     
     @Published var allStateDetails: AllStateDetails?
     
    
     
-    init(stateID: String) {
+    init() {
         
         
         
         //network code
         
-        let fixedURLString =  "https://api.covidtracking.com/v1/states/\(stateID.lowercased())/current.json"
+        let fixedURLString =  "https://api.covidtracking.com/v1/states/md/current.json"
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         
         

@@ -1,25 +1,18 @@
 //
-//  StateDetailView.swift
+//  MDDetailView.swift
 //  CovidAlert
 //
-//  Created by Matthew Garlington on 12/10/20.
+//  Created by Matthew Garlington on 12/27/20.
 //
 
 import SwiftUI
-import MapKit
 
 
-
-
-struct StateDetailView: View {
-    @ObservedObject var vm: StateDetailViewModel
+struct ALDetailView: View {
+    @ObservedObject var vm = ALDetailViewModel()
     
-    let state: StateUS
+
     
-    init(state: StateUS) {
-        self.state = state
-        self.vm = .init(stateID: state.state)
-    }
 
     
     var body: some View {
@@ -163,7 +156,7 @@ struct StateDetailView: View {
                             
                             })
                         StateNewsView()
-                    }.navigationTitle("Maryland")
+                    }.navigationTitle("Alabama")
                  
              
                     
@@ -174,7 +167,7 @@ struct StateDetailView: View {
         
             }  .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .bottom, endPoint: .top))
             .cornerRadius(7)
-        }.navigationBarTitle("Maryland", displayMode: .inline)
+        }.navigationBarTitle("Alabama", displayMode: .inline)
       
     }
 }
@@ -184,10 +177,12 @@ struct StateDetailView: View {
 
 
 
-struct StateDetailView_Previews: PreviewProvider {
+struct ALDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            StateDetailView(state: .init(state: "MD"))
+            ALDetailView()
         }
     }
 }
+
+

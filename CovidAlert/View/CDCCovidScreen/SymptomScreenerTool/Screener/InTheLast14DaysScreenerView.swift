@@ -13,6 +13,7 @@ struct InTheLast14DaysScreenerView: View {
     @State var isWithinSixFeetCovid : Bool = false
     @State var isMightHaveBeenExposedToCovid : Bool = false
     @State var isNoKnownExposure : Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
   
     @State private var didTap: Bool = false
     @State private var showNextPage: Bool = false
@@ -24,6 +25,7 @@ struct InTheLast14DaysScreenerView: View {
                 Text("In the last 14 days, did any of these apply to you?")
                     .font(.title)
                     .bold()
+                    .padding(.top)
                 Text("Check All That Apply")
                 VStack {
                     
@@ -49,6 +51,20 @@ struct InTheLast14DaysScreenerView: View {
                             self.didTap = true}
                         else {
                             self.didTap = true
+                        }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isLivedWithCovidPositivePerson == true {
+                            
+                            self.screenerStatus.isLivedWithCovidPositivePersonSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isLivedWithCovidPositivePersonSelected = false
                         }
                         
                       
@@ -105,6 +121,19 @@ struct InTheLast14DaysScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isWithinSixFeetCovid == true {
+                            
+                            self.screenerStatus.isWithinSixFeetCovidSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isWithinSixFeetCovidSelected = false
+                        }
                         
                         
                         
@@ -157,6 +186,20 @@ struct InTheLast14DaysScreenerView: View {
                             self.didTap = true}
                         else {
                             self.didTap = true
+                        }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isCaredForCovidPositivePerson == true {
+                            
+                            self.screenerStatus.isCaredForCovidPositivePersonSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isCaredForCovidPositivePersonSelected = false
                         }
                         
                         
@@ -216,6 +259,19 @@ struct InTheLast14DaysScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isMightHaveBeenExposedToCovid == true {
+                            
+                            self.screenerStatus.isMightHaveBeenExposedToCovidSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isMightHaveBeenExposedToCovidSelected = false
+                        }
                         
                         
                         
@@ -272,6 +328,20 @@ struct InTheLast14DaysScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isNoKnownExposure == true {
+                            
+                            self.screenerStatus.isNoKnownExposureSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isNoKnownExposureSelected = false
+                        }
+                        
                         
                         
                         
@@ -299,7 +369,7 @@ struct InTheLast14DaysScreenerView: View {
                     
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: LiveInLongTermCareView(), isActive: $showNextPage,
+                        destination: LiveInLongTermCareView(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         
@@ -335,9 +405,13 @@ struct InTheLast14DaysScreenerView: View {
                         }
                     })
                 }
-            }.padding()
+            }
+        }.padding(.bottom)
+        .padding(.top)
+                                            
+            
             .background(Color(.init(white: 0.85, alpha: 1)))
-        }
+
         
     }
     
@@ -347,6 +421,6 @@ struct InTheLast14DaysScreenerView: View {
 
 struct InTheLast14DaysScreenerView_Previews: PreviewProvider {
     static var previews: some View {
-        InTheLast14DaysScreenerView()
+        InTheLast14DaysScreenerView(screenerStatus: ScreenerStatus.init())
     }
 }

@@ -7,6 +7,49 @@
 
 import SwiftUI
 
+class ScreenerStatus: ObservableObject {
+    @Published var IsPositiveSelected: Bool = false
+    @Published var IsNegativeSelected: Bool = false
+    @Published var isNonResultsSelected: Bool = false
+    @Published var isNoTestSelected: Bool = false
+    @Published var isFeverOrChillsSelected: Bool = false
+    @Published var isDifficultyBreathingSelected: Bool = false
+    @Published var isNewCoughSelected: Bool = false
+    @Published var isLossOfSmellSelected: Bool = false
+    @Published var isSoreThroatSelected: Bool = false
+    @Published var isVomittingSelected: Bool = false
+    @Published var isFatigueSelected: Bool = false
+    @Published var isNoneOfTheseSymptomsSelected: Bool = false
+    @Published var isLittleImpactSelected: Bool = false
+    @Published var isSomeImpactSelected: Bool = false
+    @Published var isMajorImpactSelected: Bool = false
+
+
+    @Published var isObesitySelected: Bool = false
+    @Published var isSmokerorVapingSelected: Bool = false
+    @Published var isPregnantSelected: Bool = false
+    @Published var isDiabetesSelected: Bool = false
+    @Published var isChronicLungProblemsSelected: Bool = false
+    @Published var isWeakendImmuneSystemSelected: Bool = false
+    @Published var isStrokeSelected: Bool = false
+    @Published var isSickleCellSelected: Bool = false
+    @Published var isHeartConditionSelected: Bool = false
+    @Published var isNoCombrobitiesSelected: Bool = false
+    
+    @Published var isLivedWithCovidPositivePersonSelected: Bool = false
+    @Published var isCaredForCovidPositivePersonSelected: Bool = false
+    @Published var isWithinSixFeetCovidSelected: Bool = false
+    @Published var isMightHaveBeenExposedToCovidSelected: Bool = false
+    @Published var isNoKnownExposureSelected: Bool = false
+    
+    @Published var isLiveInLongtermCareSelected: Bool = false
+    @Published var isDontLiveInLongTermCareSelected: Bool = false
+    
+    @Published var isDidWorkOrVolunteerSelected: Bool = false
+    @Published var isDidNotWorkOrVolunteerSelected: Bool = false
+    
+
+}
 struct RecentTestingScreenerView: View {
     @State private var showNextPage: Bool = false
     @State var isPositive : Bool = false
@@ -14,6 +57,7 @@ struct RecentTestingScreenerView: View {
     @State var isNoResults : Bool = false
     @State var isNOTest : Bool = false
     @State private var didTap: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     var body: some View {
        
@@ -81,6 +125,24 @@ struct RecentTestingScreenerView: View {
                         else {
                             self.didTap = false
                         }
+                        
+                        // Action to Add point to Score System depending on What is selected
+                        if self.isPositive == true {
+                           
+                            self.screenerStatus.IsPositiveSelected = true
+                            
+                      
+                        }
+                        
+                        else {
+                            
+                            self.screenerStatus.IsPositiveSelected = false
+                            
+                        }
+                      
+                        
+                       
+                        
                         
                         
                         
@@ -162,7 +224,17 @@ struct RecentTestingScreenerView: View {
                             self.didTap = false
                         }
                         
+                        // Action to Add point to Score System depending on What is selected
                         
+                        if self.isNegative {
+                            
+                            self.screenerStatus.IsNegativeSelected = true
+                            
+                        }
+                        
+                        else {
+                            self.screenerStatus.IsNegativeSelected = false
+                        }
                         
                         
                     }, label: {
@@ -246,6 +318,13 @@ struct RecentTestingScreenerView: View {
                             self.didTap = false
                         }
                         
+                        if self.isNoResults == true {
+                            
+                            self.screenerStatus.isNonResultsSelected = true
+                        }
+                        else {
+                            self.screenerStatus.isNonResultsSelected = false
+                        }
                         
                         
                         
@@ -329,6 +408,20 @@ struct RecentTestingScreenerView: View {
                         }
                         
                         
+                        // Action to add point to screener score
+                        
+                        if self.isNOTest == true {
+                            
+                            self.screenerStatus.isNoTestSelected = true
+                        }
+                        
+                        else {
+                            
+                            self.screenerStatus.isNoTestSelected = false
+                        }
+                        
+                        
+                        
                         
                         
                     }, label: {
@@ -354,7 +447,7 @@ struct RecentTestingScreenerView: View {
                     })
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: SymptomCheckerScreenerView(), isActive: $showNextPage,
+                        destination: SymptomCheckerScreenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         
@@ -383,6 +476,7 @@ struct RecentTestingScreenerView: View {
                             HStack {
                                 Text("Next")
                                     .foregroundColor(.white)
+                                
                             }
                             
                             
@@ -396,7 +490,9 @@ struct RecentTestingScreenerView: View {
 }
 
 struct RecentTestingScreenerView_Previews: PreviewProvider {
+    
+  
     static var previews: some View {
-        RecentTestingScreenerView()
-    }
+        RecentTestingScreenerView(screenerStatus: ScreenerStatus.init())
+}
 }

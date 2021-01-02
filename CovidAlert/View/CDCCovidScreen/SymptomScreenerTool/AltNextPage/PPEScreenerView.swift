@@ -13,6 +13,7 @@ struct PPEScreenerView: View {
     @State private var didTap: Bool = false
     @State private var showNextPage: Bool = false
     @State private var showEmergencyPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     
     var body: some View {
@@ -179,7 +180,7 @@ struct PPEScreenerView: View {
                 VStack{
              // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: AgeScreenerView(), isActive: $showNextPage,
+                        destination: AgeScreenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         
@@ -236,6 +237,6 @@ struct PPEScreenerView: View {
 
 struct PPEScreenerView_Previews: PreviewProvider {
     static var previews: some View {
-        PPEScreenerView()
+        PPEScreenerView(screenerStatus: ScreenerStatus.init())
     }
 }

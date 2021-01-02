@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabHomeView: View {
     
-  
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     @State private var selectedTab = 0
     
@@ -43,7 +43,7 @@ struct TabHomeView: View {
                 }
 //                .tag(1)
 //                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
-            CDCHomeView()
+            CDCHomeView(screenerStatus: screenerStatus)
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Screener")
@@ -71,7 +71,7 @@ struct TabHomeView: View {
 struct TabHomeView_Previews: PreviewProvider {
     static var previews: some View {
 
-        TabHomeView()
+        TabHomeView(screenerStatus: ScreenerStatus.init())
         
     }
 }

@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct AgeScreenerView: View {
     
     @State var isUnder18Checked : Bool = false
@@ -15,6 +17,7 @@ struct AgeScreenerView: View {
     @State private var didTap: Bool = false
     @State private var showNextPage: Bool = false
     @State private var showTooYoungPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     var body: some View {
         
@@ -53,7 +56,7 @@ struct AgeScreenerView: View {
                     }
                     
                     
-                    // Action to Display Check Mark when Udner 18 button is pressed
+                    // Action to Display Check Mark when Under 18 button is pressed
                     
                     if self.is64checked || self.isOver65Checked == true {
                     }
@@ -72,6 +75,15 @@ struct AgeScreenerView: View {
                     else {
                         self.didTap = false
                     }
+                    
+                    
+                    
+           
+           
+                    
+            
+                    
+                    
                     
                     
                     
@@ -235,7 +247,7 @@ struct AgeScreenerView: View {
             VStack{
                 // These are the two views that will be the destination depending on which box is checked
                 NavigationLink(
-                    destination: RecentTestingScreenerView(), isActive: $showNextPage,
+                    destination: RecentTestingScreenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
                     
                     label: { Text("") }
                     
@@ -294,6 +306,6 @@ struct AgeScreenerView: View {
 
 struct AgeScreenerView_Previews: PreviewProvider {
     static var previews: some View {
-        AgeScreenerView()
+        AgeScreenerView(screenerStatus: ScreenerStatus.init())
     }
 }

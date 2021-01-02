@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CDCScreenerTool: View {
     var body: some View {
-        NavigationView {
+     
             ScrollView{
                 VStack(spacing: 1){
                     ScreenerHeaderView()
@@ -18,11 +18,11 @@ struct CDCScreenerTool: View {
                         )
                         .listRowInsets(EdgeInsets())
                     
-                    ScreenerToolBody()
+                    ScreenerToolBody(screenerStatus: ScreenerStatus.init())
                 }
                 
                 
-            }
+            
         }
     }
 }
@@ -33,6 +33,7 @@ struct ScreenerToolBody: View {
     
     
     @State private var showNextPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
         var body: some View {
          
      
@@ -66,7 +67,7 @@ struct ScreenerToolBody: View {
                 VStack {
                     
                     NavigationLink(
-                        destination: EmergencyScrenerView(), isActive: $showNextPage,
+                        destination: EmergencyScrenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         

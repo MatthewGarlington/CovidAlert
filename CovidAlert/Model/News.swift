@@ -10,14 +10,17 @@ import SwiftUI
 
 struct News: Decodable, Hashable {
     
+   
     let articles: [Articles]
 
     
 }
 
 struct Articles: Decodable, Hashable {
+   
     
-  
+    
+    
     let author: String?
     let title: String
     let description: String

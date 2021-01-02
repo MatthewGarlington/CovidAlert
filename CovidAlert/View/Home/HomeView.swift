@@ -13,11 +13,14 @@ extension Color {
 
 struct HomeView: View {
     
-    @ObservedObject var country = CurrentCountryData()
+ //   @ObservedObject var country = CurrentCountryData()
     
     @ObservedObject var tweetsvm = TwitterViewModel()
     
-    @ObservedObject var vm2 = OverDoseDeathViewModel()
+//    @ObservedObject var vm2 = OverDoseDeathViewModel()
+    
+    @ObservedObject var vm = NewYorkTimesViewModel()
+ 
     
 //    @ObservedObject var vm: StateDetailViewModel
     
@@ -71,7 +74,7 @@ struct HomeView: View {
                      .cornerRadius(12)
                       .padding(16)
                  
-                    StateDataView(state: state )
+                    StateDataView()
                     
                     VStack {
                    

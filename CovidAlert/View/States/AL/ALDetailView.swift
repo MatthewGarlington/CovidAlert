@@ -32,7 +32,7 @@ struct ALDetailView: View {
                             
                             
                             HStack{
-//                                ForEach(0..<1, id: \.self) { num in
+
                                
                                 LazyVStack {
                                 
@@ -48,7 +48,7 @@ struct ALDetailView: View {
                                         .font(.system(size: 20))
                                         .font(.headline)
                                             Spacer()
-                                            Text("\(vm.allStateDetails?.death.formatNumber() ?? "" )")
+                                            Text("\(vm.allStateDetails?.death.formatNumber() ?? "NA" )")
                                         .font(.system(size: 35))
                                         .fontWeight(.bold)
                                                 
@@ -68,7 +68,7 @@ struct ALDetailView: View {
                                         .font(.system(size: 20))
                                         .font(.headline)
                                             Spacer()
-                                            Text("\(vm.allStateDetails?.positive.formatNumber() ?? "")")
+                                            Text("\(vm.allStateDetails?.positive.formatNumber() ?? "NA")")
                                         .font(.system(size: 35))
                                         .fontWeight(.bold)
                                         }
@@ -86,7 +86,7 @@ struct ALDetailView: View {
                                         .font(.system(size: 20))
                                         .font(.headline)
                                             Spacer()
-                                            Text("\(vm.allStateDetails?.deathIncrease.formatNumber() ?? "")")
+                                            Text("\(vm.allStateDetails?.deathIncrease.formatNumber() ?? "Na")")
                                         .font(.system(size: 35))
                                         .fontWeight(.bold)
                                         }
@@ -105,7 +105,7 @@ struct ALDetailView: View {
                                         .font(.system(size: 18))
                                         .font(.headline)
                                             Spacer()
-                                            Text("\(vm.allStateDetails?.hospitalizedIncrease.formatNumber() ?? "")")
+                                            Text("\(vm.allStateDetails?.hospitalizedIncrease.formatNumber() ?? "NA")")
                                         .font(.system(size: 35))
                                         .fontWeight(.bold)
                                         }
@@ -123,7 +123,7 @@ struct ALDetailView: View {
                                         .font(.system(size: 18))
                                         .font(.headline)
                                             Spacer()
-                                            Text("\(vm.allStateDetails?.positiveIncrease.formatNumber() ?? "")")
+                                            Text("\(vm.allStateDetails?.positiveIncrease.formatNumber() ?? "NA")")
                                         .font(.system(size: 35))
                                         .fontWeight(.bold)
                                         }
@@ -140,7 +140,7 @@ struct ALDetailView: View {
                                         .font(.system(size: 20))
                                         .font(.headline)
                                             Spacer()
-                                            Text("NA")
+                                            Text("\(vm.allStateDetails?.hospitalizedCurrently.formatNumber() ?? "NA")")
                                         .font(.system(size: 35))
                                         .fontWeight(.bold)
                                         }
@@ -151,7 +151,6 @@ struct ALDetailView: View {
                             
                             
                             }.padding(.top)
-                            
 
                             
                             })

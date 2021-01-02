@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct CDCHomeView: View {
+    @ObservedObject var screenerStatus: ScreenerStatus
     var body: some View {
      
       
             VStack {
-            TopInfoView()
+            TopInfoView(screenerStatus: screenerStatus)
             ListView()
             }
         
@@ -23,11 +24,12 @@ struct CDCHomeView: View {
 
 //Mark: - New .swift file.
 struct TopInfoView: View {
+    @ObservedObject var screenerStatus: ScreenerStatus
     var body: some View {
         VStack(alignment: .leading) {
         TopLogoView()
         HeaderView()
-        VButtons()
+        VButtons(screenerStatus: screenerStatus)
         }
         .padding()
         .background(
@@ -92,26 +94,47 @@ struct TextAndImageInfoView: View {
 //Mark: - New .swift file.
 struct VButtons: View {
     
-
-    
+    @State private var showNextPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
+    @State private var didTap: Bool = true
     var body: some View {
         VStack {
            
-            Button(action: {
-            // do stuff
-    
-//            CDCScreenerTool()
+            // These are the two views that will be the destination depending on which box is checked
+            NavigationLink(
+                destination: CDCScreenerTool(), isActive: $showNextPage,
                 
-            }) {
-                Text("Start Screening")
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 50, alignment: .center)
-                    .background(Color.blue)
-                    .cornerRadius(12)
-                    .padding(.vertical, 8)
-                   
-            }
+                label: { Text("") }
+                
+            )
+            Button(action: {
+                
+                if self.showNextPage == false {
+                    self.showNextPage = true
+                }
+                else {
+                    
+                }
+       
+             
+
+            }, label: {
+                
+                
+                
+                ZStack {
+                    Spacer()
+                        .frame(width: 375, height: 50, alignment: .center)
+                        .background(didTap ? Color.blue : Color.gray)
+                        .cornerRadius(10)
+                    HStack {
+                        Text("Screener Tool")
+                            .foregroundColor(.white)
+                    }
+                    
+                    
+                }
+            })
         }
     }
 }
@@ -121,7 +144,7 @@ struct VButtons: View {
 struct CDCHomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        CDCHomeView()
+            CDCHomeView(screenerStatus: ScreenerStatus.init())
         }
         
     }

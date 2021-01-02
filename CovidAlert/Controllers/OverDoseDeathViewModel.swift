@@ -11,7 +11,7 @@ import Foundation
 class OverDoseDeathViewModel: ObservableObject {
    
     
-    @Published var overDosed: OverDose?
+    @Published var dataResponse: DataResponse?
     
    
     
@@ -30,8 +30,8 @@ class OverDoseDeathViewModel: ObservableObject {
           
             do {
                 
-                self.overDosed = try JSONDecoder().decode(OverDose.self, from: data)
-               print(self.overDosed!)
+                self.dataResponse = try JSONDecoder().decode(DataResponse.self, from: data)
+               print(self.dataResponse!)
         } catch let jsonError {
             print("Decoding failed for OverDose", jsonError)
         }

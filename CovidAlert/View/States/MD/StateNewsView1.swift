@@ -9,17 +9,27 @@ import SwiftUI
 import KingfisherSwiftUI
 
 
+
 struct StateNewsView: View {
+   
+
+let title = "Coronavirus in N.Y.: Latest Updates"
+let description = "Upper Manhattan and the southern part of Staten Island face stricter restrictions as officials battle a second wave of the outbreak."
+let SampleurlToImage = "https://static01.nyt.com/images/2020/11/24/nyregion/24nytoday-photo/24nytoday-photo-facebookJumbo.jpg"
     
-    let description = "Upper Manhattan and the southern part of Staten Island face stricter restrictions as officials battle a second wave of the outbreak."
-    let title = "Coronavirus in N.Y.: Latest Updates"
     
-    let samplePhoto = "https://static01.nyt.com/images/2020/11/24/nyregion/24nytoday-photo/24nytoday-photo-facebookJumbo.jpg"
+
+    
+    
+@ObservedObject var vm = StateNewsDataViewModel()
+   
+@ObservedObject var vm2 = MDDetailViewModel()
            
     var body: some View {
     
         VStack {
-        Text("Maryland News")
+    
+            Text("State News")
             .fontWeight(.bold)
             .font(.title)
             .foregroundColor(.black)
@@ -40,7 +50,7 @@ struct StateNewsView: View {
                             
                             VStack(spacing: 20) {
                                 
-                                KFImage(URL(string: samplePhoto))
+                                KFImage(URL(string: SampleurlToImage))
                                     .resizable()
                                     .frame(width: 390, height: 230)
                                 

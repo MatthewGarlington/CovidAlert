@@ -12,12 +12,15 @@ struct VolunteerHospitalScreenerView: View {
     @State var isDidWorkOrVolunteer : Bool = false
     @State var isDidNotWorkOrVolunteer : Bool = false
     @State private var didTap: Bool = false
-    @State private var showNextPage: Bool = false
-    @State private var showEmergencyPage: Bool = false
+    @State private var showContactHealthcare: Bool = false
+    @State private var showContactWork: Bool = false
+    @State private var showKeepPhysicalDistancing: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     
     var body: some View {
-       
+    
+        
         VStack {
        
             VStack(alignment: .leading, spacing: 10) {
@@ -81,6 +84,21 @@ struct VolunteerHospitalScreenerView: View {
                         else {
                             self.didTap = false
                         }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isDidWorkOrVolunteer == true {
+                            
+                            self.screenerStatus.isDidWorkOrVolunteerSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isDidWorkOrVolunteerSelected = false
+                        }
+                        
                         
                         
                         
@@ -152,6 +170,21 @@ struct VolunteerHospitalScreenerView: View {
                         else {
                             self.didTap = false
                         }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isDidNotWorkOrVolunteer == true {
+                            
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected = false
+                        }
+                        
                     }, label: {
                         ZStack {
                             Spacer()
@@ -175,48 +208,208 @@ struct VolunteerHospitalScreenerView: View {
                     })
                     Spacer()
                     
+//                    ZStack {
+//                        Spacer()
+//                            .frame(width: 375, height: 200, alignment: .center)
+//                            .background(Color(.init(white: 1, alpha: 1)))
+//                            .cornerRadius(15)
+//                       VStack {
+//                            Text("Is Positive is \(self.screenerStatus.IsPositiveSelected.description)")
+//                                .bold()
+//                                .foregroundColor(.primary)
+//                                .frame(width: 250)
+//
+//                        Text("Is Negative is \(self.screenerStatus.IsNegativeSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        Text("Is No Test is \(self.screenerStatus.isNoTestSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        Text("Is No Results is \(self.screenerStatus.isNonResultsSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        Text("Is Worked with Covid is \(self.screenerStatus.isDidWorkOrVolunteerSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        Text("Is Did Not Worked with Covid is \(self.screenerStatus.isDidNotWorkOrVolunteerSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 300)
+//                        Text("Is Some Impact \(self.screenerStatus.isSomeImpactSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        Text("Is Major Impact \(self.screenerStatus.isMajorImpactSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        Text("Is No Impact \(self.screenerStatus.isLittleImpactSelected.description)")
+//                            .bold()
+//                            .foregroundColor(.primary)
+//                            .frame(width: 250)
+//                        }
+//
+//
+//                    }.padding()
+                    
                 }
+            
                 
                 
                 VStack{
              // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: AgeScreenerView(), isActive: $showNextPage,
+                        destination: ContactHealthCareResultsView(), isActive: $showContactHealthcare,
                         
                         label: { Text("") }
                         
                     )
                     
                     NavigationLink(
-                        destination: PPEScreenerView(), isActive: $showEmergencyPage,
+                        destination: ContactYourWorkResultsView() , isActive: $showContactWork,
+                        
+                        label: { Text("") }
+                        
+                    )
+                    
+                    NavigationLink(
+                        destination: ContinuePhysicalDistancingResultsView(), isActive: $showKeepPhysicalDistancing,
                         
                         label: { Text("") }
                         
                     )
                     
            //This is the nevigation button view at the button
+                  
                     Button(action: {
+                       
+                        // If You did work at the hospital and had symptoms Then this will show the contact work page
+                        
+                        // show contact healthcare professional page if there are selected
                         
                         if
+                            self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.IsPositiveSelected == true {
                             
-                           self.isDidNotWorkOrVolunteer == true {
-                          
-                            self.showNextPage = true }
-                        else {
-                            self.showNextPage = false
-                            
+                            self.showContactWork = true
                         }
+                        
+                        else if
+                            
+                             self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.isSomeImpactSelected || self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.isMajorImpactSelected == true {
+                            
+                            self.showContactWork = true
+                        
+                        }
+                        
+                        else if
+                            
+                            self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.isLiveInLongtermCareSelected || self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.isMightHaveBeenExposedToCovidSelected == true {
+                            
+                            self.showContactWork = true }
+               
+                        else if
+                            
+                            self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.isLivedWithCovidPositivePersonSelected || self.screenerStatus.isDidWorkOrVolunteerSelected && self.screenerStatus.isCaredForCovidPositivePersonSelected == true {
+                            
+                            self.showContactWork = true }
+               
+                            else {
+                          
+                                self.showContactWork = false
+                        }
+                        
+                    
+                        
+
                       
+                    
+                        
+              
+                  
+                        
+                        
+                     
+                     
+                        
+                       
+                        // show contact healthcare professional page if there are selected
+                        
+                        
                         if
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.IsPositiveSelected == true {
                             
-                           self.isDidWorkOrVolunteer == true {
-                          
-                            self.showEmergencyPage = true }
-                        else {
-                            self.showEmergencyPage = false
-                            
+                            self.showContactHealthcare = true
                         }
+                        
+                        else if
+                            
+                             self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.isSomeImpactSelected || self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.isMajorImpactSelected == true {
+                            
+                            self.showContactHealthcare = true
+                        
+                        }
+                        
+                        else if
+                            
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.isLiveInLongtermCareSelected || self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.isMightHaveBeenExposedToCovidSelected == true {
+                            
+                            self.showContactHealthcare = true }
+               
+                        else if
+                            
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.isLivedWithCovidPositivePersonSelected || self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.isCaredForCovidPositivePersonSelected == true {
+                            
+                            self.showContactHealthcare = true }
+               
+                            else {
+                          
+                                self.showContactHealthcare = false
+                        }
+                        
                       
+                        
+                        // Show No test needed/ physical distancing screen if these are selected
+                        
+                        
+                  
+                  
+                        
+                        
+                        if
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected && self.screenerStatus.IsNegativeSelected == true {
+                            
+                            self.showKeepPhysicalDistancing = true
+                        }
+                        
+                        else if
+                            
+                             self.screenerStatus.isNonResultsSelected && self.screenerStatus.isNoneOfTheseSymptomsSelected || self.screenerStatus.isNonResultsSelected && self.screenerStatus.isNoneOfTheseSymptomsSelected == true {
+                            
+                            self.showKeepPhysicalDistancing = true
+                        
+                        }
+                        
+                        else if
+                            
+                            self.screenerStatus.isNoTestSelected && self.screenerStatus.isNoneOfTheseSymptomsSelected || self.screenerStatus.isNoTestSelected && self.screenerStatus.isLittleImpactSelected == true {
+                            
+                            self.showKeepPhysicalDistancing = true }
+               
+                     
+                            else {
+                          
+                                self.showKeepPhysicalDistancing = false
+                        }
+                        
+
+                        
+                        
+                      
+                
                     }, label: {
                         
                         
@@ -239,8 +432,11 @@ struct VolunteerHospitalScreenerView: View {
                 
                 
             }.padding(.bottom)
+        .padding(.top)
+                                            
             
             .background(Color(.init(white: 0.85, alpha: 1)))
+          
         }
         
     
@@ -248,6 +444,6 @@ struct VolunteerHospitalScreenerView: View {
 
 struct VolunteerHospitalScreenerView_Previews: PreviewProvider {
     static var previews: some View {
-        VolunteerHospitalScreenerView()
+        VolunteerHospitalScreenerView(screenerStatus: ScreenerStatus.init())
     }
 }

@@ -7,14 +7,58 @@
 
 import SwiftUI
 
-struct NYTimes: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+
+struct NYTimes: Decodable, Hashable {
+    
+   
+    let status: String?
+    let copyright: String?
+    let response: Response
+
+    
 }
 
-struct NYTimes_Previews: PreviewProvider {
-    static var previews: some View {
-        NYTimes()
-    }
+struct Response: Decodable, Hashable {
+    
+    let docs: [Docs]
+    
 }
+
+
+struct Docs: Decodable, Hashable {
+   
+    
+    
+    let abstract: String?
+    let web_url: String?
+    let snippet: String?
+    let lead_paragraph: String?
+    let headline: Headline
+    let multimedia: [Multimedia]
+    let byline: Byline
+
+ 
+    
+}
+
+struct Byline: Decodable, Hashable {
+    
+    let original: String?
+}
+
+
+
+struct Headline: Decodable, Hashable {
+    
+    let main: String?
+    let print_headline: String?
+}
+
+
+
+struct Multimedia: Decodable, Hashable {
+
+    let url: String
+}
+
+

@@ -11,7 +11,7 @@ import SwiftUI
 struct CovidAlertApp: App {
     var body: some Scene {
         WindowGroup {
-            TabHomeView()
+            TabHomeView(screenerStatus: ScreenerStatus.init())
         }
     }
 }

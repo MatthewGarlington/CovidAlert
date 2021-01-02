@@ -9,7 +9,7 @@ import SwiftUI
 import KingfisherSwiftUI
 
 struct StatNewsLargeCard: View {
-   // @ObservedObject var vm = NewsDataViewModel()
+    @ObservedObject var vm = NewYorkTimesViewModel()
  
     
 
@@ -26,11 +26,11 @@ struct StatNewsLargeCard: View {
                     label: {
                         
                         
-                        //         vm.news?.articles ?? []
+                   
                         ZStack{
                             
                             Spacer()
-                                .frame(width: 450, height: 550)
+                                .frame(width: 400, height: 550)
                                 .background(Color.black)
                                 .cornerRadius(40)
                                 .shadow(radius: 4)
@@ -40,7 +40,7 @@ struct StatNewsLargeCard: View {
                                 
                                  KFImage(URL(string: samplePhoto ))
                                      .resizable()
-                                     .frame(width: 400 , height: 250 )
+                                     .frame(width: 385 , height: 200 )
                                      .cornerRadius(12)
                                      .padding(.top)
                              
@@ -51,8 +51,8 @@ struct StatNewsLargeCard: View {
                                 VStack(alignment: .center) {
                               
                                 HStack(alignment: .firstTextBaseline) {
-                                    Text(title)
-                                        .frame(width: 300, height: 50, alignment: .center)
+                                    Text(vm.nytimesnews?.response.docs[7].headline.main ?? title)
+                                        .frame(width: 350, height: 100, alignment: .center)
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.white)
                                         .padding(.top)
@@ -64,7 +64,7 @@ struct StatNewsLargeCard: View {
                                 }
                                
                            
-                                Text(description)
+                                Text(vm.nytimesnews?.response.docs[7].snippet ?? description)
                                     .frame(width: 350, height: 200, alignment: .center)
                                     .font(.system(size: 17, weight: .semibold))
                                     .foregroundColor(.white)

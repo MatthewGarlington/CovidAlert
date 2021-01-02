@@ -18,6 +18,7 @@ struct SymptomCheckerScreenerView: View {
     @State var isFatigue : Bool = false
     @State var isNoneOfThese : Bool = false
     @State private var didTap: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     var body: some View {
        
@@ -46,17 +47,7 @@ struct SymptomCheckerScreenerView: View {
                        
                         
                         
-                        // Action to Display Check Mark when  button is pressed
-
-//                        if self.isDifficultyBreathing || self.isVomitting || self.isFatigue || self.isNewCough || self.isLossOfSmell || self.isNoneOfThese || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//
-//                            self.isFeverOrChills.toggle()
-//                        }
-
+            
                         
                         
                         // Tap Action for responding Next button
@@ -69,8 +60,21 @@ struct SymptomCheckerScreenerView: View {
                         }
                         
                       
-                       
+                        // Action to Add point to Score System depending on What is selected
                         
+                        if
+                            self.isFeverOrChills  == true {
+                            
+                            self.screenerStatus.isFeverOrChillsSelected = true
+                        }
+                        
+                        else {
+                            
+                            self.screenerStatus.isFeverOrChillsSelected = false
+                        }
+                        
+                        
+                      
                         
                         
                         
@@ -102,7 +106,7 @@ struct SymptomCheckerScreenerView: View {
                     Button(action: {
                         
                         
-                 //Toggle of other checked items upon click
+                 //Toggle off other checked items upon click
                         
                         if self.isDifficultyBreathing == false {
                             
@@ -113,16 +117,7 @@ struct SymptomCheckerScreenerView: View {
                             self.isDifficultyBreathing.toggle()
                         }
                        
-                        // Action to Display Check Mark when  button is pressed
-                        
-//                        if self.isFeverOrChills || self.isVomitting || self.isFatigue || self.isNewCough || self.isLossOfSmell || self.isNoneOfThese || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isDifficultyBreathing.toggle()
-//                        }
-//
+   
                         
                         // Tap Action for responding Next button
                         if
@@ -133,6 +128,18 @@ struct SymptomCheckerScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action to Add point to Score System depending on What is selected
+                        
+                        if
+                            self.isDifficultyBreathing  == true {
+                            
+                            self.screenerStatus.isDifficultyBreathingSelected = true
+                         }
+                         
+                         else {
+                             
+                             self.screenerStatus.isDifficultyBreathingSelected = false
+                         }
                         
                         
                         
@@ -173,17 +180,7 @@ struct SymptomCheckerScreenerView: View {
                        
                         
                         
-                        // Action to Display Check Mark when  button is pressed
-                        
-//                        if self.isDifficultyBreathing || self.isVomitting || self.isFatigue || self.isFeverOrChills || self.isLossOfSmell || self.isNoneOfThese || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isNewCough.toggle()
-//                        }
-//
-//
+               
                         // Tap Action for responding Next button
                         
                         if
@@ -193,6 +190,19 @@ struct SymptomCheckerScreenerView: View {
                         else {
                             self.didTap = true
                         }
+                        
+                        // Action to Add point to Score System depending on What is selected
+                        
+                        if
+                            self.isNewCough  == true {
+                            
+                            self.screenerStatus.isNewCoughSelected = true
+                         }
+                         
+                         else {
+                             
+                            self.screenerStatus.isNewCoughSelected = false
+                         }
                         
                         
                         
@@ -238,18 +248,7 @@ struct SymptomCheckerScreenerView: View {
                 
                         
                         
-                        // Action to Display Check Mark when  button is pressed
-                        
-//                        if self.isFeverOrChills || self.isVomitting || self.isFatigue || self.isNewCough || self.isDifficultyBreathing || self.isNoneOfThese || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isLossOfSmell.toggle()
-//                        }
-//
-//
-                        
+                
                         // Tap Action for responding Next button
                         
                         if
@@ -260,7 +259,18 @@ struct SymptomCheckerScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action to Add point to Score System depending on What is selected
                         
+                        if
+                            self.isLossOfSmell  == true {
+                            
+                            self.screenerStatus.isLossOfSmellSelected = true
+                         }
+                         
+                         else {
+                             
+                             self.screenerStatus.isLossOfSmellSelected = false
+                         }
                         
                         
                     }, label: {
@@ -302,19 +312,7 @@ struct SymptomCheckerScreenerView: View {
                 
                         
                         
-                        // Action to Display Check Mark when  button is pressed
-                        
-                        
-//
-//                        if self.isFeverOrChills || self.isVomitting || self.isLossOfSmell || self.isNewCough || self.isDifficultyBreathing || self.isNoneOfThese || self.isFatigue == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isSoreThroat.toggle()
-//                        }
-//
-//
+           
                         
                         
                         // Tap Action for responding Next button
@@ -327,8 +325,18 @@ struct SymptomCheckerScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action to Add point to Score System depending on What is selected
                         
-                        
+                        if
+                            self.isSoreThroat  == true {
+                            
+                            self.screenerStatus.isSoreThroatSelected = true
+                         }
+                         
+                         else {
+                             
+                             self.screenerStatus.isSoreThroatSelected = false
+                         }
                         
                     }, label: {
                         ZStack {
@@ -368,22 +376,7 @@ struct SymptomCheckerScreenerView: View {
                         }
                        
                         
-                        
-                        // Action to Display Check Mark when  button is pressed
-                        
-                        
-                        
-//                        if self.isFeverOrChills || self.isNoneOfThese || self.isFatigue || self.isNewCough || self.isDifficultyBreathing || self.isLossOfSmell || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isVomitting.toggle()
-//                        }
-//
-//
-//
-//
+                 
                         // Tap Action for responding Next button
                         
                         if
@@ -394,7 +387,18 @@ struct SymptomCheckerScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action to Add point to Score System depending on What is selected
                         
+                        if
+                            self.isVomitting  == true {
+                            
+                            self.screenerStatus.isVomittingSelected = true
+                         }
+                         
+                         else {
+                             
+                             self.screenerStatus.isVomittingSelected = false
+                         }
                         
                         
                     }, label: {
@@ -435,21 +439,7 @@ struct SymptomCheckerScreenerView: View {
                        
                 
                         
-                        
-                        // Action to Display Check Mark when  button is pressed
-                        
-                        
-                        
-                        
-//                        if self.isFeverOrChills || self.isNoneOfThese || self.isVomitting || self.isNewCough || self.isDifficultyBreathing || self.isLossOfSmell || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isFatigue.toggle()
-//                        }
-//
-//
+                    
                         
                         // Tap Action for responding Next button
                         
@@ -461,6 +451,18 @@ struct SymptomCheckerScreenerView: View {
                             self.didTap = true
                         }
                         
+                        // Action to Add point to Score System depending on What is selected
+                        
+                        if
+                            self.isFatigue  == true {
+                            
+                            self.screenerStatus.isFatigueSelected = true
+                         }
+                         
+                         else {
+                             
+                             self.screenerStatus.isFatigueSelected = false
+                         }
                         
                         
                         
@@ -502,21 +504,7 @@ struct SymptomCheckerScreenerView: View {
                        
                 
                         
-                        
-                        // Action to Display Check Mark when  button is pressed
-                        
-                        
-                        
-//
-//                        if self.isFeverOrChills || self.isVomitting || self.isFatigue || self.isNewCough || self.isDifficultyBreathing || self.isLossOfSmell || self.isSoreThroat == true {
-//
-//
-//                        }
-//                        else {
-//                            self.isNoneOfThese.toggle()
-//                        }
-//
-//
+                    
                         
                         // Tap Action for responding Next button
                         
@@ -526,6 +514,18 @@ struct SymptomCheckerScreenerView: View {
                             self.didTap = true}
                         else {
                             self.didTap = true
+                        }
+                        
+                        // Action to Add point to Score System depending on What is selected
+                        
+                        if
+                            self.isNoneOfThese  == true {
+                            
+                            self.screenerStatus.isNoneOfTheseSymptomsSelected = true
+                        }
+                        else {
+                            
+                            self.screenerStatus.isNoneOfTheseSymptomsSelected = false
                         }
                         
                         
@@ -555,7 +555,7 @@ struct SymptomCheckerScreenerView: View {
                   
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: SymptomSeverity(), isActive: $showNextPage,
+                        destination: SymptomSeverity(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         
@@ -565,7 +565,10 @@ struct SymptomCheckerScreenerView: View {
                         if
                             
                             self.isFatigue || self.isVomitting || self.isSoreThroat || self.isNewCough || self.isFeverOrChills || self.isLossOfSmell || self.isDifficultyBreathing || self.isNoneOfThese == true {
-                            self.showNextPage = true }
+                            self.showNextPage = true
+                        
+                        
+                        }
                         else {
                             self.showNextPage = false
                             
@@ -585,6 +588,9 @@ struct SymptomCheckerScreenerView: View {
                             HStack {
                                 Text("Next")
                                     .foregroundColor(.white)
+                        
+//                                Text("\(self.screenerStatus.isNoneOfTheseSelected.description)")
+//                                    .foregroundColor(.black)
                             }
                             
                             
@@ -601,6 +607,7 @@ struct SymptomCheckerScreenerView: View {
 
 struct SymptomCheckerScreenerView_Previews: PreviewProvider {
     static var previews: some View {
-        SymptomCheckerScreenerView()
+        SymptomCheckerScreenerView(screenerStatus: ScreenerStatus.init())
+
     }
 }

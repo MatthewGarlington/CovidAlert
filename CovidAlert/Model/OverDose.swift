@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+struct DataResponse: Decodable, Hashable {
+    
+    let response: OverDose
+}
 
 
 struct OverDose: Decodable, Hashable {

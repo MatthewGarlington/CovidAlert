@@ -29,12 +29,11 @@ struct StatenewsHorizontalViewCard: View {
                     destination: NewsDetailView(),
                     label: {
                         
-                        
-                        //         vm.news?.articles ?? []
+               
                         ZStack{
                             
                             Spacer()
-                                .frame(width: 450, height: 150)
+                                .frame(width: 400, height: 150)
                                 .background(Color.black)
                                 .cornerRadius(30)
                                 .shadow(radius: 4)
@@ -74,7 +73,7 @@ struct StatenewsHorizontalViewCard: View {
                         ZStack{
                             
                             Spacer()
-                                .frame(width: 450, height: 150)
+                                .frame(width: 400, height: 150)
                                 .background(Color.black)
                                 .cornerRadius(30)
                                 .shadow(radius: 4)

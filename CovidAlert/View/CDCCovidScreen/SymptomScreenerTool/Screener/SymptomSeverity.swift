@@ -14,6 +14,7 @@ struct SymptomSeverity: View {
     @State private var didTap: Bool = false
     @State private var showNextPage: Bool = false
     @State private var showTooYoungPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     var body: some View {
         
@@ -71,6 +72,22 @@ struct SymptomSeverity: View {
                     else {
                         self.didTap = false
                     }
+                    
+                    // Action Tells the Screener Status what is selected
+                    
+                    if
+                        self.isLittleImpact == true {
+                        
+                        self.screenerStatus.isLittleImpactSelected = true
+                            
+                        }
+                    
+                    else {
+                        
+                        self.screenerStatus.isLittleImpactSelected = false
+                    }
+                    
+                    
                     
                     
                     
@@ -148,6 +165,22 @@ struct SymptomSeverity: View {
                         self.didTap = true}
                     else {
                         self.didTap = false
+                        
+                    
+                    }
+                    
+                    // Action Tells the Screener Status what is selected
+                    
+                    if
+                        self.isSomeImpact == true {
+                        
+                        self.screenerStatus.isSomeImpactSelected = true
+                            
+                        }
+                    
+                    else {
+                        
+                        self.screenerStatus.isSomeImpactSelected = false
                     }
                 }, label: {
                     ZStack {
@@ -217,6 +250,20 @@ struct SymptomSeverity: View {
                         self.didTap = false
                     }
                     
+                    // Action Tells the Screener Status what is selected
+                    
+                    if
+                        self.isMajorImpact == true {
+                        
+                        self.screenerStatus.isMajorImpactSelected = true
+                            
+                        }
+                    
+                    else {
+                        
+                        self.screenerStatus.isMajorImpactSelected = false
+                    }
+                    
                     
                     
                     
@@ -250,7 +297,7 @@ struct SymptomSeverity: View {
             VStack{
                 // These are the two views that will be the destination depending on which box is checked
                 NavigationLink(
-                    destination: ComorbidityView(), isActive: $showNextPage,
+                    destination: ComorbidityView(screenerStatus: screenerStatus), isActive: $showNextPage,
                     
                     label: { Text("") }
                     
@@ -296,6 +343,6 @@ struct SymptomSeverity: View {
 
 struct SymptomSeverity_Previews: PreviewProvider {
     static var previews: some View {
-        SymptomSeverity()
+        SymptomSeverity(screenerStatus: ScreenerStatus.init())
     }
 }

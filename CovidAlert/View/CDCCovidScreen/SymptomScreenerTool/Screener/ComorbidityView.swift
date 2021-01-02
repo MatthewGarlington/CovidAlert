@@ -14,13 +14,14 @@ struct ComorbidityView: View {
     @State var isPregnant : Bool = false
     @State var isDiabetes : Bool = false
     @State var isChronicLungProblems : Bool = false
-    @State var isHeatCondition : Bool = false
+    @State var isHeartCondition : Bool = false
     @State var isWeakendImmuneSystem : Bool = false
     @State var isStroke : Bool = false
     @State var isSickleCell : Bool = false
     @State var isNoneOfThese : Bool = false
     @State private var didTap: Bool = false
     @State private var showNextPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     var body: some View {
        
@@ -29,6 +30,7 @@ struct ComorbidityView: View {
                 Text("Do any of these apply to you?")
                     .font(.title)
                     .bold()
+                    .padding(.top)
                 Text("Check All That Apply")
                 VStack {
                     
@@ -54,6 +56,21 @@ struct ComorbidityView: View {
                             self.didTap = true}
                         else {
                             self.didTap = true
+                        }
+                        
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isObesity == true {
+                            
+                            self.screenerStatus.isObesitySelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isObesitySelected = false
                         }
                         
                       
@@ -111,6 +128,21 @@ struct ComorbidityView: View {
                         }
                         
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isSmokerorVaping == true {
+                            
+                            self.screenerStatus.isSmokerorVapingSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isSmokerorVapingSelected = false
+                        }
+                        
+                        
                         
                         
                     }, label: {
@@ -163,6 +195,21 @@ struct ComorbidityView: View {
                         else {
                             self.didTap = true
                         }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isPregnant == true {
+                            
+                            self.screenerStatus.IsPositiveSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.IsPositiveSelected = false
+                        }
+                        
                         
                         
                         
@@ -222,6 +269,20 @@ struct ComorbidityView: View {
                         }
                         
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isDiabetes == true {
+                            
+                            self.screenerStatus.isDiabetesSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isDiabetesSelected = false
+                        }
+                        
                         
                         
                     }, label: {
@@ -278,6 +339,21 @@ struct ComorbidityView: View {
                         }
                         
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isChronicLungProblems == true {
+                            
+                            self.screenerStatus.isChronicLungProblemsSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isChronicLungProblemsSelected = false
+                        }
+                        
+                        
                         
                         
                     }, label: {
@@ -308,13 +384,13 @@ struct ComorbidityView: View {
                         //Toggle of other checked items upon click
                                
                         
-                        if self.isHeatCondition == false {
+                        if self.isHeartCondition == false {
                             
-                            self.isHeatCondition.toggle()
+                            self.isHeartCondition.toggle()
                         }
                         
                         else {
-                            self.isHeatCondition.toggle()
+                            self.isHeartCondition.toggle()
                         }
                        
                         
@@ -325,13 +401,27 @@ struct ComorbidityView: View {
                         // Tap Action for responding Next button
                         
                         if
-                            self.isHeatCondition == true
+                            self.isHeartCondition == true
                         {
                             self.didTap = true}
                         else {
                             self.didTap = true
                         }
                         
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isHeartCondition == true {
+                            
+                            self.screenerStatus.isHeartConditionSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isHeartConditionSelected = false
+                        }
                         
                         
                         
@@ -347,7 +437,7 @@ struct ComorbidityView: View {
                                     .foregroundColor(.primary)
                                     .frame(width: 250, alignment: .leading)
                                 
-                                Image(systemName: self.isHeatCondition ? "checkmark.circle.fill" :  "circle")
+                                Image(systemName: self.isHeartCondition ? "checkmark.circle.fill" :  "circle")
                                     .foregroundColor(.blue)
                                     .font(.system(size: 25))
                             }
@@ -388,6 +478,20 @@ struct ComorbidityView: View {
                             self.didTap = true}
                         else {
                             self.didTap = true
+                        }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isWeakendImmuneSystem == true {
+                            
+                            self.screenerStatus.isWeakendImmuneSystemSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isWeakendImmuneSystemSelected = false
                         }
                         
                         
@@ -445,6 +549,20 @@ struct ComorbidityView: View {
                             self.didTap = true}
                         else {
                             self.didTap = true
+                        }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isStroke == true {
+                            
+                            self.screenerStatus.isStrokeSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isStrokeSelected = false
                         }
                         
                         
@@ -505,6 +623,19 @@ struct ComorbidityView: View {
                             self.didTap = true
                         }
                         
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isSickleCell == true {
+                            
+                            self.screenerStatus.isSickleCellSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isSickleCellSelected = false
+                        }
                         
                         
                         
@@ -562,7 +693,19 @@ struct ComorbidityView: View {
                             self.didTap = true
                         }
                         
+                        // Action Tells the Screener Status what is selected
                         
+                        if
+                            self.isNoneOfThese == true {
+                            
+                            self.screenerStatus.isNoCombrobitiesSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isNoCombrobitiesSelected = false
+                        }
                         
                         
                     }, label: {
@@ -589,7 +732,7 @@ struct ComorbidityView: View {
                    
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: SymptomSeverity(), isActive: $showNextPage,
+                        destination: InTheLast14DaysScreenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         
@@ -598,7 +741,7 @@ struct ComorbidityView: View {
                         
                         if
                             
-                            self.isStroke || self.isObesity || self.isPregnant || self.isDiabetes || self.isSickleCell || self.isHeatCondition || self.isSmokerorVaping || self.isNoneOfThese == true {
+                            self.isStroke || self.isObesity || self.isPregnant || self.isDiabetes || self.isSickleCell || self.isHeartCondition || self.isSmokerorVaping || self.isNoneOfThese == true {
                             self.showNextPage = true }
                         else {
                             self.showNextPage = false
@@ -625,9 +768,13 @@ struct ComorbidityView: View {
                         }
                     })
                 }
-            }.padding()
+            }
+        }.padding(.bottom)
+        .padding(.top)
+                                            
+            
             .background(Color(.init(white: 0.85, alpha: 1)))
-        }
+     
         
     }
     
@@ -636,6 +783,6 @@ struct ComorbidityView: View {
 
 struct ComorbidityView_Previews: PreviewProvider {
     static var previews: some View {
-        ComorbidityView()
+        ComorbidityView(screenerStatus: ScreenerStatus.init())
     }
 }

@@ -14,6 +14,7 @@ struct LiveInLongTermCareView: View {
     @State private var didTap: Bool = false
     @State private var showNextPage: Bool = false
     @State private var showEmergencyPage: Bool = false
+    @ObservedObject var screenerStatus: ScreenerStatus
     
     
     var body: some View {
@@ -81,6 +82,22 @@ struct LiveInLongTermCareView: View {
                         else {
                             self.didTap = false
                         }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isLiveInLongtermCare == true {
+                            
+                            self.screenerStatus.isLiveInLongtermCareSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isLiveInLongtermCareSelected = false
+                        }
+                        
+                        
                         
                         
                         
@@ -151,6 +168,22 @@ struct LiveInLongTermCareView: View {
                         else {
                             self.didTap = false
                         }
+                        
+                        // Action Tells the Screener Status what is selected
+                        
+                        if
+                            self.isDontLiveInLongTermCare == true {
+                            
+                            self.screenerStatus.isDontLiveInLongTermCareSelected = true
+                                
+                            }
+                        
+                        else {
+                            
+                            self.screenerStatus.isDontLiveInLongTermCareSelected = false
+                        }
+                        
+                        
                     }, label: {
                         ZStack {
                             Spacer()
@@ -179,7 +212,7 @@ struct LiveInLongTermCareView: View {
                 VStack{
              // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: VolunteerHospitalScreenerView(), isActive: $showNextPage,
+                        destination: VolunteerHospitalScreenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
                         
                         label: { Text("") }
                         
@@ -222,14 +255,17 @@ struct LiveInLongTermCareView: View {
                 
                 
             }.padding(.bottom)
+        .padding(.top)
+                                            
             
             .background(Color(.init(white: 0.85, alpha: 1)))
+       
         }
         
     
 }
 struct LiveInLongTermCareView_Previews: PreviewProvider {
     static var previews: some View {
-        LiveInLongTermCareView()
+        LiveInLongTermCareView(screenerStatus: ScreenerStatus.init())
     }
 }

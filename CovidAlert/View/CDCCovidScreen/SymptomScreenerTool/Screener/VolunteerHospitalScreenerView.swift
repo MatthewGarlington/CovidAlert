@@ -21,7 +21,7 @@ struct VolunteerHospitalScreenerView: View {
     var body: some View {
     
         
-        VStack {
+        VStack(spacing: 40) {
        
             VStack(alignment: .leading, spacing: 10) {
           
@@ -40,7 +40,7 @@ struct VolunteerHospitalScreenerView: View {
             .padding()
           
             
-                VStack {
+            VStack(spacing: 40) {
              
                     Button(action: {
                         
@@ -91,24 +91,24 @@ struct VolunteerHospitalScreenerView: View {
                             self.isDidWorkOrVolunteer == true {
                             
                             self.screenerStatus.isDidWorkOrVolunteerSelected = true
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected = false
+                  
                                 
                             }
                         
                         else {
                             
+                           
                             self.screenerStatus.isDidWorkOrVolunteerSelected = false
                         }
                         
-                        
+                    
                         
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                 
                             HStack(spacing: 75)  {
                                 Text("I worked or volunteered in a healthcare facility in the last 14 days")
                                     .bold()
@@ -116,14 +116,14 @@ struct VolunteerHospitalScreenerView: View {
                                     .frame(width: 250)
                                 
                                 Image(systemName: self.isDidWorkOrVolunteer ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    }).buttonStyle(SimpleButtonStyle())
                     
                     
                     
@@ -177,20 +177,21 @@ struct VolunteerHospitalScreenerView: View {
                             self.isDidNotWorkOrVolunteer == true {
                             
                             self.screenerStatus.isDidNotWorkOrVolunteerSelected = true
+                            self.screenerStatus.isDidWorkOrVolunteerSelected = false
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isDidNotWorkOrVolunteerSelected = false
+                     
+                            self.screenerStatus.isDidNotWorkOrVolunteerSelected = false 
                         }
+                        
+                     
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                      
                             HStack(spacing: 75) {
                                 Text("I did not work or volunteer in a healthcare facility in the last 14 days")
                                     .bold()
@@ -199,13 +200,13 @@ struct VolunteerHospitalScreenerView: View {
                                 
                                 
                                 Image(systemName: self.isDidNotWorkOrVolunteer ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                         }.padding()
-                    })
+                    }).buttonStyle(SimpleButtonStyle())
                     Spacer()
                     
 //                    ZStack {
@@ -214,23 +215,7 @@ struct VolunteerHospitalScreenerView: View {
 //                            .background(Color(.init(white: 1, alpha: 1)))
 //                            .cornerRadius(15)
 //                       VStack {
-//                            Text("Is Positive is \(self.screenerStatus.IsPositiveSelected.description)")
-//                                .bold()
-//                                .foregroundColor(.primary)
-//                                .frame(width: 250)
 //
-//                        Text("Is Negative is \(self.screenerStatus.IsNegativeSelected.description)")
-//                            .bold()
-//                            .foregroundColor(.primary)
-//                            .frame(width: 250)
-//                        Text("Is No Test is \(self.screenerStatus.isNoTestSelected.description)")
-//                            .bold()
-//                            .foregroundColor(.primary)
-//                            .frame(width: 250)
-//                        Text("Is No Results is \(self.screenerStatus.isNonResultsSelected.description)")
-//                            .bold()
-//                            .foregroundColor(.primary)
-//                            .frame(width: 250)
 //                        Text("Is Worked with Covid is \(self.screenerStatus.isDidWorkOrVolunteerSelected.description)")
 //                            .bold()
 //                            .foregroundColor(.primary)
@@ -239,18 +224,7 @@ struct VolunteerHospitalScreenerView: View {
 //                            .bold()
 //                            .foregroundColor(.primary)
 //                            .frame(width: 300)
-//                        Text("Is Some Impact \(self.screenerStatus.isSomeImpactSelected.description)")
-//                            .bold()
-//                            .foregroundColor(.primary)
-//                            .frame(width: 250)
-//                        Text("Is Major Impact \(self.screenerStatus.isMajorImpactSelected.description)")
-//                            .bold()
-//                            .foregroundColor(.primary)
-//                            .frame(width: 250)
-//                        Text("Is No Impact \(self.screenerStatus.isLittleImpactSelected.description)")
-//                            .bold()
-//                            .foregroundColor(.primary)
-//                            .frame(width: 250)
+//
 //                        }
 //
 //
@@ -263,21 +237,21 @@ struct VolunteerHospitalScreenerView: View {
                 VStack{
              // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
-                        destination: ContactHealthCareResultsView(), isActive: $showContactHealthcare,
+                        destination: ContactHealthCareResultsView(screenerStatus: screenerStatus), isActive: $showContactHealthcare,
                         
                         label: { Text("") }
                         
                     )
                     
                     NavigationLink(
-                        destination: ContactYourWorkResultsView() , isActive: $showContactWork,
+                        destination: ContactYourWorkResultsView(screenerStatus: screenerStatus) , isActive: $showContactWork,
                         
                         label: { Text("") }
                         
                     )
                     
                     NavigationLink(
-                        destination: ContinuePhysicalDistancingResultsView(), isActive: $showKeepPhysicalDistancing,
+                        destination: ContinuePhysicalDistancingResultsView(screenerStatus: screenerStatus), isActive: $showKeepPhysicalDistancing,
                         
                         label: { Text("") }
                         
@@ -417,7 +391,7 @@ struct VolunteerHospitalScreenerView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)) : Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
@@ -435,7 +409,7 @@ struct VolunteerHospitalScreenerView: View {
         .padding(.top)
                                             
             
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
           
         }
         

@@ -7,7 +7,28 @@
 
 import SwiftUI
 
-
+extension Color {
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
+}
+struct SimpleButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding(10)
+            .background(
+                Group {
+                    if configuration.isPressed {
+                        Capsule()
+                            .fill(Color.offWhite)
+                    } else {
+                        Capsule()
+                            .fill(Color.offWhite)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                    }
+                }
+            )
+    }
+}
 
 struct AgeScreenerView: View {
     
@@ -26,7 +47,7 @@ struct AgeScreenerView: View {
                 .font(.title)
                 .bold()
             
-            VStack {
+            VStack(spacing: 50){
                 
                 // Action to turn off other selected Checkmarks when Under 18 is selected and turn on selected check mark
                 Button(action: {
@@ -90,24 +111,25 @@ struct AgeScreenerView: View {
                     
                 }, label: {
                     ZStack {
-                        Spacer()
-                            .frame(width: 375, height: 75, alignment: .center)
-                            .background(Color(.init(white: 1, alpha: 1)))
-                            .cornerRadius(15)
+
                         HStack(spacing: 250) {
                             Text("Under 18")
                                 .bold()
                                 .foregroundColor(.primary)
+                                .frame(width: 75)
                             
                             Image(systemName: self.isUnder18Checked ? "checkmark.circle.fill" :  "circle")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                 .font(.system(size: 25))
+                                .frame(width: 10)
                         }
                         
                         
                         
                     }.padding()
+                 
                 })
+                .buttonStyle(SimpleButtonStyle())
                 
                 
                 
@@ -156,24 +178,24 @@ struct AgeScreenerView: View {
                     }
                 }, label: {
                     ZStack {
-                        Spacer()
-                            .frame(width: 375, height: 75, alignment: .center)
-                            .background(Color(.init(white: 1, alpha: 1)))
-                            .cornerRadius(15)
-                        HStack(spacing: 175) {
+                      
+                     
+                        HStack(spacing: 250) {
                             Text("Between 18 and 64")
                                 .bold()
                                 .foregroundColor(.primary)
+                                .frame(width: 85)
                             
                             
                             Image(systemName: self.is64checked ? "checkmark.circle.fill" :  "circle")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                 .font(.system(size: 25))
+                                .frame(width: 10)
                         }
                         
                         
                     }.padding()
-                })
+                })    .buttonStyle(SimpleButtonStyle())
                 
                 Button(action: {
                     
@@ -223,24 +245,21 @@ struct AgeScreenerView: View {
                     
                 }, label: {
                     ZStack {
-                        Spacer()
-                            .frame(width: 375, height: 75, alignment: .center)
-                            .background(Color(.init(white: 1, alpha: 1)))
-                            .cornerRadius(15)
+                 
                         HStack(spacing: 240) {
                             Text("65 or Older")
                                 .bold()
                                 .foregroundColor(.primary)
                             
                             Image(systemName: self.isOver65Checked ? "checkmark.circle.fill" :  "circle")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                 .font(.system(size: 25))
                         }
                         
                         
                         
                     }.padding()
-                })
+                }) .buttonStyle(SimpleButtonStyle())
                 Spacer()
                 
             }
@@ -288,7 +307,7 @@ struct AgeScreenerView: View {
                     ZStack {
                         Spacer()
                             .frame(width: 375, height: 50, alignment: .center)
-                            .background(didTap ? Color.blue : Color.gray)
+                            .background(didTap ? Color.init(#colorLiteral(red: 0.3036714792, green: 0.2938330173, blue: 0.7397083044, alpha: 1)) : Color.gray)
                             .cornerRadius(10)
                         HStack {
                             Text("Next")
@@ -299,7 +318,7 @@ struct AgeScreenerView: View {
                     }
                 })
             }.padding()
-        }.background(Color(.init(white: 0.85, alpha: 1)))
+        }.background(Color(.init(white: 0.95, alpha: 1)))
     }
     
 }

@@ -21,9 +21,11 @@ let SampleurlToImage = "https://static01.nyt.com/images/2020/11/24/nyregion/24ny
 
     
     
-@ObservedObject var vm = StateNewsDataViewModel()
+    @ObservedObject var vm = StateNewsDataViewModel()
+    
+  //  @ObservedObject var newsvm = NewsRapidAPIViewModel()
    
-@ObservedObject var vm2 = MDDetailViewModel()
+    @ObservedObject var vm2 = MDDetailViewModel()
            
     var body: some View {
     

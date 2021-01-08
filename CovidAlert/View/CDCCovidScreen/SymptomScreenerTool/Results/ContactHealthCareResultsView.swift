@@ -9,17 +9,33 @@ import SwiftUI
 
 struct ContactHealthCareResultsView: View {
     
-   
+    @ObservedObject var screenerStatus: ScreenerStatus
+    
     var body: some View {
+        NavigationView {
         ScrollView {
             VStack (alignment: .leading){
         VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .top, spacing: 10) {
+                
+                NavigationLink(
+                    destination: CDCHomeView(screenerStatus: screenerStatus),
+                    label: {
+                      
+        Image(systemName: "xmark.circle.fill")
+            .font(.system(size: 30))
+            .foregroundColor(.gray)
+            .padding()
+        
+            })
         Text("Contact a Healthcare Provider")
             .font(.title)
             .bold()
             .padding(.top)
             .padding()
             
+           
+        }
             Text("Discuss your symptoms with a doctor or a medical professional. Call before you visit a medical facility. You can also consider a relemedicine appointment.")
                 .padding()
             Text("Your 6 Next Steps")
@@ -274,15 +290,16 @@ If soap and water are not available, use hand sanitizer that contains at least 6
             }.padding()
         
         } .background(Color(.init(white: 0.85, alpha: 1)))
-        .ignoresSafeArea()
+        .navigationBarHidden(true)
             
         }
+    }
   
     }
 
 
 struct ContactHealthCareResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactHealthCareResultsView()
+        ContactHealthCareResultsView(screenerStatus: ScreenerStatus.init())
     }
 }

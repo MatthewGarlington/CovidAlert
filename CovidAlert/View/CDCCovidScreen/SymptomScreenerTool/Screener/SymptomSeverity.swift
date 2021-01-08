@@ -18,12 +18,14 @@ struct SymptomSeverity: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 20) {
             Text("How severe are your symptoms?")
                 .font(.title)
                 .bold()
                 .frame(width: 250)
-            VStack {
+            
+         
+            VStack(spacing: 40) {
                 
                 // Action to turn off other selected Checkmarks when Under 18 is selected and turn on selected check mark
                 Button(action: {
@@ -79,6 +81,8 @@ struct SymptomSeverity: View {
                         self.isLittleImpact == true {
                         
                         self.screenerStatus.isLittleImpactSelected = true
+                        self.screenerStatus.isMajorImpactSelected = false
+                        self.screenerStatus.isSomeImpactSelected = false
                             
                         }
                     
@@ -94,10 +98,7 @@ struct SymptomSeverity: View {
                     
                 }, label: {
                     ZStack {
-                        Spacer()
-                            .frame(width: 375, height: 125, alignment: .center)
-                            .background(Color(.init(white: 1, alpha: 1)))
-                            .cornerRadius(20)
+                 
                         HStack(spacing: 75) {
                             VStack(alignment: .leading, spacing: 20) {
                             Text("Symptoms have little to no impact")
@@ -112,14 +113,14 @@ struct SymptomSeverity: View {
                             
                             
                             Image(systemName: self.isLittleImpact ? "checkmark.circle.fill" :  "circle")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                 .font(.system(size: 25))
                         }
                         
                         
                         
                     }.padding()
-                })
+                })  .buttonStyle(SimpleButtonStyle())
                 
                 
                 
@@ -175,19 +176,18 @@ struct SymptomSeverity: View {
                         self.isSomeImpact == true {
                         
                         self.screenerStatus.isSomeImpactSelected = true
+                        self.screenerStatus.isLittleImpactSelected = false
+                        self.screenerStatus.isMajorImpactSelected = false
                             
                         }
                     
                     else {
                         
-                        self.screenerStatus.isSomeImpactSelected = false
+                        self.screenerStatus.isSomeImpactSelected = true
                     }
                 }, label: {
                     ZStack {
-                        Spacer()
-                            .frame(width: 375, height: 125, alignment: .center)
-                            .background(Color(.init(white: 1, alpha: 1)))
-                            .cornerRadius(15)
+                   
                         HStack(spacing: 75) {
                             VStack(alignment : .leading) {
                             Text("Symptoms are having some impact")
@@ -199,13 +199,13 @@ struct SymptomSeverity: View {
                             
                             
                             Image(systemName: self.isSomeImpact ? "checkmark.circle.fill" :  "circle")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                 .font(.system(size: 25))
                         }
                         
                         
                     }.padding()
-                })
+                })  .buttonStyle(SimpleButtonStyle())
                 
                 Button(action: {
                     
@@ -256,12 +256,14 @@ struct SymptomSeverity: View {
                         self.isMajorImpact == true {
                         
                         self.screenerStatus.isMajorImpactSelected = true
+                        self.screenerStatus.isLittleImpactSelected = false
+                        self.screenerStatus.isSomeImpactSelected = false
                             
                         }
                     
                     else {
                         
-                        self.screenerStatus.isMajorImpactSelected = false
+                        self.screenerStatus.isMajorImpactSelected = false 
                     }
                     
                     
@@ -269,10 +271,7 @@ struct SymptomSeverity: View {
                     
                 }, label: {
                     ZStack {
-                        Spacer()
-                            .frame(width: 375, height: 125, alignment: .center)
-                            .background(Color(.init(white: 1, alpha: 1)))
-                            .cornerRadius(15)
+                
                         HStack(spacing: 75) {
                             VStack(alignment : .leading) {
                             Text("Symptoms are having a Major Impact")
@@ -283,14 +282,14 @@ struct SymptomSeverity: View {
                             }.frame(width: 250)
                             
                             Image(systemName: self.isMajorImpact ? "checkmark.circle.fill" :  "circle")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                 .font(.system(size: 25))
                         }
                         
                         
                         
                     }.padding()
-                })
+                })  .buttonStyle(SimpleButtonStyle())
                 Spacer()
                 
             }
@@ -325,7 +324,7 @@ struct SymptomSeverity: View {
                     ZStack {
                         Spacer()
                             .frame(width: 375, height: 50, alignment: .center)
-                            .background(didTap ? Color.blue : Color.gray)
+                            .background(didTap ? Color.init(#colorLiteral(red: 0.3115147948, green: 0.3016772568, blue: 0.7559033036, alpha: 1)) : Color.gray)
                             .cornerRadius(10)
                         HStack {
                             Text("Next")
@@ -336,7 +335,7 @@ struct SymptomSeverity: View {
                     }
                 })
             }.padding()
-        }.background(Color(.init(white: 0.85, alpha: 1)))
+        }.background(Color(.init(white: 0.95, alpha: 1)))
     }
     
 }

@@ -19,7 +19,7 @@ struct OKDetailView: View {
             GeometryReader { proxy in
                 ScrollView {
         
-                    TwitterCardView()
+                    OKTwitterCardView()
                     
                     VStack {
                      
@@ -163,7 +163,7 @@ struct OKDetailView: View {
                 
                 
         
-            }  .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.white]), startPoint: .bottom, endPoint: .top))
+            }  .background(LinearGradient(gradient: Gradient(colors: [Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)), Color.init(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))]), startPoint: .bottom, endPoint: .top))
             .cornerRadius(7)
         }.navigationBarTitle("Oklahoma", displayMode: .inline)
       

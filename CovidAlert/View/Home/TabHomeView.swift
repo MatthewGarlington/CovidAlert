@@ -11,6 +11,8 @@ struct TabHomeView: View {
     
     @ObservedObject var screenerStatus: ScreenerStatus
     
+  
+    
     @State private var selectedTab = 0
     
     let minDragTranslationForSwipe: CGFloat = 50
@@ -34,35 +36,32 @@ struct TabHomeView: View {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
-//                .tag(0)
-//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+
             GraphView(data: [])
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                     Text("Graph")
                 }
-//                .tag(1)
-//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+
             CDCHomeView(screenerStatus: screenerStatus)
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Screener")
                 }
-//                .tag(2)
-//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+
             NewsDataView()
                 .tabItem {
                     Image(systemName: "newspaper.fill")
                     Text("News")
                 }
-//                .tag(3)
-//                .highPriorityGesture(DragGesture().onEnded({ self.handleSwipe(translation: $0.translation.width)}))
+
             
         }
-        .accentColor(.red)
-    
+     
+        .accentColor(Color(#colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.8470588235)))
         .onAppear() {
-            UITabBar.appearance().barTintColor = .white
+            UITabBar.appearance().barTintColor = #colorLiteral(red: 0.1734037995, green: 0.1684899032, blue: 0.4230538905, alpha: 1)
+            
         }
     }
 }
@@ -71,7 +70,10 @@ struct TabHomeView: View {
 struct TabHomeView_Previews: PreviewProvider {
     static var previews: some View {
 
-        TabHomeView(screenerStatus: ScreenerStatus.init())
+        Group {
+            TabHomeView(screenerStatus: ScreenerStatus.init())
+            TabHomeView(screenerStatus: ScreenerStatus.init())
+        }
         
     }
 }

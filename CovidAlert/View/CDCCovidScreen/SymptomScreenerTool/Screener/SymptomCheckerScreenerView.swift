@@ -28,7 +28,7 @@ struct SymptomCheckerScreenerView: View {
                     .font(.title)
                     .bold()
                 Text("Check All That Apply")
-                VStack {
+            VStack(spacing: 30) {
                     
                     Button(action: {
                         
@@ -65,12 +65,12 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isFeverOrChills  == true {
                             
-                            self.screenerStatus.isFeverOrChillsSelected = true
+                            self.screenerStatus.isFeverOrChillsSelected.toggle()
                         }
                         
                         else {
                             
-                            self.screenerStatus.isFeverOrChillsSelected = false
+                            self.screenerStatus.isFeverOrChillsSelected.toggle()
                         }
                         
                         
@@ -80,10 +80,7 @@ struct SymptomCheckerScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                  
                             HStack(spacing: 75) {
                                 Text("Fever or Chills")
                                     .bold()
@@ -93,7 +90,7 @@ struct SymptomCheckerScreenerView: View {
                       
                                 
                                 Image(systemName: self.isFeverOrChills ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                                 
                             }
@@ -101,7 +98,7 @@ struct SymptomCheckerScreenerView: View {
                             
                             
                         }.padding()
-                    })
+                    })     .buttonStyle(SimpleButtonStyle())
                     
                     Button(action: {
                         
@@ -133,37 +130,35 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isDifficultyBreathing  == true {
                             
-                            self.screenerStatus.isDifficultyBreathingSelected = true
+                            self.screenerStatus.isDifficultyBreathingSelected.toggle()
                          }
                          
                          else {
                              
-                             self.screenerStatus.isDifficultyBreathingSelected = false
+                            self.screenerStatus.isDifficultyBreathingSelected.toggle()
                          }
                         
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                   
+                            HStack(spacing: 10) {
                                 Text("Mild or moderate difficulty breathing")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 315, height: 50, alignment: .leading)
+                                
                                 
                                 Image(systemName: self.isDifficultyBreathing ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -196,12 +191,12 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isNewCough  == true {
                             
-                            self.screenerStatus.isNewCoughSelected = true
+                            self.screenerStatus.isNewCoughSelected.toggle()
                          }
                          
                          else {
                              
-                            self.screenerStatus.isNewCoughSelected = false
+                            self.screenerStatus.isNewCoughSelected.toggle()
                          }
                         
                         
@@ -209,10 +204,7 @@ struct SymptomCheckerScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                 
                             HStack(spacing: 75) {
                                 Text("New or worsening cough")
                                     .bold()
@@ -220,14 +212,14 @@ struct SymptomCheckerScreenerView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isNewCough ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -264,21 +256,18 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isLossOfSmell  == true {
                             
-                            self.screenerStatus.isLossOfSmellSelected = true
+                            self.screenerStatus.isLossOfSmellSelected.toggle()
                          }
                          
                          else {
                              
-                             self.screenerStatus.isLossOfSmellSelected = false
+                            self.screenerStatus.isLossOfSmellSelected.toggle()
                          }
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                    
                             HStack(spacing: 75) {
                                 Text("Sudden loss of taste or smell")
                                     .bold()
@@ -286,14 +275,14 @@ struct SymptomCheckerScreenerView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isLossOfSmell ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -330,20 +319,17 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isSoreThroat  == true {
                             
-                            self.screenerStatus.isSoreThroatSelected = true
+                            self.screenerStatus.isSoreThroatSelected.toggle()
                          }
                          
                          else {
                              
-                             self.screenerStatus.isSoreThroatSelected = false
+                            self.screenerStatus.isSoreThroatSelected.toggle()
                          }
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+              
                             HStack(spacing: 75) {
                                 Text("Sore throat")
                                     .bold()
@@ -351,14 +337,14 @@ struct SymptomCheckerScreenerView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isSoreThroat ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -392,21 +378,18 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isVomitting  == true {
                             
-                            self.screenerStatus.isVomittingSelected = true
+                            self.screenerStatus.isVomittingSelected.toggle()
                          }
                          
                          else {
                              
-                             self.screenerStatus.isVomittingSelected = false
+                            self.screenerStatus.isVomittingSelected.toggle()
                          }
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+         
                             HStack(spacing: 75) {
                                 Text("Vomiting or diarrhea")
                                     .bold()
@@ -414,14 +397,14 @@ struct SymptomCheckerScreenerView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isVomitting ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -456,22 +439,19 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isFatigue  == true {
                             
-                            self.screenerStatus.isFatigueSelected = true
+                            self.screenerStatus.isFatigueSelected.toggle()
                          }
                          
                          else {
                              
-                             self.screenerStatus.isFatigueSelected = false
+                            self.screenerStatus.isFatigueSelected.toggle()
                          }
                         
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                   
                             HStack(spacing: 75) {
                                 Text("Unexplained, significant fatigue or aching throughout the body")
                                     .bold()
@@ -479,14 +459,14 @@ struct SymptomCheckerScreenerView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isFatigue ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -521,11 +501,11 @@ struct SymptomCheckerScreenerView: View {
                         if
                             self.isNoneOfThese  == true {
                             
-                            self.screenerStatus.isNoneOfTheseSymptomsSelected = true
+                            self.screenerStatus.isNoneOfTheseSymptomsSelected.toggle()
                         }
                         else {
                             
-                            self.screenerStatus.isNoneOfTheseSymptomsSelected = false
+                            self.screenerStatus.isNoneOfTheseSymptomsSelected.toggle()
                         }
                         
                         
@@ -533,10 +513,7 @@ struct SymptomCheckerScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                   
                             HStack(spacing: 75) {
                                 Text("None of These")
                                     .bold()
@@ -544,14 +521,14 @@ struct SymptomCheckerScreenerView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isNoneOfThese ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                   
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
@@ -583,10 +560,11 @@ struct SymptomCheckerScreenerView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.311514914, green: 0.3016776145, blue: 0.7600132823, alpha: 1)): Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
+                                    .bold()
                                     .foregroundColor(.white)
                         
 //                                Text("\(self.screenerStatus.isNoneOfTheseSelected.description)")
@@ -598,7 +576,7 @@ struct SymptomCheckerScreenerView: View {
                     })
                 }
             }.padding()
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
         }
         
     }

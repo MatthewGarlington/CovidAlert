@@ -38,7 +38,7 @@ struct LiveInLongTermCareView: View {
             .padding()
           
             
-                VStack {
+            VStack(spacing: 40) {
              
                     Button(action: {
                         
@@ -89,6 +89,7 @@ struct LiveInLongTermCareView: View {
                             self.isLiveInLongtermCare == true {
                             
                             self.screenerStatus.isLiveInLongtermCareSelected = true
+                            self.screenerStatus.isDontLiveInLongTermCareSelected = false
                                 
                             }
                         
@@ -104,24 +105,21 @@ struct LiveInLongTermCareView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                          
                             HStack(spacing: 75)  {
                                 Text("I live in a long-term care facility")
                                     .bold()
                                     .foregroundColor(.primary)
                                 
                                 Image(systemName: self.isLiveInLongtermCare ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    }).buttonStyle(SimpleButtonStyle())
                     
                     
                     
@@ -175,21 +173,19 @@ struct LiveInLongTermCareView: View {
                             self.isDontLiveInLongTermCare == true {
                             
                             self.screenerStatus.isDontLiveInLongTermCareSelected = true
+                            self.screenerStatus.isLiveInLongtermCareSelected = false
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isDontLiveInLongTermCareSelected = false
+                            self.screenerStatus.isDontLiveInLongTermCareSelected = true 
                         }
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                       
                             HStack(spacing: 75) {
                                 Text("I don't live in a long-term care facility")
                                     .bold()
@@ -197,13 +193,13 @@ struct LiveInLongTermCareView: View {
                                 
                                 
                                 Image(systemName: self.isDontLiveInLongTermCare ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                         }.padding()
-                    })
+                    }).buttonStyle(SimpleButtonStyle())
                     Spacer()
                     
                 }
@@ -240,7 +236,7 @@ struct LiveInLongTermCareView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)) : Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
@@ -258,7 +254,7 @@ struct LiveInLongTermCareView: View {
         .padding(.top)
                                             
             
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
        
         }
         

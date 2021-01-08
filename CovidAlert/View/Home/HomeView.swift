@@ -9,40 +9,25 @@ import SwiftUI
 
 extension Color {
     static let discoverBackground =  Color(.init(white: 1, alpha: 1))
-}
 
+}
 struct HomeView: View {
     
  //   @ObservedObject var country = CurrentCountryData()
     
-    @ObservedObject var tweetsvm = TwitterViewModel()
+  // @ObservedObject var tweetsvm = TwitterViewModel()
+ //  @ObservedObject var newsvm = NewsRapidAPIViewModel()
     
 //    @ObservedObject var vm2 = OverDoseDeathViewModel()
     
-    @ObservedObject var vm = NewYorkTimesViewModel()
+  //  @ObservedObject var vm = NewYorkTimesViewModel()
  
     
-//    @ObservedObject var vm: StateDetailViewModel
-    
-  // let state: StateUS
-  
-//
-//    init(state: StateUS) {
-//
-//
-//
-//
-//        UINavigationBar.appearance().largeTitleTextAttributes = [
-//            .foregroundColor: UIColor.black
-//         ]
-//
-//        self.state = state
-//        self.vm = .init(stateID: state.state)
-//
-//    }
     
    
         let state = StateUS(state: "MD")
+    
+       
 
     
   
@@ -50,30 +35,32 @@ struct HomeView: View {
     var body: some View {
       
 
-          
+   
             
-                ZStack{
+                ZStack {
                     
-                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.black]), startPoint: .top, endPoint: .center)
+                    LinearGradient(gradient: Gradient(colors: [Color.init(#colorLiteral(red: 0.311514914, green: 0.3016776145, blue: 0.7600132823, alpha: 1)), Color.init(#colorLiteral(red: 0.09712613374, green: 0.102140896, blue: 0.2525157034, alpha: 1))]), startPoint: .top, endPoint: .center)
                         .ignoresSafeArea()
                     
-                        Color.discoverBackground
-                        .offset(y:300)
+//                        Color.secondary
+//                        .offset(y:300)
+                   
                 
                 ScrollView {
-                  
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Where do you want to go?")
-                        Spacer()
-                  
-                    } .font(.system(size: 14, weight: .semibold))
-                      .foregroundColor(.white)
-                      .padding()
-                      .background(Color(.init(white: 1, alpha: 0.3)))
-                     .cornerRadius(12)
-                      .padding(16)
+                    
+                    VStack {
+//                        
+//                        Image("undraw_medical_research_red")
+//                                .resizable()
+//                                .scaledToFit()
                  
+                      
+                  
+                 
+                    
+                    }
+                    
+                    
                     StateDataView()
                     
                     VStack {
@@ -100,7 +87,7 @@ struct HomeView: View {
                         }.padding()
                         
                        
-                    }.background(Color.discoverBackground)
+                    }.background(Color.init(#colorLiteral(red: 0.1106571779, green: 0.1057340428, blue: 0.2687981129, alpha: 1)))
                     .cornerRadius(16)
                     .padding(.top, 32)
                     
@@ -108,6 +95,7 @@ struct HomeView: View {
                 
                     
                 } .navigationTitle("Coronavirus US")
+                 .navigationBarHidden(true)
                 
                   
                

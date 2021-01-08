@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 class ScreenerStatus: ObservableObject {
     @Published var IsPositiveSelected: Bool = false
     @Published var IsNegativeSelected: Bool = false
@@ -59,14 +61,25 @@ struct RecentTestingScreenerView: View {
     @State private var didTap: Bool = false
     @ObservedObject var screenerStatus: ScreenerStatus
     
+    
+    
+    
+    
     var body: some View {
        
             VStack(spacing: 30) {
                 Text("In the last 10 days, have you been tested for COVID-19?")
                     .font(.title)
                     .bold()
+                    .frame(width: 400, height: 150)
+                    .padding(.top, 10)
+
                 Text("Only include your most recent saliva, oral swabs, or nasal swab test.")
-                VStack {
+                    .frame(width: 400, height: 50)
+       
+     
+                
+                VStack(spacing: 20) {
                     
                     Button(action: {
                         
@@ -130,6 +143,9 @@ struct RecentTestingScreenerView: View {
                         if self.isPositive == true {
                            
                             self.screenerStatus.IsPositiveSelected = true
+                            self.screenerStatus.IsNegativeSelected = false
+                            self.screenerStatus.isNoTestSelected = false
+                            self.screenerStatus.isNonResultsSelected = false
                             
                       
                         }
@@ -149,20 +165,17 @@ struct RecentTestingScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                       
+                            HStack(spacing: 10) {
                                 Text("I was tested and my result was positive for COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250)
+                                    .frame(width: 350, height: 50)
                                 
                                 
                                 
                                 Image(systemName: self.isPositive ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                                 
                             }
@@ -171,6 +184,8 @@ struct RecentTestingScreenerView: View {
                             
                         }.padding()
                     })
+                    .buttonStyle(SimpleButtonStyle())
+                   
                     
                     Button(action: {
                         
@@ -229,6 +244,9 @@ struct RecentTestingScreenerView: View {
                         if self.isNegative {
                             
                             self.screenerStatus.IsNegativeSelected = true
+                            self.screenerStatus.IsPositiveSelected = false
+                            self.screenerStatus.isNonResultsSelected = false
+                            self.screenerStatus.isNoTestSelected = false
                             
                         }
                         
@@ -239,25 +257,22 @@ struct RecentTestingScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                  
+                            HStack(spacing: 10) {
                                 Text("I was tested and my result was negative for COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250)
+                                    .frame(width: 350, height: 50)
                                 
                                 Image(systemName: self.isNegative ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })                .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -321,6 +336,9 @@ struct RecentTestingScreenerView: View {
                         if self.isNoResults == true {
                             
                             self.screenerStatus.isNonResultsSelected = true
+                            self.screenerStatus.IsNegativeSelected = false
+                            self.screenerStatus.IsPositiveSelected = false
+                            self.screenerStatus.isNoTestSelected = false
                         }
                         else {
                             self.screenerStatus.isNonResultsSelected = false
@@ -330,18 +348,16 @@ struct RecentTestingScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+           
+      
+                            HStack(spacing: 10) {
                                 Text("I was tested but have not yet received my test result")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250)
+                                    .frame(width: 350, height: 50)
                                 
                                 Image(systemName: self.isNoResults ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
@@ -349,6 +365,7 @@ struct RecentTestingScreenerView: View {
                             
                         }.padding()
                     })
+                    .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -413,6 +430,9 @@ struct RecentTestingScreenerView: View {
                         if self.isNOTest == true {
                             
                             self.screenerStatus.isNoTestSelected = true
+                            self.screenerStatus.IsPositiveSelected = false
+                            self.screenerStatus.IsNegativeSelected = false
+                            self.screenerStatus.isNonResultsSelected = false 
                         }
                         
                         else {
@@ -426,25 +446,22 @@ struct RecentTestingScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+           
+                            HStack(spacing: 10) {
                                 Text("I have not been tested in the last 10 days")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250)
+                                    .frame(width: 350, height: 50)
                                 
                                 Image(systemName: self.isNOTest ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })                 .buttonStyle(SimpleButtonStyle())
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
                         destination: SymptomCheckerScreenerView(screenerStatus: screenerStatus), isActive: $showNextPage,
@@ -471,10 +488,11 @@ struct RecentTestingScreenerView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.3067351282, green: 0.3018459976, blue: 0.7559282184, alpha: 1)) : Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
+                                    .bold()
                                     .foregroundColor(.white)
                                 
                             }
@@ -484,7 +502,7 @@ struct RecentTestingScreenerView: View {
                     })
                 }
             }.padding()
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
         }
     
 }

@@ -37,10 +37,12 @@ class NewYorkTimesViewModel: ObservableObject {
                 do {
                     
                     self.nytimesnews = try JSONDecoder().decode(NYTimes?.self, from: data)
-             //      print(self.nytimesnews?.response.docs.count)
+                  print(self.nytimesnews?.response.docs.count)
+                    print(self.nytimesnews?.status)
+                 //   print(self.nytimesnews?.response.docs[0].byline.original)
                     
             } catch let jsonError {
-             //   print("Decoding failed for New york Times News", jsonError)
+                 print("Decoding failed for New york Times News", jsonError)
             }
            
                 }

@@ -38,16 +38,20 @@ struct NewsDataView: View {
             
             VStack {
                 
-                StatNewsLargeCard()
+
+            
                 
                 StateNewsCard()
                
                 StatenewsHorizontalViewCard()
+              
                     
                 
             }
-        }.navigationTitle("Covid News")
-        .padding(.horizontal)
+        }
+        .background(Color.init(#colorLiteral(red: 0.09712613374, green: 0.102140896, blue: 0.2525157034, alpha: 1)))
+        .ignoresSafeArea()
+
   
         
     }

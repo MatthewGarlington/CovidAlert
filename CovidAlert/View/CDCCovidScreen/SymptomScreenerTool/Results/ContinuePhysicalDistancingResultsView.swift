@@ -8,15 +8,33 @@
 import SwiftUI
 
 struct ContinuePhysicalDistancingResultsView: View {
+    @ObservedObject var screenerStatus: ScreenerStatus
     var body: some View {
+        NavigationView {
         ScrollView {
             VStack (alignment: .leading){
+               
         VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .top, spacing: 10) {
+                
+                NavigationLink(
+                    destination: CDCHomeView(screenerStatus: screenerStatus),
+                    label: {
+                      
+        Image(systemName: "xmark.circle.fill")
+            .font(.system(size: 30))
+            .foregroundColor(.gray)
+            .padding()
+            
+        
+            })
         Text("Continue Physical Distancing")
             .font(.title)
             .bold()
             .padding(.top)
             .padding()
+         
+            }
             
             Text("You should wear a mask and stay six feet away from anyone you don't live with.")
                 .padding()
@@ -295,9 +313,10 @@ If soap and water are not available, use hand sanitizer that contains at least 6
             }.padding()
         
         } .background(Color(.init(white: 0.85, alpha: 1)))
-        .ignoresSafeArea()
+        .navigationBarHidden(true)
             
         }
+    }
   
     }
 
@@ -305,6 +324,6 @@ If soap and water are not available, use hand sanitizer that contains at least 6
 
 struct ContinuePhysicalDistancingResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContinuePhysicalDistancingResultsView()
+        ContinuePhysicalDistancingResultsView(screenerStatus: ScreenerStatus.init())
     }
 }

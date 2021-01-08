@@ -53,10 +53,113 @@
 		6B4243F2259A3ACE00679707 /* AgeRestrictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4243F1259A3ACE00679707 /* AgeRestrictionView.swift */; };
 		6B4243F6259A3E8C00679707 /* RecentTestingScreenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4243F5259A3E8C00679707 /* RecentTestingScreenerView.swift */; };
 		6B4243FA259A7C0C00679707 /* SymptomCheckerScreenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4243F9259A7C0C00679707 /* SymptomCheckerScreenerView.swift */; };
+		6B523A7025A741EC007226B4 /* MDTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A6F25A741EC007226B4 /* MDTwitterCardView.swift */; };
+		6B523A7425A74210007226B4 /* MarylandHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523A7325A74210007226B4 /* MarylandHealth.json */; };
+		6B523A7825A74335007226B4 /* ALTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A7725A74335007226B4 /* ALTwitterCardView.swift */; };
+		6B523A7C25A743A1007226B4 /* AKTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A7B25A743A1007226B4 /* AKTwitterCardView.swift */; };
+		6B523A8025A743BC007226B4 /* AZTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A7F25A743BC007226B4 /* AZTwitterCardView.swift */; };
+		6B523A8425A74459007226B4 /* ARTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A8325A74459007226B4 /* ARTwitterCardView.swift */; };
+		6B523A8825A7447C007226B4 /* CATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A8725A7447C007226B4 /* CATwitterCardView.swift */; };
+		6B523A8C25A74517007226B4 /* COTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A8B25A74517007226B4 /* COTwitterCardView.swift */; };
+		6B523A9025A74554007226B4 /* CTTwitterViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A8F25A74554007226B4 /* CTTwitterViewCard.swift */; };
+		6B523A9425A74572007226B4 /* DETwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A9325A74572007226B4 /* DETwitterCardView.swift */; };
+		6B523A9825A7458A007226B4 /* DCTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A9725A7458A007226B4 /* DCTwitterCardView.swift */; };
+		6B523A9C25A7459D007226B4 /* FLTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A9B25A7459D007226B4 /* FLTwitterCardView.swift */; };
+		6B523AA025A745B3007226B4 /* GATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523A9F25A745B3007226B4 /* GATwitterCardView.swift */; };
+		6B523AA425A745CE007226B4 /* HITwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AA325A745CE007226B4 /* HITwitterCardView.swift */; };
+		6B523AA825A745E3007226B4 /* IDTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AA725A745E3007226B4 /* IDTwitterCardView.swift */; };
+		6B523AAC25A745F7007226B4 /* ILTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AAB25A745F7007226B4 /* ILTwitterCardView.swift */; };
+		6B523AB025A74607007226B4 /* INTwitterViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AAF25A74607007226B4 /* INTwitterViewCard.swift */; };
+		6B523AB425A7461D007226B4 /* IATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AB325A7461D007226B4 /* IATwitterCardView.swift */; };
+		6B523AB825A74630007226B4 /* KSTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AB725A74630007226B4 /* KSTwitterCardView.swift */; };
+		6B523ABC25A74644007226B4 /* KYTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523ABB25A74644007226B4 /* KYTwitterCardView.swift */; };
+		6B523AC025A746DD007226B4 /* LATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523ABF25A746DD007226B4 /* LATwitterCardView.swift */; };
+		6B523AC425A746EC007226B4 /* METwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AC325A746EC007226B4 /* METwitterCardView.swift */; };
+		6B523AC825A746FF007226B4 /* MATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AC725A746FF007226B4 /* MATwitterCardView.swift */; };
+		6B523ACC25A74722007226B4 /* MITwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523ACB25A74722007226B4 /* MITwitterCardView.swift */; };
+		6B523AD025A74736007226B4 /* MNTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523ACF25A74736007226B4 /* MNTwitterCardView.swift */; };
+		6B523AD425A74759007226B4 /* MSTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AD325A74759007226B4 /* MSTwitterCardView.swift */; };
+		6B523AD825A7476D007226B4 /* MTTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AD725A7476D007226B4 /* MTTwitterCardView.swift */; };
+		6B523ADC25A7477F007226B4 /* NETwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523ADB25A7477F007226B4 /* NETwitterCardView.swift */; };
+		6B523AE025A74793007226B4 /* NVTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523ADF25A74793007226B4 /* NVTwitterCardView.swift */; };
+		6B523AE425A747A7007226B4 /* NHTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AE325A747A7007226B4 /* NHTwitterCardView.swift */; };
+		6B523AE825A747B9007226B4 /* NJTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AE725A747B9007226B4 /* NJTwitterCardView.swift */; };
+		6B523AEC25A747D2007226B4 /* NMTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AEB25A747D2007226B4 /* NMTwitterCardView.swift */; };
+		6B523AF025A747E2007226B4 /* NYTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AEF25A747E2007226B4 /* NYTwitterCardView.swift */; };
+		6B523AFA25A7480F007226B4 /* NCTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AF925A7480F007226B4 /* NCTwitterCardView.swift */; };
+		6B523AFE25A7482C007226B4 /* NDTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523AFD25A7482C007226B4 /* NDTwitterCardView.swift */; };
+		6B523B0225A74844007226B4 /* OHTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B0125A74844007226B4 /* OHTwitterCardView.swift */; };
+		6B523B0C25A74873007226B4 /* OKTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B0B25A74873007226B4 /* OKTwitterCardView.swift */; };
+		6B523B1025A74887007226B4 /* ORTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B0F25A74887007226B4 /* ORTwitterCardView.swift */; };
+		6B523B1425A748A7007226B4 /* PATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B1325A748A7007226B4 /* PATwitterCardView.swift */; };
+		6B523B1825A748EF007226B4 /* RITwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B1725A748EF007226B4 /* RITwitterCardView.swift */; };
+		6B523B1C25A7490B007226B4 /* SCTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B1B25A7490B007226B4 /* SCTwitterCardView.swift */; };
+		6B523B2025A7491C007226B4 /* SDTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B1F25A7491C007226B4 /* SDTwitterCardView.swift */; };
+		6B523B2425A7492F007226B4 /* TNTwitterCradView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B2325A7492F007226B4 /* TNTwitterCradView.swift */; };
+		6B523B2825A74943007226B4 /* TXTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B2725A74943007226B4 /* TXTwitterCardView.swift */; };
+		6B523B2C25A74958007226B4 /* UTTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B2B25A74958007226B4 /* UTTwitterCardView.swift */; };
+		6B523B3025A7496E007226B4 /* VTTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B2F25A7496E007226B4 /* VTTwitterCardView.swift */; };
+		6B523B3425A7497E007226B4 /* VATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B3325A7497E007226B4 /* VATwitterCardView.swift */; };
+		6B523B3825A74993007226B4 /* WATwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B3725A74993007226B4 /* WATwitterCardView.swift */; };
+		6B523B3C25A749A4007226B4 /* WVTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B3B25A749A4007226B4 /* WVTwitterCardView.swift */; };
+		6B523B4025A749B7007226B4 /* WITwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B3F25A749B7007226B4 /* WITwitterCardView.swift */; };
+		6B523B4425A749CD007226B4 /* WYTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B4325A749CD007226B4 /* WYTwitterCardView.swift */; };
+		6B523B4825A749E7007226B4 /* MOTwitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B523B4725A749E7007226B4 /* MOTwitterCardView.swift */; };
+		6B523B4C25A74AF5007226B4 /* ALHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B4B25A74AF5007226B4 /* ALHealth.json */; };
+		6B523B5025A74B86007226B4 /* AKHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B4F25A74B86007226B4 /* AKHealth.json */; };
+		6B523B5425A74BDA007226B4 /* AZHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B5325A74BDA007226B4 /* AZHealth.json */; };
+		6B523B5825A74C12007226B4 /* ARHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B5725A74C12007226B4 /* ARHealth.json */; };
+		6B523B5C25A74C73007226B4 /* CAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B5B25A74C73007226B4 /* CAHealth.json */; };
+		6B523B6025A74CB5007226B4 /* COHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B5F25A74CB5007226B4 /* COHealth.json */; };
+		6B523B6425A74CE8007226B4 /* CTHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B6325A74CE8007226B4 /* CTHealth.json */; };
+		6B523B6825A74E9A007226B4 /* DEHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B6725A74E9A007226B4 /* DEHealth.json */; };
+		6B523B6C25A74EC9007226B4 /* DCHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B6B25A74EC9007226B4 /* DCHealth.json */; };
+		6B523B7025A74F28007226B4 /* FLHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B6F25A74F28007226B4 /* FLHealth.json */; };
+		6B523B7425A74FB4007226B4 /* GAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B7325A74FB4007226B4 /* GAHealth.json */; };
+		6B523B7825A7500E007226B4 /* HIHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B7725A7500E007226B4 /* HIHealth.json */; };
+		6B523B7C25A75065007226B4 /* IDHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B7B25A75065007226B4 /* IDHealth.json */; };
+		6B523B8025A75126007226B4 /* ILHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B7F25A75125007226B4 /* ILHealth.json */; };
+		6B523B8425A7516D007226B4 /* INHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B8325A7516D007226B4 /* INHealth.json */; };
+		6B523B8825A75190007226B4 /* IAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B8725A75190007226B4 /* IAHealth.json */; };
+		6B523B8C25A751BC007226B4 /* KSHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B8B25A751BC007226B4 /* KSHealth.json */; };
+		6B523B9025A751E9007226B4 /* KYHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B8F25A751E8007226B4 /* KYHealth.json */; };
+		6B523B9425A75224007226B4 /* LAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B9325A75224007226B4 /* LAHealth.json */; };
+		6B523B9825A75256007226B4 /* MEHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B9725A75256007226B4 /* MEHealth.json */; };
+		6B523B9C25A752E1007226B4 /* MaHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B9B25A752E1007226B4 /* MaHealth.json */; };
+		6B523BA025A75314007226B4 /* MIHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523B9F25A75314007226B4 /* MIHealth.json */; };
+		6B523BA425A75348007226B4 /* MNHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BA325A75348007226B4 /* MNHealth.json */; };
+		6B523BA825A7546D007226B4 /* MsHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BA725A7546D007226B4 /* MsHealth.json */; };
+		6B523BAC25A754E9007226B4 /* MTHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BAB25A754E9007226B4 /* MTHealth.json */; };
+		6B523BB025A7551A007226B4 /* NeHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BAF25A7551A007226B4 /* NeHealth.json */; };
+		6B523BB425A75555007226B4 /* NVHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BB325A75554007226B4 /* NVHealth.json */; };
+		6B523BB825A75575007226B4 /* NHHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BB725A75574007226B4 /* NHHealth.json */; };
+		6B523BBC25A755A7007226B4 /* NJHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BBB25A755A7007226B4 /* NJHealth.json */; };
+		6B523BC025A755C7007226B4 /* NMHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BBF25A755C7007226B4 /* NMHealth.json */; };
+		6B523BC425A755FD007226B4 /* NYHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BC325A755FD007226B4 /* NYHealth.json */; };
+		6B523BC825A75627007226B4 /* NCHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BC725A75627007226B4 /* NCHealth.json */; };
+		6B523BCC25A75673007226B4 /* NDHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BCB25A75673007226B4 /* NDHealth.json */; };
+		6B523BD025A756ED007226B4 /* OHHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BCF25A756ED007226B4 /* OHHealth.json */; };
+		6B523BD425A75757007226B4 /* OKHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BD325A75757007226B4 /* OKHealth.json */; };
+		6B523BD825A7577D007226B4 /* ORHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BD725A7577D007226B4 /* ORHealth.json */; };
+		6B523BDC25A757B3007226B4 /* PAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BDB25A757B3007226B4 /* PAHealth.json */; };
+		6B523BE025A757D6007226B4 /* RIHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BDF25A757D6007226B4 /* RIHealth.json */; };
+		6B523BE425A757FC007226B4 /* SCHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BE325A757FB007226B4 /* SCHealth.json */; };
+		6B523BE825A75834007226B4 /* SDHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BE725A75834007226B4 /* SDHealth.json */; };
+		6B523BEC25A75868007226B4 /* TNHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BEB25A75868007226B4 /* TNHealth.json */; };
+		6B523BF025A75894007226B4 /* TXHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BEF25A75894007226B4 /* TXHealth.json */; };
+		6B523BF425A758CA007226B4 /* UTHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BF325A758CA007226B4 /* UTHealth.json */; };
+		6B523BF825A758F9007226B4 /* VTHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BF725A758F9007226B4 /* VTHealth.json */; };
+		6B523BFC25A7592C007226B4 /* VAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BFB25A7592C007226B4 /* VAHealth.json */; };
+		6B523C0025A7595A007226B4 /* WAHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523BFF25A7595A007226B4 /* WAHealth.json */; };
+		6B523C0425A7597E007226B4 /* WVHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523C0325A7597E007226B4 /* WVHealth.json */; };
+		6B523C0825A759EA007226B4 /* WIHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523C0725A759EA007226B4 /* WIHealth.json */; };
+		6B523C0C25A75A17007226B4 /* WYHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523C0B25A75A17007226B4 /* WYHealth.json */; };
+		6B523C1025A75A6B007226B4 /* MOHealth.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B523C0F25A75A6B007226B4 /* MOHealth.json */; };
 		6B627AA1259B4D9D00221BDB /* SymptomSeverity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B627AA0259B4D9D00221BDB /* SymptomSeverity.swift */; };
 		6B627AA5259B524900221BDB /* ComorbidityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B627AA4259B524900221BDB /* ComorbidityView.swift */; };
 		6B639B812592BADA00BA8818 /* TabHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B639B802592BADA00BA8818 /* TabHomeView.swift */; };
 		6B639B852592CA5E00BA8818 /* StateNewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B639B842592CA5E00BA8818 /* StateNewsCard.swift */; };
+		6B76D4BA25A7EE3A0006D3B6 /* NewsCatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B76D4B925A7EE3A0006D3B6 /* NewsCatcher.swift */; };
 		6B8A499E2594E4AF00A4D401 /* CDCHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A499D2594E4AF00A4D401 /* CDCHomeView.swift */; };
 		6B8A49A22594E61E00A4D401 /* TopLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A49A12594E61E00A4D401 /* TopLogoView.swift */; };
 		6B8A49A625951E8A00A4D401 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A49A525951E8A00A4D401 /* ListView.swift */; };
@@ -76,12 +179,14 @@
 		6B8A49F225978BDC00A4D401 /* SymptomMonitoringSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A49F125978BDC00A4D401 /* SymptomMonitoringSheetView.swift */; };
 		6B8A49F6259791F200A4D401 /* CleaningInfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A49F5259791F200A4D401 /* CleaningInfoSheetView.swift */; };
 		6B8A49FA2597956100A4D401 /* FaceMaskSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A49F92597956100A4D401 /* FaceMaskSheetView.swift */; };
-		6B8C3EB92586D4E200D141D0 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C3EB82586D4E200D141D0 /* TwitterViewController.swift */; };
+		6B8C1EE725A7751600F9F5E7 /* TwitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C1EE625A7751600F9F5E7 /* TwitterViewModel.swift */; };
+		6B8C3EB92586D4E200D141D0 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C3EB82586D4E200D141D0 /* Bundle-Decodable.swift */; };
 		6B8C3EBD2586D74D00D141D0 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C3EBC2586D74D00D141D0 /* Twitter.swift */; };
 		6B8D80732593860B005CE4CF /* StatNewsLargeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8D80722593860B005CE4CF /* StatNewsLargeCard.swift */; };
 		6B90C2C82599502700C94E9A /* NYTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90C2C72599502700C94E9A /* NYTimes.swift */; };
 		6B90C2D6259962E000C94E9A /* NewYorkTimesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90C2D5259962E000C94E9A /* NewYorkTimesViewModel.swift */; };
 		6B9265C32592EF9C001FF998 /* StatenewsHorizontalViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9265C22592EF9C001FF998 /* StatenewsHorizontalViewCard.swift */; };
+		6B9710B525A4F19000FF6CC4 /* Covid19Twitter.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B9710B425A4F19000FF6CC4 /* Covid19Twitter.json */; };
 		6B9C5C4D2588552500E60A83 /* StateNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9C5C4C2588552500E60A83 /* StateNewsViewModel.swift */; };
 		6B9DF3AE259BCC0C00B48C7B /* InTheLast14DaysScreenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DF3AD259BCC0C00B48C7B /* InTheLast14DaysScreenerView.swift */; };
 		6B9DF3B2259BDA6200B48C7B /* LiveInLongTermCareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DF3B1259BDA6200B48C7B /* LiveInLongTermCareView.swift */; };
@@ -103,6 +208,7 @@
 		6BA5019B2582B76D00F5FDB5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5019A2582B76D00F5FDB5 /* State.swift */; };
 		6BA501A32583146300F5FDB5 /* NewsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA501A22583146300F5FDB5 /* NewsDataViewModel.swift */; };
 		6BA501A82583148100F5FDB5 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA501A72583148100F5FDB5 /* News.swift */; };
+		6BAA9E7325A0C35700A4AB7A /* NewDetailTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA9E7225A0C35700A4AB7A /* NewDetailTestView.swift */; };
 		6BAE9C342584243600CA9E16 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAE9C332584243600CA9E16 /* Alamofire */; };
 		6BAE9C3A2584246B00CA9E16 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAE9C392584246B00CA9E16 /* SwiftyJSON */; };
 		6BAE9C4F2584509400CA9E16 /* UsTotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAE9C4E2584509400CA9E16 /* UsTotalViewModel.swift */; };
@@ -112,6 +218,8 @@
 		6BBC5A5F259D09330075D882 /* ContinuePhysicalDistancingResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5A5E259D09330075D882 /* ContinuePhysicalDistancingResultsView.swift */; };
 		6BC96F752590F883008CF6FF /* SymptomCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC96F742590F883008CF6FF /* SymptomCheckView.swift */; };
 		6BC96F7D25910A94008CF6FF /* SymptomCheckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC96F7C25910A93008CF6FF /* SymptomCheckDetailView.swift */; };
+		6BE15EEA25A8B8BD00D95AF1 /* NewsRapidAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE15EE925A8B8BD00D95AF1 /* NewsRapidAPIViewModel.swift */; };
+		6BE15EEE25A8B93C00D95AF1 /* NewsRapidAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE15EED25A8B93C00D95AF1 /* NewsRapidAPI.swift */; };
 		6BE919AA2598B1A6002F0087 /* ALDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE919A92598B1A6002F0087 /* ALDetailViewModel.swift */; };
 		6BE919AE2598B1DA002F0087 /* ALDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE919AD2598B1DA002F0087 /* ALDetailView.swift */; };
 		6BE919B52598B2AF002F0087 /* AKDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE919B42598B2AF002F0087 /* AKDetailView.swift */; };
@@ -260,6 +368,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B0158CF25A738DC00510C1E /* Covid50.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Covid50.json; sourceTree = "<group>"; };
+		6B0158D025A738E000510C1E /* Covid20.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Covid20.json; sourceTree = "<group>"; };
+		6B0158D125A738E200510C1E /* Covid10.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Covid10.json; sourceTree = "<group>"; };
+		6B0158D225A738E400510C1E /* Covid5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Covid5.json; sourceTree = "<group>"; };
 		6B06A662258EB464009E07FA /* OverDoseDeathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverDoseDeathViewModel.swift; sourceTree = "<group>"; };
 		6B06A666258EB480009E07FA /* OverDose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverDose.swift; sourceTree = "<group>"; };
 		6B0ADB8E25852330007BD794 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = "../../../../../Downloads/CoronaTracker-master/Project/CoronaTracker/Controller/GraphView.swift"; sourceTree = "<group>"; };
@@ -296,10 +408,113 @@
 		6B4243F1259A3ACE00679707 /* AgeRestrictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRestrictionView.swift; sourceTree = "<group>"; };
 		6B4243F5259A3E8C00679707 /* RecentTestingScreenerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTestingScreenerView.swift; sourceTree = "<group>"; };
 		6B4243F9259A7C0C00679707 /* SymptomCheckerScreenerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomCheckerScreenerView.swift; sourceTree = "<group>"; };
+		6B523A6F25A741EC007226B4 /* MDTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A7325A74210007226B4 /* MarylandHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MarylandHealth.json; path = ../../../../../../Documents/MarylandHealth.json; sourceTree = "<group>"; };
+		6B523A7725A74335007226B4 /* ALTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A7B25A743A1007226B4 /* AKTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A7F25A743BC007226B4 /* AZTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A8325A74459007226B4 /* ARTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A8725A7447C007226B4 /* CATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A8B25A74517007226B4 /* COTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A8F25A74554007226B4 /* CTTwitterViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTTwitterViewCard.swift; sourceTree = "<group>"; };
+		6B523A9325A74572007226B4 /* DETwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DETwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A9725A7458A007226B4 /* DCTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A9B25A7459D007226B4 /* FLTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523A9F25A745B3007226B4 /* GATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AA325A745CE007226B4 /* HITwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HITwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AA725A745E3007226B4 /* IDTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AAB25A745F7007226B4 /* ILTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AAF25A74607007226B4 /* INTwitterViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INTwitterViewCard.swift; sourceTree = "<group>"; };
+		6B523AB325A7461D007226B4 /* IATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AB725A74630007226B4 /* KSTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523ABB25A74644007226B4 /* KYTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523ABF25A746DD007226B4 /* LATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AC325A746EC007226B4 /* METwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AC725A746FF007226B4 /* MATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523ACB25A74722007226B4 /* MITwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MITwitterCardView.swift; sourceTree = "<group>"; };
+		6B523ACF25A74736007226B4 /* MNTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AD325A74759007226B4 /* MSTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AD725A7476D007226B4 /* MTTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523ADB25A7477F007226B4 /* NETwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NETwitterCardView.swift; sourceTree = "<group>"; };
+		6B523ADF25A74793007226B4 /* NVTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AE325A747A7007226B4 /* NHTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AE725A747B9007226B4 /* NJTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AEB25A747D2007226B4 /* NMTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AEF25A747E2007226B4 /* NYTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AF925A7480F007226B4 /* NCTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523AFD25A7482C007226B4 /* NDTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B0125A74844007226B4 /* OHTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B0B25A74873007226B4 /* OKTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B0F25A74887007226B4 /* ORTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B1325A748A7007226B4 /* PATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B1725A748EF007226B4 /* RITwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RITwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B1B25A7490B007226B4 /* SCTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B1F25A7491C007226B4 /* SDTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B2325A7492F007226B4 /* TNTwitterCradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNTwitterCradView.swift; sourceTree = "<group>"; };
+		6B523B2725A74943007226B4 /* TXTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TXTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B2B25A74958007226B4 /* UTTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B2F25A7496E007226B4 /* VTTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B3325A7497E007226B4 /* VATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B3725A74993007226B4 /* WATwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B3B25A749A4007226B4 /* WVTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WVTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B3F25A749B7007226B4 /* WITwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WITwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B4325A749CD007226B4 /* WYTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B4725A749E7007226B4 /* MOTwitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOTwitterCardView.swift; sourceTree = "<group>"; };
+		6B523B4B25A74AF5007226B4 /* ALHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ALHealth.json; path = ../../../../../../Documents/ALHealth.json; sourceTree = "<group>"; };
+		6B523B4F25A74B86007226B4 /* AKHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AKHealth.json; path = ../../../../../../Documents/AKHealth.json; sourceTree = "<group>"; };
+		6B523B5325A74BDA007226B4 /* AZHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = AZHealth.json; path = ../../../../../../Documents/AZHealth.json; sourceTree = "<group>"; };
+		6B523B5725A74C12007226B4 /* ARHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ARHealth.json; path = ../../../../../../Documents/ARHealth.json; sourceTree = "<group>"; };
+		6B523B5B25A74C73007226B4 /* CAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CAHealth.json; path = ../../../../../../Documents/CAHealth.json; sourceTree = "<group>"; };
+		6B523B5F25A74CB5007226B4 /* COHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = COHealth.json; path = ../../../../../../Documents/COHealth.json; sourceTree = "<group>"; };
+		6B523B6325A74CE8007226B4 /* CTHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CTHealth.json; path = ../../../../../../Documents/CTHealth.json; sourceTree = "<group>"; };
+		6B523B6725A74E9A007226B4 /* DEHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = DEHealth.json; path = ../../../../../../Documents/DEHealth.json; sourceTree = "<group>"; };
+		6B523B6B25A74EC9007226B4 /* DCHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = DCHealth.json; path = ../../../../../../Documents/DCHealth.json; sourceTree = "<group>"; };
+		6B523B6F25A74F28007226B4 /* FLHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FLHealth.json; path = ../../../../../../Documents/FLHealth.json; sourceTree = "<group>"; };
+		6B523B7325A74FB4007226B4 /* GAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = GAHealth.json; path = ../../../../../../Documents/GAHealth.json; sourceTree = "<group>"; };
+		6B523B7725A7500E007226B4 /* HIHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = HIHealth.json; path = ../../../../../../Documents/HIHealth.json; sourceTree = "<group>"; };
+		6B523B7B25A75065007226B4 /* IDHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IDHealth.json; path = ../../../../../../Documents/IDHealth.json; sourceTree = "<group>"; };
+		6B523B7F25A75125007226B4 /* ILHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ILHealth.json; path = ../../../../../../Documents/ILHealth.json; sourceTree = "<group>"; };
+		6B523B8325A7516D007226B4 /* INHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = INHealth.json; path = ../../../../../../Documents/INHealth.json; sourceTree = "<group>"; };
+		6B523B8725A75190007226B4 /* IAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = IAHealth.json; path = ../../../../../../Documents/IAHealth.json; sourceTree = "<group>"; };
+		6B523B8B25A751BC007226B4 /* KSHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = KSHealth.json; path = ../../../../../../Documents/KSHealth.json; sourceTree = "<group>"; };
+		6B523B8F25A751E8007226B4 /* KYHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = KYHealth.json; path = ../../../../../../Documents/KYHealth.json; sourceTree = "<group>"; };
+		6B523B9325A75224007226B4 /* LAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LAHealth.json; path = ../../../../../../Documents/LAHealth.json; sourceTree = "<group>"; };
+		6B523B9725A75256007226B4 /* MEHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MEHealth.json; path = ../../../../../../Documents/MEHealth.json; sourceTree = "<group>"; };
+		6B523B9B25A752E1007226B4 /* MaHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MaHealth.json; path = ../../../../../../Documents/MaHealth.json; sourceTree = "<group>"; };
+		6B523B9F25A75314007226B4 /* MIHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MIHealth.json; path = ../../../../../../Documents/MIHealth.json; sourceTree = "<group>"; };
+		6B523BA325A75348007226B4 /* MNHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MNHealth.json; path = ../../../../../../Documents/MNHealth.json; sourceTree = "<group>"; };
+		6B523BA725A7546D007226B4 /* MsHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MsHealth.json; path = ../../../../../../Documents/MsHealth.json; sourceTree = "<group>"; };
+		6B523BAB25A754E9007226B4 /* MTHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MTHealth.json; path = ../../../../../../Documents/MTHealth.json; sourceTree = "<group>"; };
+		6B523BAF25A7551A007226B4 /* NeHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NeHealth.json; path = ../../../../../../Documents/NeHealth.json; sourceTree = "<group>"; };
+		6B523BB325A75554007226B4 /* NVHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NVHealth.json; path = ../../../../../../Documents/NVHealth.json; sourceTree = "<group>"; };
+		6B523BB725A75574007226B4 /* NHHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NHHealth.json; path = ../../../../../../Documents/NHHealth.json; sourceTree = "<group>"; };
+		6B523BBB25A755A7007226B4 /* NJHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NJHealth.json; path = ../../../../../../Documents/NJHealth.json; sourceTree = "<group>"; };
+		6B523BBF25A755C7007226B4 /* NMHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NMHealth.json; path = ../../../../../../Documents/NMHealth.json; sourceTree = "<group>"; };
+		6B523BC325A755FD007226B4 /* NYHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NYHealth.json; path = ../../../../../../Documents/NYHealth.json; sourceTree = "<group>"; };
+		6B523BC725A75627007226B4 /* NCHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NCHealth.json; path = ../../../../../../Documents/NCHealth.json; sourceTree = "<group>"; };
+		6B523BCB25A75673007226B4 /* NDHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NDHealth.json; path = ../../../../../../Documents/NDHealth.json; sourceTree = "<group>"; };
+		6B523BCF25A756ED007226B4 /* OHHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = OHHealth.json; path = ../../../../../../Documents/OHHealth.json; sourceTree = "<group>"; };
+		6B523BD325A75757007226B4 /* OKHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = OKHealth.json; path = ../../../../../../Documents/OKHealth.json; sourceTree = "<group>"; };
+		6B523BD725A7577D007226B4 /* ORHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ORHealth.json; path = ../../../../../../Documents/ORHealth.json; sourceTree = "<group>"; };
+		6B523BDB25A757B3007226B4 /* PAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PAHealth.json; path = ../../../../../../Documents/PAHealth.json; sourceTree = "<group>"; };
+		6B523BDF25A757D6007226B4 /* RIHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RIHealth.json; path = ../../../../../../Documents/RIHealth.json; sourceTree = "<group>"; };
+		6B523BE325A757FB007226B4 /* SCHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SCHealth.json; path = ../../../../../../Documents/SCHealth.json; sourceTree = "<group>"; };
+		6B523BE725A75834007226B4 /* SDHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SDHealth.json; path = ../../../../../../Documents/SDHealth.json; sourceTree = "<group>"; };
+		6B523BEB25A75868007226B4 /* TNHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TNHealth.json; path = ../../../../../../Documents/TNHealth.json; sourceTree = "<group>"; };
+		6B523BEF25A75894007226B4 /* TXHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TXHealth.json; path = ../../../../../../Documents/TXHealth.json; sourceTree = "<group>"; };
+		6B523BF325A758CA007226B4 /* UTHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = UTHealth.json; path = ../../../../../../Documents/UTHealth.json; sourceTree = "<group>"; };
+		6B523BF725A758F9007226B4 /* VTHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VTHealth.json; path = ../../../../../../Documents/VTHealth.json; sourceTree = "<group>"; };
+		6B523BFB25A7592C007226B4 /* VAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VAHealth.json; path = ../../../../../../Documents/VAHealth.json; sourceTree = "<group>"; };
+		6B523BFF25A7595A007226B4 /* WAHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WAHealth.json; path = ../../../../../../Documents/WAHealth.json; sourceTree = "<group>"; };
+		6B523C0325A7597E007226B4 /* WVHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WVHealth.json; path = ../../../../../../Documents/WVHealth.json; sourceTree = "<group>"; };
+		6B523C0725A759EA007226B4 /* WIHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WIHealth.json; path = ../../../../../../Documents/WIHealth.json; sourceTree = "<group>"; };
+		6B523C0B25A75A17007226B4 /* WYHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WYHealth.json; path = ../../../../../../Documents/WYHealth.json; sourceTree = "<group>"; };
+		6B523C0F25A75A6B007226B4 /* MOHealth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MOHealth.json; path = ../../../../../../Documents/MOHealth.json; sourceTree = "<group>"; };
 		6B627AA0259B4D9D00221BDB /* SymptomSeverity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomSeverity.swift; sourceTree = "<group>"; };
 		6B627AA4259B524900221BDB /* ComorbidityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComorbidityView.swift; sourceTree = "<group>"; };
 		6B639B802592BADA00BA8818 /* TabHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHomeView.swift; sourceTree = "<group>"; };
 		6B639B842592CA5E00BA8818 /* StateNewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateNewsCard.swift; sourceTree = "<group>"; };
+		6B76D4B925A7EE3A0006D3B6 /* NewsCatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCatcher.swift; sourceTree = "<group>"; };
 		6B8A499D2594E4AF00A4D401 /* CDCHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCHomeView.swift; sourceTree = "<group>"; };
 		6B8A49A12594E61E00A4D401 /* TopLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLogoView.swift; sourceTree = "<group>"; };
 		6B8A49A525951E8A00A4D401 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -319,12 +534,15 @@
 		6B8A49F125978BDC00A4D401 /* SymptomMonitoringSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomMonitoringSheetView.swift; sourceTree = "<group>"; };
 		6B8A49F5259791F200A4D401 /* CleaningInfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningInfoSheetView.swift; sourceTree = "<group>"; };
 		6B8A49F92597956100A4D401 /* FaceMaskSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMaskSheetView.swift; sourceTree = "<group>"; };
-		6B8C3EB82586D4E200D141D0 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		6B8C1EE625A7751600F9F5E7 /* TwitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewModel.swift; sourceTree = "<group>"; };
+		6B8C3EB82586D4E200D141D0 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		6B8C3EBC2586D74D00D141D0 /* Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		6B8D80722593860B005CE4CF /* StatNewsLargeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatNewsLargeCard.swift; sourceTree = "<group>"; };
 		6B90C2C72599502700C94E9A /* NYTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimes.swift; sourceTree = "<group>"; };
 		6B90C2D5259962E000C94E9A /* NewYorkTimesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkTimesViewModel.swift; sourceTree = "<group>"; };
 		6B9265C22592EF9C001FF998 /* StatenewsHorizontalViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatenewsHorizontalViewCard.swift; sourceTree = "<group>"; };
+		6B9710B425A4F19000FF6CC4 /* Covid19Twitter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Covid19Twitter.json; path = ../../../../Documents/Covid19Twitter.json; sourceTree = "<group>"; };
+		6B9710B825A4F74700FF6CC4 /* Covid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Covid.json; sourceTree = "<group>"; };
 		6B9C5C4C2588552500E60A83 /* StateNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateNewsViewModel.swift; sourceTree = "<group>"; };
 		6B9DF3AD259BCC0C00B48C7B /* InTheLast14DaysScreenerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTheLast14DaysScreenerView.swift; sourceTree = "<group>"; };
 		6B9DF3B1259BDA6200B48C7B /* LiveInLongTermCareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveInLongTermCareView.swift; sourceTree = "<group>"; };
@@ -352,6 +570,7 @@
 		6BA5019A2582B76D00F5FDB5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		6BA501A22583146300F5FDB5 /* NewsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataViewModel.swift; sourceTree = "<group>"; };
 		6BA501A72583148100F5FDB5 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		6BAA9E7225A0C35700A4AB7A /* NewDetailTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailTestView.swift; sourceTree = "<group>"; };
 		6BAE9C4E2584509400CA9E16 /* UsTotalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsTotalViewModel.swift; sourceTree = "<group>"; };
 		6BAE9C53258451B200CA9E16 /* TotalUS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUS.swift; sourceTree = "<group>"; };
 		6BB03E442586BC5E00C66C85 /* StateNewsView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateNewsView1.swift; sourceTree = "<group>"; };
@@ -359,6 +578,8 @@
 		6BBC5A5E259D09330075D882 /* ContinuePhysicalDistancingResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuePhysicalDistancingResultsView.swift; sourceTree = "<group>"; };
 		6BC96F742590F883008CF6FF /* SymptomCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomCheckView.swift; sourceTree = "<group>"; };
 		6BC96F7C25910A93008CF6FF /* SymptomCheckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomCheckDetailView.swift; sourceTree = "<group>"; };
+		6BE15EE925A8B8BD00D95AF1 /* NewsRapidAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRapidAPIViewModel.swift; sourceTree = "<group>"; };
+		6BE15EED25A8B93C00D95AF1 /* NewsRapidAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRapidAPI.swift; sourceTree = "<group>"; };
 		6BE919A92598B1A6002F0087 /* ALDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDetailViewModel.swift; sourceTree = "<group>"; };
 		6BE919AD2598B1DA002F0087 /* ALDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDetailView.swift; sourceTree = "<group>"; };
 		6BE919B42598B2AF002F0087 /* AKDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKDetailView.swift; sourceTree = "<group>"; };
@@ -513,6 +734,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0158CE25A738C500510C1E /* StateJSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6B0158CF25A738DC00510C1E /* Covid50.json */,
+				6B0158D025A738E000510C1E /* Covid20.json */,
+				6B0158D125A738E200510C1E /* Covid10.json */,
+				6B0158D225A738E400510C1E /* Covid5.json */,
+			);
+			path = StateJSONFiles;
+			sourceTree = "<group>";
+		};
 		6B29BFAC259C9A31006E9070 /* Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,7 +802,6 @@
 				6B8A49E02597790400A4D401 /* WhatInfoSheet */,
 				6B8A49BF2597575200A4D401 /* CovidScreenTabView */,
 				6B8A49BE2597570100A4D401 /* AboutCovidSheetView */,
-				6B8A49BD259756F700A4D401 /* ListViewLinks */,
 			);
 			path = CDCCovidScreen;
 			sourceTree = "<group>";
@@ -702,6 +933,8 @@
 				6BA5019A2582B76D00F5FDB5 /* State.swift */,
 				6B0ADC2925853A82007BD794 /* Path+QuadCurve.swift */,
 				6BA501A72583148100F5FDB5 /* News.swift */,
+				6B76D4B925A7EE3A0006D3B6 /* NewsCatcher.swift */,
+				6BE15EED25A8B93C00D95AF1 /* NewsRapidAPI.swift */,
 				6BAE9C53258451B200CA9E16 /* TotalUS.swift */,
 				6B0ADC2D25853A8E007BD794 /* Legend.swift */,
 				6B0ADC0925853A2A007BD794 /* Summary.swift */,
@@ -714,6 +947,7 @@
 				6B06A666258EB480009E07FA /* OverDose.swift */,
 				6B2E8EA6259142A1004A9A2A /* Model.swift */,
 				6B90C2C72599502700C94E9A /* NYTimes.swift */,
+				6B9710B425A4F19000FF6CC4 /* Covid19Twitter.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -721,6 +955,7 @@
 		6BA0A6BE25813D8800CD03A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6B0158CE25A738C500510C1E /* StateJSONFiles */,
 				6BE91BA62598DF78002F0087 /* StateNewsViewModel */,
 				6BE9199A2598A828002F0087 /* StateViewController */,
 				6BF0F608258160BF00CC427D /* StateDataViewModel.swift */,
@@ -728,10 +963,13 @@
 				6B9C5C4C2588552500E60A83 /* StateNewsViewModel.swift */,
 				6BA501A22583146300F5FDB5 /* NewsDataViewModel.swift */,
 				6BAE9C4E2584509400CA9E16 /* UsTotalViewModel.swift */,
-				6B8C3EB82586D4E200D141D0 /* TwitterViewController.swift */,
+				6B8C1EE625A7751600F9F5E7 /* TwitterViewModel.swift */,
+				6BE15EE925A8B8BD00D95AF1 /* NewsRapidAPIViewModel.swift */,
+				6B8C3EB82586D4E200D141D0 /* Bundle-Decodable.swift */,
 				6B06A662258EB464009E07FA /* OverDoseDeathViewModel.swift */,
 				6B2E8EAA259142A8004A9A2A /* CovidFetchRequest.swift */,
 				6B90C2D5259962E000C94E9A /* NewYorkTimesViewModel.swift */,
+				6B9710B825A4F74700FF6CC4 /* Covid.json */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -755,6 +993,7 @@
 		6BC789FD25851BFA008396F4 /* AllUS */ = {
 			isa = PBXGroup;
 			children = (
+				6B8A49BD259756F700A4D401 /* ListViewLinks */,
 				6BA0A6C82581447B00CD03A5 /* AllUSDataView.swift */,
 			);
 			path = AllUS;
@@ -771,6 +1010,15 @@
 			path = Screenertool;
 			sourceTree = "<group>";
 		};
+		6BDEDAD925A0AEFF007D0ADF /* NewsDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				6B1801E125868BCD00EF39DA /* NewsDetailView.swift */,
+				6BAA9E7225A0C35700A4AB7A /* NewDetailTestView.swift */,
+			);
+			path = NewsDetailsView;
+			sourceTree = "<group>";
+		};
 		6BE919992598A7FE002F0087 /* MD */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +1026,8 @@
 				6BB03E442586BC5E00C66C85 /* StateNewsView1.swift */,
 				6B1026B1258E39CF00C0334F /* TwitterCardView.swift */,
 				6BE91BB12598E837002F0087 /* MDStateNewsView.swift */,
+				6B523A6F25A741EC007226B4 /* MDTwitterCardView.swift */,
+				6B523A7325A74210007226B4 /* MarylandHealth.json */,
 			);
 			path = MD;
 			sourceTree = "<group>";
@@ -852,6 +1102,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919AD2598B1DA002F0087 /* ALDetailView.swift */,
+				6B523A7725A74335007226B4 /* ALTwitterCardView.swift */,
+				6B523B4B25A74AF5007226B4 /* ALHealth.json */,
 			);
 			path = AL;
 			sourceTree = "<group>";
@@ -860,6 +1112,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919B42598B2AF002F0087 /* AKDetailView.swift */,
+				6B523A7B25A743A1007226B4 /* AKTwitterCardView.swift */,
+				6B523B4F25A74B86007226B4 /* AKHealth.json */,
 			);
 			path = AK;
 			sourceTree = "<group>";
@@ -868,6 +1122,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919BD2598B353002F0087 /* AZDetailView.swift */,
+				6B523A7F25A743BC007226B4 /* AZTwitterCardView.swift */,
+				6B523B5325A74BDA007226B4 /* AZHealth.json */,
 			);
 			path = AZ;
 			sourceTree = "<group>";
@@ -876,6 +1132,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919C52598B3BD002F0087 /* ARDetailView.swift */,
+				6B523A8325A74459007226B4 /* ARTwitterCardView.swift */,
+				6B523B5725A74C12007226B4 /* ARHealth.json */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -884,6 +1142,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919D12598B459002F0087 /* CADetailView.swift */,
+				6B523A8725A7447C007226B4 /* CATwitterCardView.swift */,
+				6B523B5B25A74C73007226B4 /* CAHealth.json */,
 			);
 			path = CA;
 			sourceTree = "<group>";
@@ -892,6 +1152,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919DC2598B4D0002F0087 /* CODetailView.swift */,
+				6B523A8B25A74517007226B4 /* COTwitterCardView.swift */,
+				6B523B5F25A74CB5007226B4 /* COHealth.json */,
 			);
 			path = CO;
 			sourceTree = "<group>";
@@ -900,6 +1162,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919E92598B542002F0087 /* CTDetailView.swift */,
+				6B523A8F25A74554007226B4 /* CTTwitterViewCard.swift */,
+				6B523B6325A74CE8007226B4 /* CTHealth.json */,
 			);
 			path = CT;
 			sourceTree = "<group>";
@@ -908,6 +1172,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919F42598B5BC002F0087 /* DEDetailView.swift */,
+				6B523A9325A74572007226B4 /* DETwitterCardView.swift */,
+				6B523B6725A74E9A007226B4 /* DEHealth.json */,
 			);
 			path = DE;
 			sourceTree = "<group>";
@@ -916,6 +1182,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE919FF2598B642002F0087 /* DCDetailView.swift */,
+				6B523A9725A7458A007226B4 /* DCTwitterCardView.swift */,
+				6B523B6B25A74EC9007226B4 /* DCHealth.json */,
 			);
 			path = DC;
 			sourceTree = "<group>";
@@ -924,6 +1192,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A072598B6B0002F0087 /* FLDetailView.swift */,
+				6B523A9B25A7459D007226B4 /* FLTwitterCardView.swift */,
+				6B523B6F25A74F28007226B4 /* FLHealth.json */,
 			);
 			path = FL;
 			sourceTree = "<group>";
@@ -932,6 +1202,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A132598B71F002F0087 /* GADetailView.swift */,
+				6B523A9F25A745B3007226B4 /* GATwitterCardView.swift */,
+				6B523B7325A74FB4007226B4 /* GAHealth.json */,
 			);
 			path = GA;
 			sourceTree = "<group>";
@@ -940,6 +1212,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A1C2598B7D3002F0087 /* HIDetailView.swift */,
+				6B523AA325A745CE007226B4 /* HITwitterCardView.swift */,
+				6B523B7725A7500E007226B4 /* HIHealth.json */,
 			);
 			path = HI;
 			sourceTree = "<group>";
@@ -948,6 +1222,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A272598B841002F0087 /* IDDetailView.swift */,
+				6B523AA725A745E3007226B4 /* IDTwitterCardView.swift */,
+				6B523B7B25A75065007226B4 /* IDHealth.json */,
 			);
 			path = ID;
 			sourceTree = "<group>";
@@ -956,6 +1232,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A322598B8AD002F0087 /* ILDetailView.swift */,
+				6B523AAB25A745F7007226B4 /* ILTwitterCardView.swift */,
+				6B523B7F25A75125007226B4 /* ILHealth.json */,
 			);
 			path = IL;
 			sourceTree = "<group>";
@@ -964,6 +1242,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A3B2598B91A002F0087 /* INDetailView.swift */,
+				6B523AAF25A74607007226B4 /* INTwitterViewCard.swift */,
+				6B523B8325A7516D007226B4 /* INHealth.json */,
 			);
 			path = IN;
 			sourceTree = "<group>";
@@ -972,6 +1252,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A462598B98A002F0087 /* IADetailView.swift */,
+				6B523AB325A7461D007226B4 /* IATwitterCardView.swift */,
+				6B523B8725A75190007226B4 /* IAHealth.json */,
 			);
 			path = IA;
 			sourceTree = "<group>";
@@ -980,6 +1262,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A4F2598B9EB002F0087 /* KSDetailView.swift */,
+				6B523AB725A74630007226B4 /* KSTwitterCardView.swift */,
+				6B523B8B25A751BC007226B4 /* KSHealth.json */,
 			);
 			path = KS;
 			sourceTree = "<group>";
@@ -988,6 +1272,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A582598BA53002F0087 /* KYDetailView.swift */,
+				6B523ABB25A74644007226B4 /* KYTwitterCardView.swift */,
+				6B523B8F25A751E8007226B4 /* KYHealth.json */,
 			);
 			path = KY;
 			sourceTree = "<group>";
@@ -996,6 +1282,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A612598BAB4002F0087 /* LADetailView.swift */,
+				6B523ABF25A746DD007226B4 /* LATwitterCardView.swift */,
+				6B523B9325A75224007226B4 /* LAHealth.json */,
 			);
 			path = LA;
 			sourceTree = "<group>";
@@ -1004,6 +1292,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A6A2598BB1A002F0087 /* MEDetailView.swift */,
+				6B523AC325A746EC007226B4 /* METwitterCardView.swift */,
+				6B523B9725A75256007226B4 /* MEHealth.json */,
 			);
 			path = ME;
 			sourceTree = "<group>";
@@ -1012,6 +1302,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A732598BB7A002F0087 /* MADetailView.swift */,
+				6B523AC725A746FF007226B4 /* MATwitterCardView.swift */,
+				6B523B9B25A752E1007226B4 /* MaHealth.json */,
 			);
 			path = MA;
 			sourceTree = "<group>";
@@ -1020,6 +1312,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A7E2598BBFD002F0087 /* MIDetailView.swift */,
+				6B523ACB25A74722007226B4 /* MITwitterCardView.swift */,
+				6B523B9F25A75314007226B4 /* MIHealth.json */,
 			);
 			path = MI;
 			sourceTree = "<group>";
@@ -1028,6 +1322,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A872598BC4A002F0087 /* MNDetailView.swift */,
+				6B523ACF25A74736007226B4 /* MNTwitterCardView.swift */,
+				6B523BA325A75348007226B4 /* MNHealth.json */,
 			);
 			path = MN;
 			sourceTree = "<group>";
@@ -1036,6 +1332,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A922598BCB5002F0087 /* MSDetailView.swift */,
+				6B523AD325A74759007226B4 /* MSTwitterCardView.swift */,
+				6B523BA725A7546D007226B4 /* MsHealth.json */,
 			);
 			path = MS;
 			sourceTree = "<group>";
@@ -1044,6 +1342,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91A9B2598BD05002F0087 /* MTDetailView.swift */,
+				6B523AD725A7476D007226B4 /* MTTwitterCardView.swift */,
+				6B523BAB25A754E9007226B4 /* MTHealth.json */,
 			);
 			path = MT;
 			sourceTree = "<group>";
@@ -1052,6 +1352,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AA62598BD5C002F0087 /* NEDetailView.swift */,
+				6B523ADB25A7477F007226B4 /* NETwitterCardView.swift */,
+				6B523BAF25A7551A007226B4 /* NeHealth.json */,
 			);
 			path = NE;
 			sourceTree = "<group>";
@@ -1060,6 +1362,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AAF2598BDC5002F0087 /* NVDetailView.swift */,
+				6B523ADF25A74793007226B4 /* NVTwitterCardView.swift */,
+				6B523BB325A75554007226B4 /* NVHealth.json */,
 			);
 			path = NV;
 			sourceTree = "<group>";
@@ -1068,6 +1372,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91ABA2598BE2A002F0087 /* NHDetailView.swift */,
+				6B523AE325A747A7007226B4 /* NHTwitterCardView.swift */,
+				6B523BB725A75574007226B4 /* NHHealth.json */,
 			);
 			path = NH;
 			sourceTree = "<group>";
@@ -1076,6 +1382,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AC52598BE84002F0087 /* NJDetailView.swift */,
+				6B523AE725A747B9007226B4 /* NJTwitterCardView.swift */,
+				6B523BBB25A755A7007226B4 /* NJHealth.json */,
 			);
 			path = NJ;
 			sourceTree = "<group>";
@@ -1084,6 +1392,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AD02598BF3C002F0087 /* NMDetailView.swift */,
+				6B523AEB25A747D2007226B4 /* NMTwitterCardView.swift */,
+				6B523BBF25A755C7007226B4 /* NMHealth.json */,
 			);
 			path = NM;
 			sourceTree = "<group>";
@@ -1092,6 +1402,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91ADB2598BF91002F0087 /* NYDetailView.swift */,
+				6B523AEF25A747E2007226B4 /* NYTwitterCardView.swift */,
+				6B523BC325A755FD007226B4 /* NYHealth.json */,
 			);
 			path = NY;
 			sourceTree = "<group>";
@@ -1100,6 +1412,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AE42598C071002F0087 /* NCDetailView.swift */,
+				6B523AF925A7480F007226B4 /* NCTwitterCardView.swift */,
+				6B523BC725A75627007226B4 /* NCHealth.json */,
 			);
 			path = NC;
 			sourceTree = "<group>";
@@ -1108,6 +1422,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AED2598C0D8002F0087 /* NDDetailView.swift */,
+				6B523AFD25A7482C007226B4 /* NDTwitterCardView.swift */,
+				6B523BCB25A75673007226B4 /* NDHealth.json */,
 			);
 			path = ND;
 			sourceTree = "<group>";
@@ -1116,6 +1432,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91AF82598C13A002F0087 /* OHDetailView.swift */,
+				6B523B0125A74844007226B4 /* OHTwitterCardView.swift */,
+				6B523BCF25A756ED007226B4 /* OHHealth.json */,
 			);
 			path = OH;
 			sourceTree = "<group>";
@@ -1124,6 +1442,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B012598C19E002F0087 /* OKDetailView.swift */,
+				6B523B0B25A74873007226B4 /* OKTwitterCardView.swift */,
+				6B523BD325A75757007226B4 /* OKHealth.json */,
 			);
 			path = OK;
 			sourceTree = "<group>";
@@ -1132,6 +1452,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B0C2598C244002F0087 /* ORDetailView.swift */,
+				6B523B0F25A74887007226B4 /* ORTwitterCardView.swift */,
+				6B523BD725A7577D007226B4 /* ORHealth.json */,
 			);
 			path = OR;
 			sourceTree = "<group>";
@@ -1140,6 +1462,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B172598C29F002F0087 /* PADetailView.swift */,
+				6B523B1325A748A7007226B4 /* PATwitterCardView.swift */,
+				6B523BDB25A757B3007226B4 /* PAHealth.json */,
 			);
 			path = PA;
 			sourceTree = "<group>";
@@ -1148,6 +1472,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B222598C30E002F0087 /* RIDetailView.swift */,
+				6B523B1725A748EF007226B4 /* RITwitterCardView.swift */,
+				6B523BDF25A757D6007226B4 /* RIHealth.json */,
 			);
 			path = RI;
 			sourceTree = "<group>";
@@ -1156,6 +1482,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B2D2598C35C002F0087 /* SCDetailView.swift */,
+				6B523B1B25A7490B007226B4 /* SCTwitterCardView.swift */,
+				6B523BE325A757FB007226B4 /* SCHealth.json */,
 			);
 			path = SC;
 			sourceTree = "<group>";
@@ -1164,6 +1492,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B382598C3BD002F0087 /* SDDetailView.swift */,
+				6B523B1F25A7491C007226B4 /* SDTwitterCardView.swift */,
+				6B523BE725A75834007226B4 /* SDHealth.json */,
 			);
 			path = SD;
 			sourceTree = "<group>";
@@ -1172,6 +1502,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B412598C414002F0087 /* TNDetailView.swift */,
+				6B523B2325A7492F007226B4 /* TNTwitterCradView.swift */,
+				6B523BEB25A75868007226B4 /* TNHealth.json */,
 			);
 			path = TN;
 			sourceTree = "<group>";
@@ -1180,6 +1512,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B4A2598C46C002F0087 /* TXDetailView.swift */,
+				6B523B2725A74943007226B4 /* TXTwitterCardView.swift */,
+				6B523BEF25A75894007226B4 /* TXHealth.json */,
 			);
 			path = TX;
 			sourceTree = "<group>";
@@ -1188,6 +1522,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B552598C4C2002F0087 /* UTDetailView.swift */,
+				6B523B2B25A74958007226B4 /* UTTwitterCardView.swift */,
+				6B523BF325A758CA007226B4 /* UTHealth.json */,
 			);
 			path = UT;
 			sourceTree = "<group>";
@@ -1196,6 +1532,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B602598C521002F0087 /* VTDetailView.swift */,
+				6B523B2F25A7496E007226B4 /* VTTwitterCardView.swift */,
+				6B523BF725A758F9007226B4 /* VTHealth.json */,
 			);
 			path = VT;
 			sourceTree = "<group>";
@@ -1204,6 +1542,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B6B2598C582002F0087 /* VADetailView.swift */,
+				6B523B3325A7497E007226B4 /* VATwitterCardView.swift */,
+				6B523BFB25A7592C007226B4 /* VAHealth.json */,
 			);
 			path = VA;
 			sourceTree = "<group>";
@@ -1212,6 +1552,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B762598C5DF002F0087 /* WADetailView.swift */,
+				6B523B3725A74993007226B4 /* WATwitterCardView.swift */,
+				6B523BFF25A7595A007226B4 /* WAHealth.json */,
 			);
 			path = WA;
 			sourceTree = "<group>";
@@ -1220,6 +1562,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B812598C65E002F0087 /* WVDetailView.swift */,
+				6B523B3B25A749A4007226B4 /* WVTwitterCardView.swift */,
+				6B523C0325A7597E007226B4 /* WVHealth.json */,
 			);
 			path = WV;
 			sourceTree = "<group>";
@@ -1228,6 +1572,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B8A2598C772002F0087 /* WIDetailView.swift */,
+				6B523B3F25A749B7007226B4 /* WITwitterCardView.swift */,
+				6B523C0725A759EA007226B4 /* WIHealth.json */,
 			);
 			path = WI;
 			sourceTree = "<group>";
@@ -1236,6 +1582,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B952598C7E1002F0087 /* WYDetailView.swift */,
+				6B523B4325A749CD007226B4 /* WYTwitterCardView.swift */,
+				6B523C0B25A75A17007226B4 /* WYHealth.json */,
 			);
 			path = WY;
 			sourceTree = "<group>";
@@ -1244,6 +1592,8 @@
 			isa = PBXGroup;
 			children = (
 				6BE91B9E2598D5C3002F0087 /* MODetailView.swift */,
+				6B523B4725A749E7007226B4 /* MOTwitterCardView.swift */,
+				6B523C0F25A75A6B007226B4 /* MOHealth.json */,
 			);
 			path = MO;
 			sourceTree = "<group>";
@@ -1372,8 +1722,8 @@
 		6BF0F6102581706100CC427D /* News */ = {
 			isa = PBXGroup;
 			children = (
+				6BDEDAD925A0AEFF007D0ADF /* NewsDetailsView */,
 				6BA0A6C3258143DE00CD03A5 /* NewsDataView.swift */,
-				6B1801E125868BCD00EF39DA /* NewsDetailView.swift */,
 				6B639B842592CA5E00BA8818 /* StateNewsCard.swift */,
 				6B8D80722593860B005CE4CF /* StatNewsLargeCard.swift */,
 				6B9265C22592EF9C001FF998 /* StatenewsHorizontalViewCard.swift */,
@@ -1509,9 +1859,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B523BB825A75575007226B4 /* NHHealth.json in Resources */,
+				6B523BE425A757FC007226B4 /* SCHealth.json in Resources */,
+				6B523B9425A75224007226B4 /* LAHealth.json in Resources */,
+				6B523B6025A74CB5007226B4 /* COHealth.json in Resources */,
+				6B523BA425A75348007226B4 /* MNHealth.json in Resources */,
 				6B0ADBD62585239A007BD794 /* Covid.graphql.json in Resources */,
+				6B523BE025A757D6007226B4 /* RIHealth.json in Resources */,
+				6B523BD425A75757007226B4 /* OKHealth.json in Resources */,
+				6B523C0425A7597E007226B4 /* WVHealth.json in Resources */,
+				6B523B9025A751E9007226B4 /* KYHealth.json in Resources */,
+				6B523BF025A75894007226B4 /* TXHealth.json in Resources */,
+				6B523B8425A7516D007226B4 /* INHealth.json in Resources */,
+				6B523B6425A74CE8007226B4 /* CTHealth.json in Resources */,
+				6B523C0825A759EA007226B4 /* WIHealth.json in Resources */,
+				6B523B8825A75190007226B4 /* IAHealth.json in Resources */,
+				6B523B7425A74FB4007226B4 /* GAHealth.json in Resources */,
+				6B523B7825A7500E007226B4 /* HIHealth.json in Resources */,
+				6B9710B525A4F19000FF6CC4 /* Covid19Twitter.json in Resources */,
+				6B523C1025A75A6B007226B4 /* MOHealth.json in Resources */,
+				6B523B9825A75256007226B4 /* MEHealth.json in Resources */,
+				6B523B6C25A74EC9007226B4 /* DCHealth.json in Resources */,
+				6B523B6825A74E9A007226B4 /* DEHealth.json in Resources */,
+				6B523BAC25A754E9007226B4 /* MTHealth.json in Resources */,
+				6B523BF425A758CA007226B4 /* UTHealth.json in Resources */,
+				6B523BB425A75555007226B4 /* NVHealth.json in Resources */,
+				6B523BA025A75314007226B4 /* MIHealth.json in Resources */,
+				6B523B9C25A752E1007226B4 /* MaHealth.json in Resources */,
+				6B523BD825A7577D007226B4 /* ORHealth.json in Resources */,
+				6B523BC025A755C7007226B4 /* NMHealth.json in Resources */,
+				6B523B7C25A75065007226B4 /* IDHealth.json in Resources */,
+				6B523BB025A7551A007226B4 /* NeHealth.json in Resources */,
+				6B523BBC25A755A7007226B4 /* NJHealth.json in Resources */,
+				6B523B8C25A751BC007226B4 /* KSHealth.json in Resources */,
+				6B523B5025A74B86007226B4 /* AKHealth.json in Resources */,
+				6B523BCC25A75673007226B4 /* NDHealth.json in Resources */,
+				6B523BC825A75627007226B4 /* NCHealth.json in Resources */,
+				6B523B7025A74F28007226B4 /* FLHealth.json in Resources */,
+				6B523B4C25A74AF5007226B4 /* ALHealth.json in Resources */,
 				6BA0A688258124FA00CD03A5 /* Preview Assets.xcassets in Resources */,
+				6B523B5C25A74C73007226B4 /* CAHealth.json in Resources */,
+				6B523A7425A74210007226B4 /* MarylandHealth.json in Resources */,
+				6B523BC425A755FD007226B4 /* NYHealth.json in Resources */,
+				6B523B5425A74BDA007226B4 /* AZHealth.json in Resources */,
+				6B523C0025A7595A007226B4 /* WAHealth.json in Resources */,
+				6B523B5825A74C12007226B4 /* ARHealth.json in Resources */,
 				6BA0A685258124FA00CD03A5 /* Assets.xcassets in Resources */,
+				6B523BFC25A7592C007226B4 /* VAHealth.json in Resources */,
+				6B523BDC25A757B3007226B4 /* PAHealth.json in Resources */,
+				6B523BEC25A75868007226B4 /* TNHealth.json in Resources */,
+				6B523B8025A75126007226B4 /* ILHealth.json in Resources */,
+				6B523C0C25A75A17007226B4 /* WYHealth.json in Resources */,
+				6B523BA825A7546D007226B4 /* MsHealth.json in Resources */,
+				6B523BD025A756ED007226B4 /* OHHealth.json in Resources */,
+				6B523BE825A75834007226B4 /* SDHealth.json in Resources */,
+				6B523BF825A758F9007226B4 /* VTHealth.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1546,6 +1948,7 @@
 				6BE919AE2598B1DA002F0087 /* ALDetailView.swift in Sources */,
 				6BE91B9F2598D5C3002F0087 /* MODetailView.swift in Sources */,
 				6BA501962582AE1E00F5FDB5 /* AllStateDetails.swift in Sources */,
+				6B523B4425A749CD007226B4 /* WYTwitterCardView.swift in Sources */,
 				6BE91A592598BA53002F0087 /* KYDetailView.swift in Sources */,
 				6B8A49B22596285500A4D401 /* CovidTestingView.swift in Sources */,
 				6BE91AFD2598C16D002F0087 /* OHDetailViewModel.swift in Sources */,
@@ -1553,17 +1956,31 @@
 				6B8A49F6259791F200A4D401 /* CleaningInfoSheetView.swift in Sources */,
 				6B4243EA259A153000679707 /* EmergencyScrenerView.swift in Sources */,
 				6BA501A82583148100F5FDB5 /* News.swift in Sources */,
+				6B523B2025A7491C007226B4 /* SDTwitterCardView.swift in Sources */,
+				6BE15EEA25A8B8BD00D95AF1 /* NewsRapidAPIViewModel.swift in Sources */,
+				6B523A7025A741EC007226B4 /* MDTwitterCardView.swift in Sources */,
+				6B523AA025A745B3007226B4 /* GATwitterCardView.swift in Sources */,
 				6BEE63292597B11300310B5E /* MentalHealthSheetView.swift in Sources */,
+				6B523AA425A745CE007226B4 /* HITwitterCardView.swift in Sources */,
+				6B523AA825A745E3007226B4 /* IDTwitterCardView.swift in Sources */,
 				6BBC5A5F259D09330075D882 /* ContinuePhysicalDistancingResultsView.swift in Sources */,
 				6BE919B92598B2FE002F0087 /* AKDetailViewModel.swift in Sources */,
+				6B523A8025A743BC007226B4 /* AZTwitterCardView.swift in Sources */,
 				6B8A49D7259771D000A4D401 /* ShouldYouSeeADoctorSheetView.swift in Sources */,
+				6B523AB825A74630007226B4 /* KSTwitterCardView.swift in Sources */,
 				6BE91A662598BAF2002F0087 /* LADetailViewModel.swift in Sources */,
 				6BE919E52598B503002F0087 /* CODetailViewModel.swift in Sources */,
+				6B523A9025A74554007226B4 /* CTTwitterViewCard.swift in Sources */,
+				6B523AFE25A7482C007226B4 /* NDTwitterCardView.swift in Sources */,
 				6BEE632D2597B6A000310B5E /* ShopWisleySheetView.swift in Sources */,
+				6B523AB425A7461D007226B4 /* IATwitterCardView.swift in Sources */,
 				6BE919CB2598B416002F0087 /* ARDetailViewModel.swift in Sources */,
 				6B8A49AA2596097500A4D401 /* AboutCovidDetailView.swift in Sources */,
+				6B523AC825A746FF007226B4 /* MATwitterCardView.swift in Sources */,
 				6B0ADC1C25853A61007BD794 /* CountryData.swift in Sources */,
 				6BE91B722598C5B6002F0087 /* VADetailViewModel.swift in Sources */,
+				6B523B1025A74887007226B4 /* ORTwitterCardView.swift in Sources */,
+				6B523B2425A7492F007226B4 /* TNTwitterCradView.swift in Sources */,
 				6BEE631C2597A32D00310B5E /* WhatCanIDoSheetView.swift in Sources */,
 				6B627AA5259B524900221BDB /* ComorbidityView.swift in Sources */,
 				6BE91B2E2598C35C002F0087 /* SCDetailView.swift in Sources */,
@@ -1576,47 +1993,59 @@
 				6BE919D82598B490002F0087 /* CADetailViewModel.swift in Sources */,
 				6BE91A542598BA1B002F0087 /* KSDetailViewModel.swift in Sources */,
 				6B8A49E625977CEE00A4D401 /* PhysicalDistancingSheetView.swift in Sources */,
+				6B76D4BA25A7EE3A0006D3B6 /* NewsCatcher.swift in Sources */,
 				6B0ADC2625853A7D007BD794 /* MagnifierRect.swift in Sources */,
 				6BEE63182597A0CB00310B5E /* WhenResultsSheetView.swift in Sources */,
+				6B523AFA25A7480F007226B4 /* NCTwitterCardView.swift in Sources */,
+				6B523AE425A747A7007226B4 /* NHTwitterCardView.swift in Sources */,
 				6BE91B422598C414002F0087 /* TNDetailView.swift in Sources */,
+				6B523B1C25A7490B007226B4 /* SCTwitterCardView.swift in Sources */,
 				6BE91B1E2598C2DF002F0087 /* PADetailViewModel.swift in Sources */,
 				6B0ADBBD25852361007BD794 /* CoronaTracker.xcdatamodeld in Sources */,
 				6B8A49EA259780C700A4D401 /* QuarantiningSheetView.swift in Sources */,
 				6BA501912582ADE400F5FDB5 /* MDDetailViewModel.swift in Sources */,
 				6B06A667258EB480009E07FA /* OverDose.swift in Sources */,
+				6B523AAC25A745F7007226B4 /* ILTwitterCardView.swift in Sources */,
 				6BE91A142598B71F002F0087 /* GADetailView.swift in Sources */,
 				6BE91B912598C7AE002F0087 /* WIDetailViewModel.swift in Sources */,
 				6BA5018925829DFB00F5FDB5 /* MDDetailView.swift in Sources */,
 				6B9C5C4D2588552500E60A83 /* StateNewsViewModel.swift in Sources */,
 				6BE91A082598B6B0002F0087 /* FLDetailView.swift in Sources */,
+				6B523ACC25A74722007226B4 /* MITwitterCardView.swift in Sources */,
 				6BE91A6F2598BB3E002F0087 /* MEDetailViewModel.swift in Sources */,
 				6B06A663258EB464009E07FA /* OverDoseDeathViewModel.swift in Sources */,
 				6BE91B962598C7E1002F0087 /* WYDetailView.swift in Sources */,
 				6BE91A6B2598BB1A002F0087 /* MEDetailView.swift in Sources */,
+				6BE15EEE25A8B93C00D95AF1 /* NewsRapidAPI.swift in Sources */,
 				6BB03E452586BC5E00C66C85 /* StateNewsView1.swift in Sources */,
 				6BE91AC12598BE61002F0087 /* NHDetailViewModel.swift in Sources */,
 				6B8D80732593860B005CE4CF /* StatNewsLargeCard.swift in Sources */,
 				6BE91AAB2598BD91002F0087 /* NEDetailViewModel.swift in Sources */,
 				6BE91AE52598C071002F0087 /* NCDetailView.swift in Sources */,
 				6BE91BB22598E837002F0087 /* MDStateNewsView.swift in Sources */,
+				6B523B0225A74844007226B4 /* OHTwitterCardView.swift in Sources */,
 				6BE919DD2598B4D0002F0087 /* CODetailView.swift in Sources */,
 				6B0ADC2E25853A8E007BD794 /* Legend.swift in Sources */,
 				6B0ADC2225853A74007BD794 /* Line.swift in Sources */,
+				6BAA9E7325A0C35700A4AB7A /* NewDetailTestView.swift in Sources */,
 				6BE919C62598B3BD002F0087 /* ARDetailView.swift in Sources */,
 				6BE91B022598C19E002F0087 /* OKDetailView.swift in Sources */,
 				6BE91ADC2598BF91002F0087 /* NYDetailView.swift in Sources */,
 				6B8A49CF2597683700A4D401 /* CovidRiskSheetView.swift in Sources */,
 				6BE91A1D2598B7D3002F0087 /* HIDetailView.swift in Sources */,
+				6B523B3425A7497E007226B4 /* VATwitterCardView.swift in Sources */,
 				6BAE9C4F2584509400CA9E16 /* UsTotalViewModel.swift in Sources */,
 				6BE91B292598C33C002F0087 /* RIDetailViewModel.swift in Sources */,
 				6B2E8EB025914302004A9A2A /* StateDataViewII.swift in Sources */,
 				6BE91A4B2598B9BA002F0087 /* IADetailViewModel.swift in Sources */,
+				6B523ABC25A74644007226B4 /* KYTwitterCardView.swift in Sources */,
 				6B8A49FA2597956100A4D401 /* FaceMaskSheetView.swift in Sources */,
 				6B90C2C82599502700C94E9A /* NYTimes.swift in Sources */,
 				6BE91A3C2598B91A002F0087 /* INDetailView.swift in Sources */,
 				6BE91A232598B814002F0087 /* HIDetailViewModel.swift in Sources */,
 				6BA0A683258124F900CD03A5 /* HomeView.swift in Sources */,
 				6B2E8EB8259143B9004A9A2A /* StateListHeaderView.swift in Sources */,
+				6B523AC425A746EC007226B4 /* METwitterCardView.swift in Sources */,
 				6BE91A9C2598BD05002F0087 /* MTDetailView.swift in Sources */,
 				6BE919C22598B386002F0087 /* AZDetailViewModel.swift in Sources */,
 				6B639B852592CA5E00BA8818 /* StateNewsCard.swift in Sources */,
@@ -1625,21 +2054,26 @@
 				6B8A49B625962D8E00A4D401 /*  SelfCareDetailView.swift in Sources */,
 				6BE91A0D2598B6F5002F0087 /* FLDetailViewModel.swift in Sources */,
 				6BE91AB02598BDC5002F0087 /* NVDetailView.swift in Sources */,
+				6B523B2825A74943007226B4 /* TXTwitterCardView.swift in Sources */,
+				6B523A9C25A7459D007226B4 /* FLTwitterCardView.swift in Sources */,
 				6BA5019B2582B76D00F5FDB5 /* State.swift in Sources */,
 				6B0ADC3A25853AA7007BD794 /* IndicatorPoint.swift in Sources */,
 				6BE91B4B2598C46C002F0087 /* TXDetailView.swift in Sources */,
 				6BE91A282598B841002F0087 /* IDDetailView.swift in Sources */,
 				6B3D7A622581C79D00B10B63 /* NavigationLazyStack.swift in Sources */,
 				6BE91B8B2598C772002F0087 /* WIDetailView.swift in Sources */,
+				6B523ADC25A7477F007226B4 /* NETwitterCardView.swift in Sources */,
 				6BE91B862598C687002F0087 /* WVDetailViewModel.swift in Sources */,
 				6BE91B132598C277002F0087 /* ORDetailViewModel.swift in Sources */,
 				6B29BFB5259C9BDC006E9070 /* ContactYourWorkResultsView.swift in Sources */,
+				6B523AD025A74736007226B4 /* MNTwitterCardView.swift in Sources */,
 				6B0ADBA825852350007BD794 /* LineChartView.swift in Sources */,
 				6BF0F609258160BF00CC427D /* StateDataViewModel.swift in Sources */,
 				6BE919FB2598B5EC002F0087 /* DEDetailViewModel.swift in Sources */,
 				6BE91A2E2598B87D002F0087 /* IDDetailViewModel.swift in Sources */,
 				6B0ADC1625853A4A007BD794 /* DataController.swift in Sources */,
 				6BE91AA22598BD39002F0087 /* MTDetailViewModel.swift in Sources */,
+				6B523AE825A747B9007226B4 /* NJTwitterCardView.swift in Sources */,
 				6B8A49EE2597868F00A4D401 /* IsolatingSheetView.swift in Sources */,
 				6BE91AF42598C10D002F0087 /* NDDetailViewModel.swift in Sources */,
 				6B2E8EAB259142A9004A9A2A /* CovidFetchRequest.swift in Sources */,
@@ -1647,29 +2081,36 @@
 				6BE91A7F2598BBFD002F0087 /* MIDetailView.swift in Sources */,
 				6BE91A882598BC4A002F0087 /* MNDetailView.swift in Sources */,
 				6B2E8EC0259143CB004A9A2A /* StateDataRowView.swift in Sources */,
+				6B523A7C25A743A1007226B4 /* AKTwitterCardView.swift in Sources */,
 				6B1801E225868BCD00EF39DA /* NewsDetailView.swift in Sources */,
 				6BE91B082598C1E4002F0087 /* OKDetailViewModel.swift in Sources */,
 				6BE919EA2598B542002F0087 /* CTDetailView.swift in Sources */,
 				6BAE9C54258451B200CA9E16 /* TotalUS.swift in Sources */,
+				6B523B1425A748A7007226B4 /* PATwitterCardView.swift in Sources */,
 				6BEE63202597AC8A00310B5E /* WaitingOnTestResultsSheetView.swift in Sources */,
 				6B4243F2259A3ACE00679707 /* AgeRestrictionView.swift in Sources */,
 				6BE91B7D2598C63A002F0087 /* WADetailViewModel.swift in Sources */,
 				6BE919BE2598B353002F0087 /* AZDetailView.swift in Sources */,
 				6B0ADBC72585236A007BD794 /* CoronaClient.swift in Sources */,
 				6BE91B5C2598C4EF002F0087 /* UTDetailViewModel.swift in Sources */,
+				6B523A7825A74335007226B4 /* ALTwitterCardView.swift in Sources */,
 				6BE91B9A2598C828002F0087 /* WYDetailViewModel.swift in Sources */,
 				6BE91A5D2598BA8F002F0087 /* KYDetailViewModel.swift in Sources */,
 				6B2E8EB42591430B004A9A2A /* StateDetailViewII.swift in Sources */,
+				6B523AF025A747E2007226B4 /* NYTwitterCardView.swift in Sources */,
 				6BF0F60425815E8700CC427D /* StateDetails.swift in Sources */,
 				6B8A49A22594E61E00A4D401 /* TopLogoView.swift in Sources */,
 				6BEE63312597B9A700310B5E /* WorkStrategiesSheetView.swift in Sources */,
 				6BE91AB62598BDFF002F0087 /* NVDetailViewModel.swift in Sources */,
+				6B523B4825A749E7007226B4 /* MOTwitterCardView.swift in Sources */,
 				6BE91BA32598D61E002F0087 /* MODetailViewModel.swift in Sources */,
 				6BA0A6C4258143DE00CD03A5 /* NewsDataView.swift in Sources */,
+				6B523AEC25A747D2007226B4 /* NMTwitterCardView.swift in Sources */,
 				6BE91AEE2598C0D8002F0087 /* NDDetailView.swift in Sources */,
 				6BA0A6C92581447B00CD03A5 /* AllUSDataView.swift in Sources */,
 				6BE91A332598B8AD002F0087 /* ILDetailView.swift in Sources */,
 				6BE91A742598BB7A002F0087 /* MADetailView.swift in Sources */,
+				6B523B1825A748EF007226B4 /* RITwitterCardView.swift in Sources */,
 				6B0ADC2A25853A82007BD794 /* Path+QuadCurve.swift in Sources */,
 				6B8A49D325976AD700A4D401 /* PregnancyAndCovidSheetView.swift in Sources */,
 				6BE91A622598BAB4002F0087 /* LADetailView.swift in Sources */,
@@ -1677,56 +2118,73 @@
 				6B9265C32592EF9C001FF998 /* StatenewsHorizontalViewCard.swift in Sources */,
 				6BE91B562598C4C2002F0087 /* UTDetailView.swift in Sources */,
 				6BE91AF92598C13A002F0087 /* OHDetailView.swift in Sources */,
-				6B8C3EB92586D4E200D141D0 /* TwitterViewController.swift in Sources */,
+				6B8C3EB92586D4E200D141D0 /* Bundle-Decodable.swift in Sources */,
 				6BA0A6B825813D5900CD03A5 /* StateDataView.swift in Sources */,
 				6B90C2D6259962E000C94E9A /* NewYorkTimesViewModel.swift in Sources */,
 				6BE91A7A2598BBCC002F0087 /* MADetailViewModel.swift in Sources */,
+				6B523B3C25A749A4007226B4 /* WVTwitterCardView.swift in Sources */,
 				6B9DF3BB259C072A00B48C7B /* PPEScreenerView.swift in Sources */,
 				6BE91B182598C29F002F0087 /* PADetailView.swift in Sources */,
 				6B0ADC0A25853A2A007BD794 /* Summary.swift in Sources */,
 				6BC96F7D25910A94008CF6FF /* SymptomCheckDetailView.swift in Sources */,
 				6BEE633E2597C83700310B5E /* CDCScreenerTool.swift in Sources */,
+				6B523A9425A74572007226B4 /* DETwitterCardView.swift in Sources */,
 				6BE91AA72598BD5C002F0087 /* NEDetailView.swift in Sources */,
 				6B8A49BA259756D100A4D401 /* WhatIsCovid19DetailView.swift in Sources */,
 				6BE91A472598B98A002F0087 /* IADetailView.swift in Sources */,
 				6BE91B822598C65E002F0087 /* WVDetailView.swift in Sources */,
 				6BE91B232598C30E002F0087 /* RIDetailView.swift in Sources */,
+				6B523B3025A7496E007226B4 /* VTTwitterCardView.swift in Sources */,
 				6BE91ABB2598BE2A002F0087 /* NHDetailView.swift in Sources */,
+				6B523AD425A74759007226B4 /* MSTwitterCardView.swift in Sources */,
 				6B0ADC0E25853A2D007BD794 /* Country.swift in Sources */,
+				6B523AB025A74607007226B4 /* INTwitterViewCard.swift in Sources */,
 				6BE91A002598B642002F0087 /* DCDetailView.swift in Sources */,
 				6BE91AE92598C0A7002F0087 /* NCDetailViewModel.swift in Sources */,
 				6B9DF3B2259BDA6200B48C7B /* LiveInLongTermCareView.swift in Sources */,
 				6B639B812592BADA00BA8818 /* TabHomeView.swift in Sources */,
 				6BEE63352597BD8D00310B5E /* HouseHoldEmergencyPlanSheetView.swift in Sources */,
+				6B523A8C25A74517007226B4 /* COTwitterCardView.swift in Sources */,
 				6B9DF3B6259BDF5600B48C7B /* VolunteerHospitalScreenerView.swift in Sources */,
+				6B523A8825A7447C007226B4 /* CATwitterCardView.swift in Sources */,
 				6BEE630E25979E5200310B5E /* TestResultsSheetsView.swift in Sources */,
 				6BE91B0D2598C244002F0087 /* ORDetailView.swift in Sources */,
+				6B523B0C25A74873007226B4 /* OKTwitterCardView.swift in Sources */,
 				6BE91A832598BC26002F0087 /* MIDetailViewModel.swift in Sources */,
 				6B8C3EBD2586D74D00D141D0 /* Twitter.swift in Sources */,
 				6BE91A422598B95B002F0087 /* INDetailViewModel.swift in Sources */,
+				6B523B3825A74993007226B4 /* WATwitterCardView.swift in Sources */,
 				6BE919F02598B582002F0087 /* CTDetailViewModel.swift in Sources */,
 				6BE91A502598B9EB002F0087 /* KSDetailView.swift in Sources */,
 				6B9DF3AE259BCC0C00B48C7B /* InTheLast14DaysScreenerView.swift in Sources */,
 				6B8A49CB25975E1A00A4D401 /* WhatAreCovidSymptomDetailView.swift in Sources */,
 				6BE91B462598C448002F0087 /* TNDetailViewModel.swift in Sources */,
 				6BA501A32583146300F5FDB5 /* NewsDataViewModel.swift in Sources */,
+				6B523AE025A74793007226B4 /* NVTwitterCardView.swift in Sources */,
+				6B523AD825A7476D007226B4 /* MTTwitterCardView.swift in Sources */,
 				6BE91AD12598BF3C002F0087 /* NMDetailView.swift in Sources */,
 				6B0ADB8F25852330007BD794 /* GraphView.swift in Sources */,
 				6B8A499E2594E4AF00A4D401 /* CDCHomeView.swift in Sources */,
 				6B4243FA259A7C0C00679707 /* SymptomCheckerScreenerView.swift in Sources */,
+				6B523B2C25A74958007226B4 /* UTTwitterCardView.swift in Sources */,
 				6BE91B6C2598C582002F0087 /* VADetailView.swift in Sources */,
 				6B1FA4B525911BCE00158823 /* SymptomAnaylsisView.swift in Sources */,
 				6BEE63252597AF0500310B5E /* CareForBodySheetView.swift in Sources */,
+				6B523AC025A746DD007226B4 /* LATwitterCardView.swift in Sources */,
 				6BE91A372598B8EF002F0087 /* ILDetailViewModel.swift in Sources */,
+				6B523A9825A7458A007226B4 /* DCTwitterCardView.swift in Sources */,
 				6B3D7A5D2581C49F00B10B63 /* NumberFormatter.swift in Sources */,
 				6B8A49A625951E8A00A4D401 /* ListView.swift in Sources */,
 				6B8A49F225978BDC00A4D401 /* SymptomMonitoringSheetView.swift in Sources */,
 				6B627AA1259B4D9D00221BDB /* SymptomSeverity.swift in Sources */,
 				6BE919D22598B459002F0087 /* CADetailView.swift in Sources */,
+				6B523A8425A74459007226B4 /* ARTwitterCardView.swift in Sources */,
 				6BE919AA2598B1A6002F0087 /* ALDetailViewModel.swift in Sources */,
 				6B1026B2258E39CF00C0334F /* TwitterCardView.swift in Sources */,
+				6B8C1EE725A7751600F9F5E7 /* TwitterViewModel.swift in Sources */,
 				6BE91ACC2598BEAF002F0087 /* NJDetailViewModel.swift in Sources */,
 				6BE91B772598C5DF002F0087 /* WADetailView.swift in Sources */,
+				6B523B4025A749B7007226B4 /* WITwitterCardView.swift in Sources */,
 				6BE919F52598B5BC002F0087 /* DEDetailView.swift in Sources */,
 				6BE919B52598B2AF002F0087 /* AKDetailView.swift in Sources */,
 				6B4243EE259A357E00679707 /* AgeScreenerView.swift in Sources */,

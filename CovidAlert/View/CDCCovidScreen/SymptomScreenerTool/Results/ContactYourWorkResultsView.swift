@@ -9,18 +9,34 @@ import SwiftUI
 
 struct ContactYourWorkResultsView: View {
     
-    
+    @ObservedObject var screenerStatus: ScreenerStatus
    
     var body: some View {
+        NavigationView {
         ScrollView {
             VStack (alignment: .leading){
         VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .top, spacing: 10) {
+         
+                NavigationLink(
+                    destination: CDCHomeView(screenerStatus: screenerStatus),
+                    label: {
+                    
+        Image(systemName: "xmark.circle.fill")
+            .font(.system(size: 30))
+            .foregroundColor(.gray)
+            .padding()
+            
+            })
+            }
+                
         Text("Contact You Work's Occupational Health Provider")
             .font(.title)
             .bold()
             .padding(.top)
             .padding()
-            
+     
+            }
             Text("Let your occupational health provider at work know about your positive test result for COVID-19.")
                 .padding()
             Text("Your 6 Next Steps")
@@ -262,21 +278,24 @@ If soap and water are not available, use hand sanitizer that contains at least 6
                         .frame(width: 300)
                         
                       
-                    }
+                    
                         
                 }.padding(.top)
             }.padding()
         
         } .background(Color(.init(white: 0.85, alpha: 1)))
-        .ignoresSafeArea()
+        .navigationBarHidden(true)
             
         }
+       
   
     }
+}
+    
 
 
 struct ContactYourWorkResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactYourWorkResultsView()
+        ContactYourWorkResultsView(screenerStatus: ScreenerStatus.init())
     }
 }

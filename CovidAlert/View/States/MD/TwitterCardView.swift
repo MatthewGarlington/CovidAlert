@@ -6,97 +6,110 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 
 struct TwitterCardView: View {
+    
+    let twitterDecoded = Bundle.main.decode("Covid50.json")
+    let samplePhoto = "https://static01.nyt.com/images/2020/11/24/nyregion/24nytoday-photo/24nytoday-photo-facebookJumbo.jpg"
+    
     var body: some View {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack{
-                    ForEach(0..<4, id: \.self) { num in
-                        ZStack{
-                            Spacer()
-                                .frame(width: 400, height: 350)
-                                .background(Color(.init(white: 0.95, alpha: 1)))
-                                .cornerRadius(25)
-                                .shadow(radius: 4)
-                                .padding(.horizontal)
-                            VStack(alignment: .leading) {
-                               
-                                HStack(spacing: 25) {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(alignment: .top){
+                ForEach(twitterDecoded?.statuses ?? [], id: \.id) { tweet in
+                
+                ZStack{
+                    Spacer()
+                        .frame(width: 400, height: 350)
+                        .background(Color(.init(white: 0.95, alpha: 1)))
+                        .cornerRadius(25)
+                        .shadow(radius: 4)
+                    
+                    VStack(alignment: .leading) {
+                 
+           
+                       
+                        HStack(spacing: 25) {
                             
-                            Image("Hogan")
+                     
+                            
+                            KFImage(URL(string: tweet.user.profile_image_url_https))
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
                                 .background(Color(.init(white: 0.85, alpha: 1)))
                                 .clipShape(Circle())
                                 .shadow(radius: 6)
-                                .padding(.top)
-                                .padding(.horizontal, 25)
+                                .padding(.horizontal, 20)
                             
+                            
+                            VStack(alignment: .leading) {
                                 
-                          VStack {
-                            Spacer()
-                            Text("Governor Larry Hogan")
-                                .bold()
+                                Text("\(tweet.user.name)")
+                                    .bold()
                                 
-                            Text("@GovLarryHogan")
-                                .foregroundColor(Color(.init(white: 0.55, alpha: 1)))
-                      
+                                Text("\(tweet.user.screen_name)")
+                                    .foregroundColor(Color(.init(white: 0.55, alpha: 1)))
+                                
+                            }     .frame(width: 250, height: 150)
                           }
-                                }
                         
-                            Text("Our message is simple: you are safer at home for the holidays this year. Making difficult sacrifices during these next few weeks will help to keep your family, loved ones, and your fellow Marylanders safe")
-                                .font(.system(size: 20))
-                                .fontWeight(.regular)
-                                .frame(width: 390, height: 150)
-                                .padding(.horizontal)
-                           
-                            Text("7:21 PM - Dec 17, 2020 - Twitter for Iphone")
-                                .foregroundColor(Color(.init(white: 0.55, alpha: 1)))
-                                
-                                .padding(.bottom)
-                                .padding(.horizontal, 40)
-                                
-                                HStack(alignment: .center, spacing: 50) {
-                                    HStack{
-                                        
-                                        Image(systemName: "bubble.left")
-                                        Text("160")
-                                            .font(.system(size: 15))
-                                        
-                                        
-                                    }
-                                    HStack{
-                                        Image(systemName: "return")
-                                        Text("62")
-                                            .font(.system(size: 15))
-                                        
-                                    }
-                                    HStack{
-                                        Image(systemName: "heart")
-                                        Text("91")
-                                            .font(.system(size: 15))
-                                        
-                                    }
-                                    
-                                    Image(systemName: "square.and.arrow.up")
-                                    
-                                    
-                                }.padding(.bottom)
-                       
-                                .padding(.horizontal, 25)
-                                
-                                
-                            }.padding(.top)
-                        }
+                        Text("\(tweet.text)")
+                            .font(.system(size: 20))
+                            .fontWeight(.regular)
+                            .frame(width: 390, height: 100)
+                            .padding(.horizontal)
                         
-                        }
-                    }.padding(.bottom)
-                    .padding(.top)
+                        
+                        Text("\(tweet.created_at)")
+                            .foregroundColor(Color(.init(white: 0.55, alpha: 1)))
+                            
+                            .padding(.bottom)
+                            .padding(.horizontal, 20)
+                        
+                        HStack(alignment: .center, spacing: 50) {
+                            HStack{
+                                
+                                Image(systemName: "bubble.left")
+                                Text("2")
+                                    .font(.system(size: 15))
+                                
+                                
+                            }
+                            HStack{
+                                Image(systemName: "return")
+                                Text("\(tweet.retweet_count.formatNumber())")
+                                    .font(.system(size: 15))
+                                    .frame(width: 30)
+                                
+                            }
+                            HStack{
+                                Image(systemName: "heart")
+                                Text("\(tweet.favorite_count.formatNumber())")
+                                    .font(.system(size: 15))
+                                
+                            }
+                            
+                            Image(systemName: "square.and.arrow.up")
+                            
+                            
+                        }.padding(.horizontal, 50)
+                        
+                        
+                        
+                    }
                 }
-               
+                }
+                }
+                
+        }
+            
+        
     }
+    
+    
+    
 }
 
 struct TwitterCardView_Previews: PreviewProvider {

@@ -32,7 +32,7 @@ struct ComorbidityView: View {
                     .bold()
                     .padding(.top)
                 Text("Check All That Apply")
-                VStack {
+            VStack(spacing: 40) {
                     
                     Button(action: {
                         
@@ -64,13 +64,13 @@ struct ComorbidityView: View {
                         if
                             self.isObesity == true {
                             
-                            self.screenerStatus.isObesitySelected = true
+                            self.screenerStatus.isObesitySelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isObesitySelected = false
+                            self.screenerStatus.isObesitySelected.toggle()
                         }
                         
                       
@@ -81,28 +81,25 @@ struct ComorbidityView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+               
+                            HStack(spacing: 10) {
                                 Text("Obesity")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 320, height: 50, alignment: .leading)
                                 
                       
                                 
                                 Image(systemName: self.isObesity ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                                 
                             }
                             
                             
                             
-                        }.padding()
-                    })
+                        }
+                    })  .buttonStyle(SimpleButtonStyle())
                     
                     Button(action: {
                         
@@ -133,13 +130,13 @@ struct ComorbidityView: View {
                         if
                             self.isSmokerorVaping == true {
                             
-                            self.screenerStatus.isSmokerorVapingSelected = true
+                            self.screenerStatus.isSmokerorVapingSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isSmokerorVapingSelected = false
+                            self.screenerStatus.isSmokerorVapingSelected.toggle()
                         }
                         
                         
@@ -147,27 +144,25 @@ struct ComorbidityView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+               
+                            HStack(spacing: 10) {
                                 Text("Smoking or Vaping")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 320, height: 50, alignment: .leading)
                                 
                                 Image(systemName: self.isSmokerorVaping ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }
-                    })
-                }
-            VStack {
+                    })  .buttonStyle(SimpleButtonStyle())
+            }.padding(.bottom)
+            .padding(.horizontal)
+            VStack(spacing: 40) {
                     Button(action: {
                         
                         
@@ -201,13 +196,13 @@ struct ComorbidityView: View {
                         if
                             self.isPregnant == true {
                             
-                            self.screenerStatus.IsPositiveSelected = true
+                            self.screenerStatus.IsPositiveSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.IsPositiveSelected = false
+                            self.screenerStatus.IsPositiveSelected.toggle()
                         }
                         
                         
@@ -216,25 +211,22 @@ struct ComorbidityView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                   
+                            HStack(spacing: 10) {
                                 Text("Pregnancy")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 320, height: 50, alignment: .leading)
                                 
                                 Image(systemName: self.isPregnant ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -274,38 +266,35 @@ struct ComorbidityView: View {
                         if
                             self.isDiabetes == true {
                             
-                            self.screenerStatus.isDiabetesSelected = true
+                            self.screenerStatus.isDiabetesSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isDiabetesSelected = false
+                            self.screenerStatus.isDiabetesSelected.toggle()
                         }
                         
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                      
+                            HStack(spacing: 100) {
                                 Text("Diabetes, high blood pressure, chronic kidney diease, or liver disease")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 230, height: 100 , alignment: .leading)
                                 
                                 Image(systemName: self.isDiabetes ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -344,13 +333,13 @@ struct ComorbidityView: View {
                         if
                             self.isChronicLungProblems == true {
                             
-                            self.screenerStatus.isChronicLungProblemsSelected = true
+                            self.screenerStatus.isChronicLungProblemsSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isChronicLungProblemsSelected = false
+                            self.screenerStatus.isChronicLungProblemsSelected.toggle()
                         }
                         
                         
@@ -358,10 +347,7 @@ struct ComorbidityView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 150, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                    
                             HStack(spacing: 75) {
                                 Text("Chronic Lung disease, such as moderate to severe asthma, COPD (chronic obstructive pulmonary diease), cystic fibrosis, or pulmonary fibrosis")
                                     .bold()
@@ -369,14 +355,14 @@ struct ComorbidityView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isChronicLungProblems ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -414,23 +400,20 @@ struct ComorbidityView: View {
                         if
                             self.isHeartCondition == true {
                             
-                            self.screenerStatus.isHeartConditionSelected = true
+                            self.screenerStatus.isHeartConditionSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isHeartConditionSelected = false
+                            self.screenerStatus.isHeartConditionSelected.toggle()
                         }
                         
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                     
                             HStack(spacing: 75) {
                                 Text("Serious heart condition, such as heart failure, prior heart attack, or cardiomyopathy")
                                     .bold()
@@ -438,14 +421,14 @@ struct ComorbidityView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isHeartCondition ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -485,13 +468,13 @@ struct ComorbidityView: View {
                         if
                             self.isWeakendImmuneSystem == true {
                             
-                            self.screenerStatus.isWeakendImmuneSystemSelected = true
+                            self.screenerStatus.isWeakendImmuneSystemSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isWeakendImmuneSystemSelected = false
+                            self.screenerStatus.isWeakendImmuneSystemSelected.toggle()
                         }
                         
                         
@@ -499,10 +482,7 @@ struct ComorbidityView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 125, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                   
                             HStack(spacing: 75) {
                                 Text("Weakend immune system from HIV, cancer treatment, use of medicines causing immune supression, or other factors")
                                     .bold()
@@ -510,14 +490,14 @@ struct ComorbidityView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isWeakendImmuneSystem ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -556,13 +536,13 @@ struct ComorbidityView: View {
                         if
                             self.isStroke == true {
                             
-                            self.screenerStatus.isStrokeSelected = true
+                            self.screenerStatus.isStrokeSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isStrokeSelected = false
+                            self.screenerStatus.isStrokeSelected.toggle()
                         }
                         
                         
@@ -570,10 +550,7 @@ struct ComorbidityView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                 
                             HStack(spacing: 75) {
                                 Text("Stroke, dementia, or other cerebrovascular disease or neurologic condition")
                                     .bold()
@@ -581,14 +558,14 @@ struct ComorbidityView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isStroke ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                   
                     Button(action: {
                         
@@ -628,23 +605,20 @@ struct ComorbidityView: View {
                         if
                             self.isSickleCell == true {
                             
-                            self.screenerStatus.isSickleCellSelected = true
+                            self.screenerStatus.isSickleCellSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isSickleCellSelected = false
+                            self.screenerStatus.isSickleCellSelected.toggle()
                         }
                         
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+             
                             HStack(spacing: 75) {
                                 Text("Sickel cell disease, thalassemia, or other blood disorder")
                                     .bold()
@@ -652,14 +626,14 @@ struct ComorbidityView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isSickleCell ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -698,22 +672,19 @@ struct ComorbidityView: View {
                         if
                             self.isNoneOfThese == true {
                             
-                            self.screenerStatus.isNoCombrobitiesSelected = true
+                            self.screenerStatus.isNoCombrobitiesSelected.toggle()
                                 
                             }
                         
                         else {
                             
-                            self.screenerStatus.isNoCombrobitiesSelected = false
+                            self.screenerStatus.isNoCombrobitiesSelected.toggle()
                         }
                         
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                            
                             HStack(spacing: 75) {
                                 Text("None of These")
                                     .bold()
@@ -721,14 +692,14 @@ struct ComorbidityView: View {
                                     .frame(width: 250, alignment: .leading)
                                 
                                 Image(systemName: self.isNoneOfThese ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                    
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
@@ -741,7 +712,7 @@ struct ComorbidityView: View {
                         
                         if
                             
-                            self.isStroke || self.isObesity || self.isPregnant || self.isDiabetes || self.isSickleCell || self.isHeartCondition || self.isSmokerorVaping || self.isNoneOfThese == true {
+                            self.isStroke || self.isObesity || self.isPregnant || self.isDiabetes || self.isSickleCell || self.isChronicLungProblems || self.isHeartCondition || self.isSmokerorVaping || self.isNoneOfThese == true {
                             self.showNextPage = true }
                         else {
                             self.showNextPage = false
@@ -757,7 +728,7 @@ struct ComorbidityView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)) : Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
@@ -773,7 +744,7 @@ struct ComorbidityView: View {
         .padding(.top)
                                             
             
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
      
         
     }

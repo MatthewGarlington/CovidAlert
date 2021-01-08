@@ -1,16 +1,15 @@
 //
-//  NewsDetailView.swift
+//  NewsDetail7View.swift
 //  CovidAlert
 //
-//  Created by Matthew Garlington on 12/13/20.
+//  Created by Matthew Garlington on 1/2/21.
 //
 
 import SwiftUI
 import KingfisherSwiftUI
 
-struct NewsDetailView: View {
-    
-  //  @ObservedObject var vm = NewYorkTimesViewModel()
+struct NewsDetail7View: View {
+    @ObservedObject var vm = NewYorkTimesViewModel()
     
  
     
@@ -44,7 +43,7 @@ struct NewsDetailView: View {
                 
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(title)
+                        Text(vm.nytimesnews?.response.docs[7].headline.print_headline ?? title)
                             .foregroundColor(.white)
                             .font(.system(size: 18, weight: .bold))
                 
@@ -54,7 +53,7 @@ struct NewsDetailView: View {
                     
                
                     
-                    Text(author)
+                    Text(vm.nytimesnews?.response.docs[7].byline.original ?? author)
                         .foregroundColor(.white)
                         .font(.system(size: 14, weight: .regular))
                         .frame(width: 80)
@@ -65,7 +64,7 @@ struct NewsDetailView: View {
             }
             
             VStack(alignment: .leading, spacing: 8){
-                Text(title)
+                Text(vm.nytimesnews?.response.docs[7].headline.main ?? title)
                     
                     .font(.system(size: 16, weight: .bold))
                 
@@ -80,7 +79,7 @@ struct NewsDetailView: View {
             }.padding(.horizontal)
             .padding(.top)
             
-            Text(content)
+            Text(vm.nytimesnews?.response.docs[7].lead_paragraph ?? content)
                 .frame(height: 350)
                 .padding(.top, 8)
                 .font(.system(size: 16, weight: .regular))
@@ -107,17 +106,8 @@ struct NewsDetailView: View {
     }
 
 
-
-        
-  
-
-
-struct NewsDetailView_Previews: PreviewProvider {
+struct NewsDetail7View_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            NewsDetailView()
-        }
-        HomeView()
+        NewsDetail7View()
     }
 }
-

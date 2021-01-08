@@ -27,7 +27,7 @@ struct InTheLast14DaysScreenerView: View {
                     .bold()
                     .padding(.top)
                 Text("Check All That Apply")
-                VStack {
+            VStack(spacing: 40) {
                     
                     Button(action: {
                         
@@ -59,6 +59,7 @@ struct InTheLast14DaysScreenerView: View {
                             self.isLivedWithCovidPositivePerson == true {
                             
                             self.screenerStatus.isLivedWithCovidPositivePersonSelected = true
+                     
                                 
                             }
                         
@@ -75,20 +76,17 @@ struct InTheLast14DaysScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                      
+                            HStack(spacing: 10) {
                                 Text("I lived with someone who has COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 300, height: 50, alignment: .leading)
                                 
                       
                                 
                                 Image(systemName: self.isLivedWithCovidPositivePerson ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                                 
                             }
@@ -96,7 +94,7 @@ struct InTheLast14DaysScreenerView: View {
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     
                     Button(action: {
                         
@@ -139,27 +137,25 @@ struct InTheLast14DaysScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                  
+                            HStack(spacing: 10) {
                                 Text("For at least 15 minutes, I waas within 6 feet of someone who has COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 300, height: 100, alignment: .leading)
+                                    .padding(.horizontal, 10)
                                 
                                 Image(systemName: self.isWithinSixFeetCovid ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }
-                    })
-                }
-            VStack {
+                    })  .buttonStyle(SimpleButtonStyle())
+            }.padding(.bottom)
+            VStack(spacing: 40) {
                     Button(action: {
                         
                         
@@ -207,25 +203,23 @@ struct InTheLast14DaysScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                      
+                            HStack(spacing: 10) {
                                 Text("I cared for someone who has COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 310, height: 75, alignment: .leading)
+                                    .padding(.horizontal, 5)
                                 
                                 Image(systemName: self.isCaredForCovidPositivePerson ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -277,25 +271,22 @@ struct InTheLast14DaysScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+                      
+                            HStack(spacing: 10) {
                                 Text("I might have been exposed to COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 300, height: 50, alignment: .leading)
                                 
                                 Image(systemName: self.isMightHaveBeenExposedToCovid ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     Button(action: {
                         
                         
@@ -333,7 +324,7 @@ struct InTheLast14DaysScreenerView: View {
                         if
                             self.isNoKnownExposure == true {
                             
-                            self.screenerStatus.isNoKnownExposureSelected = true
+                            self.screenerStatus.isNoKnownExposureSelected = true 
                                 
                             }
                         
@@ -347,25 +338,22 @@ struct InTheLast14DaysScreenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 100, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
-                            HStack(spacing: 75) {
+               
+                            HStack(spacing: 10) {
                                 Text("I've no known exposure to COVID-19")
                                     .bold()
                                     .foregroundColor(.primary)
-                                    .frame(width: 250, alignment: .leading)
+                                    .frame(width: 300, height: 50, alignment: .leading)
                                 
                                 Image(systemName: self.isNoKnownExposure ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })  .buttonStyle(SimpleButtonStyle())
                     
                     // These are the two views that will be the destination depending on which box is checked
                     NavigationLink(
@@ -394,7 +382,7 @@ struct InTheLast14DaysScreenerView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)) : Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
@@ -410,7 +398,7 @@ struct InTheLast14DaysScreenerView: View {
         .padding(.top)
                                             
             
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
 
         
     }

@@ -22,7 +22,7 @@ struct StatNewsLargeCard: View {
         HStack(spacing: 40) {
            
                 NavigationLink(
-                    destination: NewsDetailView(),
+                    destination: NewsDetailView(choice: 7),
                     label: {
                         
                         
@@ -31,7 +31,7 @@ struct StatNewsLargeCard: View {
                             
                             Spacer()
                                 .frame(width: 400, height: 550)
-                                .background(Color.black)
+                                .background(Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)))
                                 .cornerRadius(40)
                                 .shadow(radius: 4)
              

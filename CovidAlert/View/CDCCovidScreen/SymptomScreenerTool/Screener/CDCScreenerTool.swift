@@ -43,21 +43,21 @@ struct ScreenerToolBody: View {
                 VStack(alignment: .leading, spacing: 2) {
                     HStack {
                     Image(systemName: "list.number")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color.init(#colorLiteral(red: 0.311514914, green: 0.3016776145, blue: 0.7600132823, alpha: 1)))
                         .font(.system(size: 25))
                     Text("You'll answer a few questions about symptoms and contact you've had with others")
                         .frame(height: 100)
                 }
                     HStack {
                     Image(systemName: "hand.raised.fill")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color.init(#colorLiteral(red: 0.311514914, green: 0.3016776145, blue: 0.7600132823, alpha: 1)))
                         .font(.system(size: 25))
                     Text("Your Answers will not be shared with anyone without your permission")
                         .frame(height: 100)
                 }
                     HStack {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color.init(#colorLiteral(red: 0.311514914, green: 0.3016776145, blue: 0.7600132823, alpha: 1)))
                         .font(.system(size: 25))
                     Text("By using this tool, you agree to its terms and that the company will not be liable for any harm relating to using it")
                         .frame(height: 100)
@@ -78,10 +78,11 @@ struct ScreenerToolBody: View {
                         ZStack {
                         Spacer()
                             .frame(width: 375, height: 50, alignment: .center)
-                            .background(Color.blue)
+                            .background(Color.init(#colorLiteral(red: 0.3067351282, green: 0.3018459976, blue: 0.7559282184, alpha: 1)))
                             .cornerRadius(10)
                             HStack {
                                 Text("Use for Myself")
+                                    .bold()
                                     .foregroundColor(.white)
                             }
                             

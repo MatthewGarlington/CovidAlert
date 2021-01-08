@@ -45,7 +45,7 @@ struct EmergencyScrenerView: View {
 
 """)
                 
-                VStack {
+                VStack(spacing: 40) {
                     
                     Button(action: {
                         
@@ -95,24 +95,21 @@ struct EmergencyScrenerView: View {
                         
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                      
                             HStack {
                                 Text("I'm experiencing at least one of these")
                                     .bold()
                                     .foregroundColor(.primary)
                                 
                                 Image(systemName: self.isAtLeastOneChecked ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                             
                         }.padding()
-                    })
+                    })           .buttonStyle(SimpleButtonStyle())
                     
                     
                     
@@ -161,10 +158,7 @@ struct EmergencyScrenerView: View {
                         }
                     }, label: {
                         ZStack {
-                            Spacer()
-                                .frame(width: 375, height: 75, alignment: .center)
-                                .background(Color(.init(white: 1, alpha: 1)))
-                                .cornerRadius(15)
+                            
                             HStack(spacing: 100) {
                                 Text("I do not have any of these")
                                     .bold()
@@ -172,13 +166,13 @@ struct EmergencyScrenerView: View {
                                 
                                 
                                 Image(systemName: self.isNoneChecked ? "checkmark.circle.fill" :  "circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color.init(#colorLiteral(red: 0.3067349494, green: 0.3018456101, blue: 0.7518180013, alpha: 1)))
                                     .font(.system(size: 25))
                             }
                             
                             
                         }.padding()
-                    })
+                    })           .buttonStyle(SimpleButtonStyle())
                     Spacer()
                     
                 }
@@ -228,7 +222,7 @@ struct EmergencyScrenerView: View {
                         ZStack {
                             Spacer()
                                 .frame(width: 375, height: 50, alignment: .center)
-                                .background(didTap ? Color.blue : Color.gray)
+                                .background(didTap ? Color.init(#colorLiteral(red: 0.3028137088, green: 0.2979239523, blue: 0.7478307486, alpha: 1)) : Color.gray)
                                 .cornerRadius(10)
                             HStack {
                                 Text("Next")
@@ -244,7 +238,7 @@ struct EmergencyScrenerView: View {
                 
             }.padding(.bottom)
             
-            .background(Color(.init(white: 0.85, alpha: 1)))
+            .background(Color(.init(white: 0.95, alpha: 1)))
         }
         
     

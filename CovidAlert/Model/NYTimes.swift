@@ -20,6 +20,7 @@ struct NYTimes: Decodable, Hashable {
 
 struct Response: Decodable, Hashable {
     
+   
     let docs: [Docs]
     
 }
@@ -27,8 +28,7 @@ struct Response: Decodable, Hashable {
 
 struct Docs: Decodable, Hashable {
    
-    
-    
+
     let abstract: String?
     let web_url: String?
     let snippet: String?
@@ -36,10 +36,17 @@ struct Docs: Decodable, Hashable {
     let headline: Headline
     let multimedia: [Multimedia]
     let byline: Byline
+    var _id: String
 
- 
-    
 }
+//extension Docs: Identifiable {
+//        var id: String { return _id }
+//    }
+//
+//
+    
+
+
 
 struct Byline: Decodable, Hashable {
     

@@ -11,7 +11,6 @@ struct CDCHomeView: View {
     @ObservedObject var screenerStatus: ScreenerStatus
     var body: some View {
      
-      
             VStack {
             TopInfoView(screenerStatus: screenerStatus)
             ListView()
@@ -125,7 +124,7 @@ struct VButtons: View {
                 ZStack {
                     Spacer()
                         .frame(width: 375, height: 50, alignment: .center)
-                        .background(didTap ? Color.blue : Color.gray)
+                        .background(didTap ? Color.init(#colorLiteral(red: 0.3067351282, green: 0.3018459976, blue: 0.7559282184, alpha: 1)) : Color.gray)
                         .cornerRadius(10)
                     HStack {
                         Text("Screener Tool")

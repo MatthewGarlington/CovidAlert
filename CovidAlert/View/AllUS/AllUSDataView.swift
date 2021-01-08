@@ -7,13 +7,26 @@
 
 import SwiftUI
 
+
+
+
+
+
 struct AllUSDataView: View {
     
     @ObservedObject var vm = UsTotalViewModel()
-
     
+
+  
+    
+   
     var body: some View {
-        VStack {
+        
+        
+            
+        
+        
+
             ScrollView(.horizontal, showsIndicators: false ) {
                 HStack {
                    
@@ -23,33 +36,44 @@ struct AllUSDataView: View {
                 ZStack {
                 Spacer()
                     .frame(width: 375, height: 100)
-                    .background(Color(.init(white: 0.95, alpha: 1)))
+                    .background(Color(.init(white: 1, alpha: 0.9)))
                     .cornerRadius(30)
-                    .shadow(radius: 10)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+            
                     VStack(spacing: 20) {
                Text("Total US Cases")
                 .font(.system(size: 30, weight: .semibold))
                 .padding(.horizontal)
+             
             
                         Text(allUS.positive.formatNumber())
                 .font(.system(size: 27, weight: .bold))
                 .padding(.horizontal)
                 
-                    }.padding(.top)
+                    }
+              
+                    .padding(.top)
                     .padding(.bottom)
+                    
                         
                 }
             
             ZStack {
             Spacer()
                 .frame(width: 375, height: 100)
-                .background(Color(.init(white: 0.95, alpha: 1)))
+                .background(Color(.init(white: 1, alpha: 0.9)))
                 .cornerRadius(30)
-                .shadow(radius: 10)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+        
+        
                 VStack(spacing: 20) {
            Text("Total US Deaths")
             .font(.system(size: 30, weight: .semibold))
             .padding(.horizontal)
+                    
+           
         
             Text(allUS.death.formatNumber())
             .font(.system(size: 27, weight: .bold))
@@ -60,9 +84,11 @@ struct AllUSDataView: View {
             ZStack {
             Spacer()
                 .frame(width: 375, height: 100)
-                .background(Color(.init(white: 0.95, alpha: 1)))
+                .background(Color(.init(white: 1, alpha: 0.9)))
                 .cornerRadius(30)
-                .shadow(radius: 10)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+     
                 VStack(spacing: 20) {
            Text("Deaths Increase")
             .font(.system(size: 30, weight: .semibold))
@@ -83,9 +109,11 @@ struct AllUSDataView: View {
                             ZStack {
                             Spacer()
                                 .frame(width: 375, height: 100)
-                                .background(Color(.init(white: 0.95, alpha: 1)))
+                                .background(Color(.init(white: 1, alpha: 0.9)))
                                 .cornerRadius(30)
-                                .shadow(radius: 10)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                        
                                 VStack(spacing: 20) {
                            Text("On Ventilator")
                             .font(.system(size: 30, weight: .semibold))
@@ -104,9 +132,11 @@ struct AllUSDataView: View {
                         ZStack {
                         Spacer()
                             .frame(width: 375, height: 100)
-                            .background(Color(.init(white: 0.95, alpha: 1)))
+                            .background(Color(.init(white: 1, alpha: 0.9)))
                             .cornerRadius(30)
-                            .shadow(radius: 10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                     
                             VStack(spacing: 20) {
                        Text("Hospitalized Increase")
                         .font(.system(size: 30, weight: .semibold))
@@ -122,9 +152,11 @@ struct AllUSDataView: View {
                         ZStack {
                         Spacer()
                             .frame(width: 375, height: 100)
-                            .background(Color(.init(white: 0.95, alpha: 1)))
+                            .background(Color(.init(white: 1, alpha: 0.9)))
                             .cornerRadius(30)
-                            .shadow(radius: 10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                      
                             VStack(spacing: 20) {
                        Text("Hospitalized Increase")
                         .font(.system(size: 30, weight: .semibold))
@@ -144,9 +176,11 @@ struct AllUSDataView: View {
                     ZStack {
                     Spacer()
                         .frame(width: 375, height: 100)
-                        .background(Color(.init(white: 0.95, alpha: 1)))
+                        .background(Color(.init(white: 1, alpha: 0.9)))
                         .cornerRadius(30)
-                        .shadow(radius: 10)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+
                         VStack(spacing: 20) {
                    Text("Suicide Increase")
                     .font(.system(size: 30, weight: .semibold))
@@ -162,9 +196,11 @@ struct AllUSDataView: View {
                     ZStack {
                     Spacer()
                         .frame(width: 375, height: 100)
-                        .background(Color(.init(white: 0.95, alpha: 1)))
+                        .background(Color(.init(white: 1, alpha: 0.9)))
                         .cornerRadius(30)
-                        .shadow(radius: 10)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+           
                         VStack(spacing: 20) {
                    Text("Overdose Deaths")
                     .font(.system(size: 30, weight: .semibold))
@@ -180,9 +216,11 @@ struct AllUSDataView: View {
                         ZStack {
                         Spacer()
                             .frame(width: 375, height: 100)
-                            .background(Color(.init(white: 0.95, alpha: 1)))
+                            .background(Color(.init(white: 1, alpha: 0.9)))
                             .cornerRadius(30)
-                            .shadow(radius: 10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+        
                             VStack(spacing: 20) {
                        Text("Suicide Deaths")
                         .font(.system(size: 30, weight: .semibold))
@@ -202,8 +240,11 @@ struct AllUSDataView: View {
                 .padding(.bottom, 35)
                 } .padding(.horizontal)
                 
-        }
-    }
+                .background(LinearGradient(gradient: Gradient(colors: [.init(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), .init(#colorLiteral(red: 0.9193099141, green: 0.90953511, blue: 0.9052304626, alpha: 1))]), startPoint: .bottom, endPoint: .top))
+     
+                
+            }
+        
 }
 }
 
